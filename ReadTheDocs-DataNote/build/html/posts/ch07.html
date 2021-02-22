@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>第七章 指导白皮书 &mdash; Data Note  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="关于" href="about.html" />
+    <link rel="prev" title="第六章 信号交易系统（外汇、股市与区块链）" href="ch06.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Data Note
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ch01.html">第一章 数据收集、统计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch02.html">第二章 机器学习基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch03.html">第三章 ABM建模基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch04.html">第四章 数据处理平台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch05.html">第五章 外汇交易基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch06.html">第六章 信号交易系统（外汇、股市与区块链）</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">第七章 指导白皮书</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1. 软硬件配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fpga">1.1. FPGA处理技术指标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#armnvidia-gpufpga-tpuhpc">1.2. 基于ARM与NVIDIA GPU或FPGA TPU的HPC集群</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">1.3. FPGA加速机器学习框架</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">1.4. 无线电微波传输降低延迟</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ibmhercules">1.5. IBM大型机模拟器Hercules（迁移）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">1.6. 高性能虚拟化</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">2. 交易备注</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">3. 平台建设</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">功能菜单</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">新闻查看</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">新闻搜索</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">汇市查看</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">关于</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Data Note</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>第七章 指导白皮书</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/posts/ch07.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>第七章 指导白皮书<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>1. 软硬件配置<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>算法设计完成后如果有高频需求，可能需要设计FPGA。</p>
+<p>目前采用Xilinx的Zynq MPSoC以及Kintex-7两款FPGA，基础设施以及业务层面，可加速的内容都非常多，包括负载均衡、算法固化、加解密、网络卸载等。</p>
+<p>HPC集群暂时使用ARM+NVIDIA架构，无实时处理部分，仅训练以及函数计算服务。</p>
+<p>考虑到部分数据传输延迟问题，会采用CPLD/FPGA或专用无线电微波传输，频率在6GHz以上（低于此的意义不大），目前成熟产品为80Ghz，速率为3Gbps。如此以来，伦敦到法兰克福（396英里，673公里）的延迟可从传统光传输所花费的17ms降至4.2毫秒。</p>
+<p>一直想搞台大型机，哪怕是玩玩扫雷也成，所以基础设施中先加个玩具大型机。</p>
+<div class="section" id="fpga">
+<h3>1.1. FPGA处理技术指标<a class="headerlink" href="#fpga" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="armnvidia-gpufpga-tpuhpc">
+<h3>1.2. 基于ARM与NVIDIA GPU或FPGA TPU的HPC集群<a class="headerlink" href="#armnvidia-gpufpga-tpuhpc" title="永久链接至标题">¶</a></h3>
+<p><a class="reference external" href="https://github.com/Xilinx/ml-suite">https://github.com/Xilinx/ml-suite</a></p>
+</div>
+<div class="section" id="id3">
+<h3>1.3. FPGA加速机器学习框架<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id4">
+<h3>1.4. 无线电微波传输降低延迟<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="ibmhercules">
+<h3>1.5. IBM大型机模拟器Hercules（迁移）<a class="headerlink" href="#ibmhercules" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id5">
+<h3>1.6. 高性能虚拟化<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>2. 交易备注<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li><p>来源函数、即时指标</p></li>
+</ol>
+</div>
+<div class="section" id="id7">
+<h2>3. 平台建设<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>站点暂定日本节点与国内节点，美国节点先不开通。节点间信息同步延迟及带宽可使用同一家IDC方式解决，搜索引擎可采用分布式，数据库可用分布式，存储可跨国同步。</p>
+<div class="section" id="id8">
+<h3>功能菜单<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id9">
+<h3>新闻查看<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id10">
+<h3>新闻搜索<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id11">
+<h3>汇市查看<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="about.html" class="btn btn-neutral float-right" title="关于" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ch06.html" class="btn btn-neutral float-left" title="第六章 信号交易系统（外汇、股市与区块链）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2016, lofyer.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
