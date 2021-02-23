@@ -1,0 +1,77 @@
+site_name: My Docs
+site_url: https://lofyer.github.io
+
+nav:
+  - Home: index.md
+  - Blog:
+    - Post1: blog/2020/10/01/blogxx.md
+  - Page1: 
+    - Page3: docs2/index.md
+    - Page2: docs3/index.md
+  - DataNote: 
+    - datanote/index.md
+    - Ch01: datanote/ch01.md
+    - Ch02: datanote/ch02.md
+    - Ch03: datanote/ch03.md
+    - Ch04: datanote/ch04.md
+    - Ch05: datanote/ch05.md
+    - Ch06: datanote/ch06.md
+    - Ch07: datanote/ch07.md
+    - About: datanote/about.md
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - search.share
+
+plugins:
+  - search:
+      prebuild_index: true
+  - blog:
+      folder: blog
+      articles: 10
+      format: "(%y/%m/%d)"
+      text-align: "right"
+      display-more-articles: true
+      display-article-date: true
+      pagination: "Page % of %"
+      more-articles: "More articles(%)"
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid-experimental
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.snippets
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - footnotes
+  #- meta
+
+extra:
+  disqus: lofyer
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

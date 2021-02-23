@@ -1,0 +1,48 @@
+site_name: My Docs
+site_url: https://lofyer.github.io
+
+nav:
+  - Home: index.md
+  - Blog:
+    - Post1: blog/2020/10/01/blogxx.md
+  - Page1: 
+    - Page3: docs2/index.md
+    - Page2: docs3/index.md
+  - DN:
+    - Ch01: docs2/ch01.md
+    - Ch02: docs2/ch02.md
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - search.share
+
+plugins:
+  - search:
+    prebuild_index: true
+  - blog:
+      folder: blog
+      articles: 10
+      format: "(%y/%m/%d)"
+      text-align: "right"
+      display-more-articles: true
+      display-article-date: true
+      pagination: "Page % of %"
+      more-articles: "More articles(%)"
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
