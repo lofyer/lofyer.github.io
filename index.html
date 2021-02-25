@@ -11,7 +11,7 @@
       
         <link rel="canonical" href="https://docs.lofyer.org/">
       
-      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <link rel="shortcut icon" href="images/favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
@@ -29,11 +29,6 @@
     
     
     
-      
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -583,11 +578,15 @@
 <li><code>mkdocs -h</code> - Print help message and exit.</li>
 </ul>
 <h2 id="project-layout">Project layout</h2>
-<div class="highlight"><pre><span></span><code>mkdocs.yml    # The configuration file.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>mkdocs.yml    # The configuration file.
 docs/
     index.md  # The documentation homepage.
     ...       # Other markdown pages, images and other files.
 </code></pre></div>
+</td></tr></table>
                 
               
               
@@ -646,7 +645,7 @@ docs/
       <script>
         app = initialize({
           base: ".",
-          features: ['navigation.tabs', 'navigation.tabs.sticky', 'navigation.sections', 'navigation.indexes', 'navigation.instant', 'search.suggest', 'search.highlight', 'search.share'],
+          features: ['navigation.tabs', 'navigation.tabs.sticky', 'navigation.sections', 'navigation.indexes', 'search.suggest', 'search.highlight', 'search.share'],
           search: Object.assign({
             worker: "assets/javascripts/worker/search.9c0e82ba.min.js"
           }, typeof search !== "undefined" && search)

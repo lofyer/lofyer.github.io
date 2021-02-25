@@ -11,7 +11,7 @@
       
         <link rel="canonical" href="https://docs.lofyer.org/datanote/ch02/">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
@@ -29,11 +29,6 @@
     
     
     
-      
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -947,7 +942,62 @@
                 
                 <h1 id="_1">第二章 机器学习基础</h1>
 <h2 id="21-numpy">2.1 numpy 快查</h2>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">data_type</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;S10&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">)]</span>
 <span class="n">values</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Arthur&#39;</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="mi">41</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Lancelot&#39;</span><span class="p">,</span> <span class="mf">1.9</span><span class="p">,</span> <span class="mi">38</span><span class="p">),</span>
@@ -1004,6 +1054,7 @@
 <span class="c1"># 最小二乘，参数为[x,y,degree]，degree为多项式的最高次幂，返回值为所有次幂的系数</span>
 <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
+</td></tr></table>
 <h2 id="22">2.2 监督学习</h2>
 <h3 id="_2">信息分类基础</h3>
 <p>信息的不稳定性为熵（entropy），而信息增益为有无样本特征对分类问题影响的大小。比如，抛硬币正反两面各有50%概率，此时不稳定性最大，熵为1；太阳明天照常升起，则是必然，此事不稳定性最小，熵为0。</p>
@@ -1016,7 +1067,25 @@ l(X) = -log_2 x
 H = -\sum^n_{i=1} log_2 x
 \]</div>
 <p>如何找到最好的分类特征：</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">chooseBestFeatureToSplit</span><span class="p">(</span><span class="n">dataSet</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">chooseBestFeatureToSplit</span><span class="p">(</span><span class="n">dataSet</span><span class="p">):</span>
     <span class="n">numFeatures</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataSet</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span>      <span class="c1">#the last column is used for the labels</span>
     <span class="n">baseEntropy</span> <span class="o">=</span> <span class="n">calcShannonEnt</span><span class="p">(</span><span class="n">dataSet</span><span class="p">)</span>
     <span class="n">bestInfoGain</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span> <span class="n">bestFeature</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
@@ -1036,6 +1105,7 @@ H = -\sum^n_{i=1} log_2 x
 
 <span class="n">其中</span><span class="err">，</span><span class="n">dataSet为所有特征向量</span><span class="err">，</span><span class="n">caclShannonEnt</span><span class="p">()</span><span class="n">计算特征向量的熵</span><span class="err">，</span><span class="n">splitDataSet</span><span class="p">()</span><span class="n">切除向量中的value列</span><span class="err">；</span><span class="n">infoGain即为信息增益</span><span class="err">，</span><span class="n">chooseBestFeatureToSplit返回最好的特征向量索引值</span><span class="err">。</span>
 </code></pre></div>
+</td></tr></table>
 <h3 id="k">K邻近算法</h3>
 <p>kNN的算法模型如下：</p>
 <p>对于未知类别属性的数据且集中的每个点依次执行以下操作：</p>
@@ -1047,7 +1117,21 @@ H = -\sum^n_{i=1} log_2 x
 <li>返回前k个点出现频率最高的类别作为当前点的预测分类</li>
 </ul>
 <p>代码参考如下：</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">classify0</span><span class="p">(</span><span class="n">inX</span><span class="p">,</span> <span class="n">dataSet</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">classify0</span><span class="p">(</span><span class="n">inX</span><span class="p">,</span> <span class="n">dataSet</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="n">dataSetSize</span> <span class="o">=</span> <span class="n">dataSet</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">diffMat</span> <span class="o">=</span> <span class="n">tile</span><span class="p">(</span><span class="n">inX</span><span class="p">,</span> <span class="p">(</span><span class="n">dataSetSize</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="o">-</span> <span class="n">dataSet</span>
     <span class="n">sqDiffMat</span> <span class="o">=</span> <span class="n">diffMat</span><span class="o">**</span><span class="mi">2</span>
@@ -1063,11 +1147,54 @@ H = -\sum^n_{i=1} log_2 x
 
 <span class="n">其中</span><span class="err">，</span><span class="n">inX为输入向量</span><span class="err">，</span><span class="n">dataSet为数据集</span><span class="err">，</span><span class="n">labels为数据集的分类</span><span class="err">，</span><span class="n">可调</span><span class="err">。</span><span class="n">距离计算公式为d0</span> <span class="o">=</span> <span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">x0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">y0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="err">。</span>
 </code></pre></div>
+</td></tr></table>
 <p>此种算法的优点为精度高、对异常值不敏感、但缺点也比较明显，即数据量大时开支相对较大，适用于数值－标称型数据。</p>
 <h3 id="_3">决策树</h3>
 <p>决策树即列出一系列选择，根据训练集中的大量形似（A、B、C）以及结果D的向量来预测新输入（A'、B'、C'）的结果D'。</p>
 <p>首先创建一个决策树：</p>
-<div class="highlight"><pre><span></span><code> <span class="k">def</span> <span class="nf">createTree</span><span class="p">(</span><span class="n">dataSet</span><span class="p">,</span><span class="n">labels</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code> <span class="k">def</span> <span class="nf">createTree</span><span class="p">(</span><span class="n">dataSet</span><span class="p">,</span><span class="n">labels</span><span class="p">):</span>
      <span class="n">classList</span> <span class="o">=</span> <span class="p">[</span><span class="n">example</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">example</span> <span class="ow">in</span> <span class="n">dataSet</span><span class="p">]</span>
      <span class="k">if</span> <span class="n">classList</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">classList</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">classList</span><span class="p">):</span>
          <span class="k">return</span> <span class="n">classList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>     <span class="c1">#stop splitting when all of the classes are equal</span>
@@ -1111,8 +1238,20 @@ H = -\sum^n_{i=1} log_2 x
 
  <span class="n">构建决策树的方法比较多</span><span class="err">，</span><span class="n">也可使用C4</span><span class="o">.</span><span class="mi">5</span><span class="n">和CART算法</span><span class="err">。</span>
 </code></pre></div>
+</td></tr></table>
 <p>接下来使用决策树进行分类：</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">classify</span><span class="p">(</span><span class="n">inputTree</span><span class="p">,</span><span class="n">featLabels</span><span class="p">,</span><span class="n">testVec</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">classify</span><span class="p">(</span><span class="n">inputTree</span><span class="p">,</span><span class="n">featLabels</span><span class="p">,</span><span class="n">testVec</span><span class="p">):</span>
     <span class="n">firstStr</span> <span class="o">=</span> <span class="n">inputTree</span><span class="o">.</span><span class="n">keys</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">secondDict</span> <span class="o">=</span> <span class="n">inputTree</span><span class="p">[</span><span class="n">firstStr</span><span class="p">]</span>
     <span class="n">featIndex</span> <span class="o">=</span> <span class="n">featLabels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">firstStr</span><span class="p">)</span>
@@ -1125,8 +1264,15 @@ H = -\sum^n_{i=1} log_2 x
 
 <span class="n">其中</span><span class="err">，</span><span class="n">featLabels为测试的判断节点</span><span class="err">，</span><span class="n">即特征</span><span class="err">，</span><span class="n">testVec为其值</span><span class="err">，</span><span class="n">比如classify</span><span class="p">[</span><span class="n">myTree</span><span class="p">,</span><span class="s2">&quot;[&#39;no-surfacing&#39;,&#39;flippers&#39;]&quot;</span><span class="p">,:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="s2">&quot;]，如此结果便为&#39;no&#39;。</span>
 </code></pre></div>
+</td></tr></table>
 <p>使用pickle对决策树进行序列化存储：</p>
-<div class="highlight"><pre><span></span><code> <span class="k">def</span> <span class="nf">storeTree</span><span class="p">(</span><span class="n">inputTree</span><span class="p">,</span><span class="n">filename</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code> <span class="k">def</span> <span class="nf">storeTree</span><span class="p">(</span><span class="n">inputTree</span><span class="p">,</span><span class="n">filename</span><span class="p">):</span>
      <span class="kn">import</span> <span class="nn">pickle</span>
      <span class="n">fw</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
      <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">inputTree</span><span class="p">,</span><span class="n">fw</span><span class="p">)</span>
@@ -1134,10 +1280,23 @@ H = -\sum^n_{i=1} log_2 x
 
 <span class="n">其中</span><span class="err">，</span><span class="n">dump可选协议为0</span><span class="err">（</span><span class="n">ASCII</span><span class="err">），</span><span class="mi">1</span><span class="err">（</span><span class="n">BINARY</span><span class="err">），</span><span class="n">默认为0</span><span class="err">；</span><span class="n">读取时使用pickle</span><span class="o">.</span><span class="n">load</span><span class="err">；</span><span class="n">同样可使用dumps</span><span class="err">，</span><span class="n">loads直接对字符变量进行操作</span><span class="err">。</span>
 </code></pre></div>
+</td></tr></table>
 <p>此种算法计算复杂度不高，对中间值缺失不敏感，但可能会产生过拟合的问题。</p>
 <h3 id="_4">朴素贝叶斯</h3>
 <p>贝叶斯模型是基于独立概率统计的，思想可以这么说：</p>
-<div class="highlight"><pre><span></span><code><span class="n">总共7个石子在A</span><span class="err">、</span><span class="n">B两个桶中</span><span class="err">，</span><span class="n">A桶中有2黑2白</span><span class="err">，</span><span class="n">B桶中有2黑1白</span><span class="err">。</span><span class="n">已知条件为石子来自B桶</span><span class="err">，</span><span class="n">那么它是白色石子的概率可表示为</span><span class="err">：</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">总共7个石子在A</span><span class="err">、</span><span class="n">B两个桶中</span><span class="err">，</span><span class="n">A桶中有2黑2白</span><span class="err">，</span><span class="n">B桶中有2黑1白</span><span class="err">。</span><span class="n">已知条件为石子来自B桶</span><span class="err">，</span><span class="n">那么它是白色石子的概率可表示为</span><span class="err">：</span>
 
     <span class="n">P</span><span class="p">(</span><span class="n">white</span><span class="o">|</span><span class="n">B</span><span class="p">)</span><span class="o">=</span><span class="n">P</span><span class="p">(</span><span class="n">B</span><span class="o">|</span><span class="n">white</span><span class="p">)</span><span class="n">P</span><span class="p">(</span><span class="n">white</span><span class="p">)</span><span class="o">/</span><span class="n">P</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
 
@@ -1151,8 +1310,27 @@ H = -\sum^n_{i=1} log_2 x
 
 <span class="n">整个算法核心即是等式P</span><span class="p">(</span><span class="n">yi</span><span class="o">|</span><span class="n">x</span><span class="p">)</span><span class="o">=</span><span class="n">P</span><span class="p">(</span><span class="n">x</span><span class="o">|</span><span class="n">yi</span><span class="p">)</span><span class="n">P</span><span class="p">(</span><span class="n">yi</span><span class="p">)</span><span class="o">/</span><span class="n">P</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="err">。</span>
 </code></pre></div>
+</td></tr></table>
 <p>首先构建一个分类训练函数（二元分类）：</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">trainNB0</span><span class="p">(</span><span class="n">trainMatrix</span><span class="p">,</span><span class="n">trainCategory</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">trainNB0</span><span class="p">(</span><span class="n">trainMatrix</span><span class="p">,</span><span class="n">trainCategory</span><span class="p">):</span>
     <span class="n">numTrainDocs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">trainMatrix</span><span class="p">)</span>
     <span class="n">numWords</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">trainMatrix</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">pBad</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">trainCategory</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">numTrainDocs</span><span class="p">)</span>
@@ -1172,8 +1350,17 @@ H = -\sum^n_{i=1} log_2 x
 <span class="n">其中</span><span class="err">，</span><span class="n">trainMatrix为所有训练集中的布尔向量</span><span class="err">，</span><span class="n">比如两本书A</span><span class="err">、</span><span class="n">B</span><span class="err">，</span><span class="n">其中A有两个单词x</span><span class="err">、</span><span class="n">y</span><span class="err">，</span><span class="n">B有两个单词x</span><span class="err">、</span><span class="n">z</span><span class="err">，</span><span class="n">并且A是好书</span><span class="err">（</span><span class="n">值计为0</span><span class="err">），</span><span class="n">B是烂书</span><span class="err">（</span><span class="n">值计为0</span><span class="err">），</span><span class="n">把所有单词进行排序后得向量</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">]</span><span class="err">，</span><span class="n">则A的Matrix可表示为</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="err">，</span><span class="n">B的为</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="err">，</span><span class="n">所以此函数中的trainMatrix即</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span><span class="err">，</span><span class="n">trainCategory为</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="err">。</span>
 <span class="n">函数返回的为概率集的向量</span><span class="err">。</span>
 </code></pre></div>
+</td></tr></table>
 <p>分类函数：</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">classifyNB</span><span class="p">(</span><span class="n">vec2Classify</span><span class="p">,</span> <span class="n">p0Vec</span><span class="p">,</span> <span class="n">p1Vec</span><span class="p">,</span> <span class="n">pClass1</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">classifyNB</span><span class="p">(</span><span class="n">vec2Classify</span><span class="p">,</span> <span class="n">p0Vec</span><span class="p">,</span> <span class="n">p1Vec</span><span class="p">,</span> <span class="n">pClass1</span><span class="p">):</span>
     <span class="n">p1</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">vec2Classify</span> <span class="o">*</span> <span class="n">p1Vec</span><span class="p">)</span> <span class="o">+</span> <span class="n">log</span><span class="p">(</span><span class="n">pClass1</span><span class="p">)</span>    <span class="c1">#element-wise mult</span>
     <span class="n">p0</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">vec2Classify</span> <span class="o">*</span> <span class="n">p0Vec</span><span class="p">)</span> <span class="o">+</span> <span class="n">log</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">pClass1</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">p1</span> <span class="o">&gt;</span> <span class="n">p0</span><span class="p">:</span>
@@ -1183,8 +1370,21 @@ H = -\sum^n_{i=1} log_2 x
 
 <span class="n">vec2Classify即为要分类的向量</span><span class="err">，</span><span class="n">形如trainMatrix</span><span class="err">，</span><span class="n">随后的三个参数为trainNB0所返回</span><span class="err">。</span><span class="n">p1</span><span class="err">、</span><span class="n">p0可以理解为期望概率值</span><span class="err">，</span><span class="n">比较两者大小即可划分</span><span class="err">。</span>
 </code></pre></div>
+</td></tr></table>
 <p>测试用例：</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">testingNB</span><span class="p">():</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">testingNB</span><span class="p">():</span>
     <span class="n">listOPosts</span><span class="p">,</span><span class="n">listClasses</span> <span class="o">=</span> <span class="n">loadDataSet</span><span class="p">()</span>
     <span class="n">myVocabList</span> <span class="o">=</span> <span class="n">createVocabList</span><span class="p">(</span><span class="n">listOPosts</span><span class="p">)</span>
     <span class="n">trainMat</span><span class="o">=</span><span class="p">[]</span>
@@ -1198,6 +1398,7 @@ H = -\sum^n_{i=1} log_2 x
     <span class="n">thisDoc</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">setOfWords2Vec</span><span class="p">(</span><span class="n">myVocabList</span><span class="p">,</span> <span class="n">testEntry</span><span class="p">))</span>
     <span class="nb">print</span> <span class="n">testEntry</span><span class="p">,</span><span class="s1">&#39;classified as: &#39;</span><span class="p">,</span><span class="n">classifyNB</span><span class="p">(</span><span class="n">thisDoc</span><span class="p">,</span><span class="n">p0V</span><span class="p">,</span><span class="n">p1V</span><span class="p">,</span><span class="n">pAb</span><span class="p">)</span>
 </code></pre></div>
+</td></tr></table>
 <p>整体来说，朴素贝叶斯分类方法在数据较少的情况下仍然有效，但是对数据输入比较敏感。</p>
 <h3 id="logistic">Logistic回归</h3>
 <p>在统计学中，线性回归是利用称为线性回归方程的最小二乘函数对一个或多个自变量和因变量之间关系进行建模的一种回归分析。这种函数是一个或多个称为回归系数的模型参数的线性组合。只有一个自变量的情况称为简单回归，大于一个自变量情况的叫做多元回归。（ <a href="https://zh.wikipedia.org/zh-cn/%E7%B7%9A%E6%80%A7%E5%9B%9E%E6%AD%B8">维基百科</a> ）</p>
@@ -1207,7 +1408,13 @@ H = -\sum^n_{i=1} log_2 x
 <p>利用最小二乘法可以简便地求得未知的数据，并使得这些求得的数据与实际数据之间误差的平方和为最小。</p>
 <p><em>示例1</em></p>
 <p>有四个数据点(1,6)、(2,5)、(3,7)、(4,10)，我们希望找到一条直线y=a+bx与这四个点最匹配。</p>
-<div class="highlight"><pre><span></span><code>a+1b=6
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>a+1b=6
 
 a+2b=5
 
@@ -1215,6 +1422,7 @@ a+3b=7
 
 a+4b=10
 </code></pre></div>
+</td></tr></table>
 <p>采用最小二乘法使等号两边的方差尽可能小，也就是找出这个函数的最小值：</p>
 <div class="arithmatex">\[
     S(a,b) = [6-(a+1b)]^2+[5-(a+2b)]^2+[7-(a+3b)]^2+[10-(a+4b)]^2
@@ -1265,29 +1473,39 @@ b_1 = \frac{\sum_{i=1}^n (t_i - \bar t)(y_i - \bar y)}{\sum_{i=1}^n (t_i - \bar 
 \]</div>
 <p><em>示例2</em></p>
 <p>随机选定10艘战舰，并分析它们的长度与宽度，寻找它们长度与宽度之间的关系。由下面的描点图可以直观地看出，一艘战舰的长度（t）与宽度（y）基本呈线性关系。散点图如下：</p>
-<p>```{image} ../images/04-02.png
+<p>```{image} ../images/datanote/04-02.png
 :align: center</p>
-<div class="highlight"><pre><span></span><code>以下图表列出了各战舰的数据，随后步骤是采用最小二乘法确定两变量间的线性关系。
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>以下图表列出了各战舰的数据，随后步骤是采用最小二乘法确定两变量间的线性关系。
 
-```{image} ./images/04-03.png
+```{image} ./images/datanote/04-03.png
 :align: center
 </code></pre></div>
+</td></tr></table>
 <p>仿照上面给出的例子</p>
-<div class="highlight"><pre><span></span><code>\bar t = \frac {\sum_{i=1}^n t_i}{n} = \frac {1678}{10} = 167{.}8
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>\bar t = \frac {\sum_{i=1}^n t_i}{n} = \frac {1678}{10} = 167{.}8
 </code></pre></div>
+</td></tr></table>
 <p>并得到相应的</p>
-<div class="highlight"><pre><span></span><code>\bar y = 18{.}41
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>\bar y = 18{.}41
 </code></pre></div>
+</td></tr></table>
 <p>然后确定b1</p>
-<div class="highlight"><pre><span></span><code>b_1 = \frac{\sum_{i=1}^n (t_i- \bar {t})(y_i - \bar y)}{\sum_{i=1}^n (t_i- \bar t)^2}
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>b_1 = \frac{\sum_{i=1}^n (t_i- \bar {t})(y_i - \bar y)}{\sum_{i=1}^n (t_i- \bar t)^2}
 
 = \frac{3287{.}820} {20391{.}60} = 0{.}1612 \;
 </code></pre></div>
+</td></tr></table>
 <p>可以看出，战舰的长度每变化1m，相对应的宽度便要变化16cm。并由下式得到常数项b0：</p>
-<div class="highlight"><pre><span></span><code>b_0 = \bar y - b_1 \bar t = 18{.}41 - 0{.}1612 \cdot 167{.}8 = -8{.}6394
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>b_0 = \bar y - b_1 \bar t = 18{.}41 - 0{.}1612 \cdot 167{.}8 = -8{.}6394
 </code></pre></div>
+</td></tr></table>
 <p>可以看出点的拟合非常好，长度和宽度的相关性大约为96.03％。 利用Matlab得到拟合直线：</p>
-<p><img alt="Placeholder" loading="lazy" src="../../images/04-04.png" /></p>
+<p><img alt="Placeholder" loading="lazy" src="../../images/datanote/04-04.png" /></p>
 <p><strong>Sigmoid函数</strong></p>
 <p>Sigmoid函数具有单位阶跃函数的性质，公式表示为：</p>
 <div class="arithmatex">\[
@@ -1295,7 +1513,17 @@ b_1 = \frac{\sum_{i=1}^n (t_i - \bar t)(y_i - \bar y)}{\sum_{i=1}^n (t_i - \bar 
 \]</div>
 <p>```{image} ../images/04-01.png
 :align: center</p>
-<div class="highlight"><pre><span></span><code>我们将输入记为z，有下面的公式得出：
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>我们将输入记为z，有下面的公式得出：
 
 $$
 z=w_0 x_0 + w_1 x_1 + w_2 x_2 + \dots + w_n x_n
@@ -1307,18 +1535,36 @@ $$
 
 z=w^T x
 </code></pre></div>
+</td></tr></table>
 <p>其中向量x是分类器的输入数据，向量w就是我们要找到的最佳系数。</p>
 <p><em>基于优化方法确定回归系数</em></p>
 <p><strong>梯度上升/下降法</strong></p>
 <p>梯度上升法/下降法的思想是：要找到函数的最大值，最好的方法是沿着该函数的梯度方向探寻，函数f(x,y)的梯度如下表示：</p>
-<div class="highlight"><pre><span></span><code>{\nabla}f(x,y)=\begin{pmatrix} \cfrac{{\partial}f(x,y)}{{\partial}x} \\ \cfrac{{\partial}f(x,y)}{{\partial}y}\end{pmatrix}
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>{\nabla}f(x,y)=\begin{pmatrix} \cfrac{{\partial}f(x,y)}{{\partial}x} \\ \cfrac{{\partial}f(x,y)}{{\partial}y}\end{pmatrix}
 </code></pre></div>
+</td></tr></table>
 <p>可以这样理解此算法：</p>
 <blockquote>
 <p>从前有一座山，一个懒人要爬山，他从山脚下的任意位置向山顶出发，并且知道等高线图的每个环上都有一个宿营点，他希望在这些宿营点之间修建一条笔直的路，并且路到两旁的宿营点的垂直距离差的平方和尽可能小。每到一个等高线圈，他都会根据他在上一个等高线的距离的变化量来调节他的在等高线上的位置，从而使公路满足要求。</p>
 <p>返回回归系数：</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
 
 <span class="k">def</span> <span class="nf">gradAscent</span><span class="p">(</span><span class="n">dataMatIn</span><span class="p">,</span> <span class="n">classLabels</span><span class="p">):</span>
@@ -1336,8 +1582,30 @@ z=w^T x
 
 <span class="n">其中</span><span class="err">，</span><span class="n">误差值乘以矩阵的转秩代表梯度</span><span class="err">。</span>
 </code></pre></div>
+</td></tr></table>
 <p>接下来，我们载入数据集尝试画出最佳拟合直线：</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="k">def</span> <span class="nf">plotBestFit</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
     <span class="n">weights</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">getA</span><span class="p">()</span> <span class="c1"># 将矩阵转化为数组</span>
     <span class="n">dataMat</span><span class="p">,</span> <span class="n">labelMat</span> <span class="o">=</span> <span class="n">loadDataSet</span><span class="p">()</span>
@@ -1360,8 +1628,30 @@ z=w^T x
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;X2&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
+</td></tr></table>
 <p>如果处理大量数据集时，可以使用批量数据集中的单个数据点进行系数更新，或者使用随机数据集的数据点，分别如下所示：</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">stocGradAscentBatch</span><span class="p">(</span><span class="n">dataMatrix</span><span class="p">,</span> <span class="n">classLabels</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">stocGradAscentBatch</span><span class="p">(</span><span class="n">dataMatrix</span><span class="p">,</span> <span class="n">classLabels</span><span class="p">):</span>
     <span class="n">m</span><span class="p">,</span><span class="n">n</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">dataMatrix</span><span class="p">)</span>
     <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.01</span>
     <span class="n">weights</span> <span class="o">=</span> <span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -1384,6 +1674,7 @@ z=w^T x
             <span class="n">weights</span> <span class="o">=</span> <span class="n">weights</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">error</span> <span class="o">*</span> <span class="n">dataMatrix</span><span class="p">[</span><span class="n">randIndex</span><span class="p">]</span>
             <span class="k">del</span><span class="p">(</span><span class="n">dataIndex</span><span class="p">[</span><span class="n">randIndex</span><span class="p">])</span>   <span class="c1"># 删除已选，防止重复选取</span>
 </code></pre></div>
+</td></tr></table>
 <h3 id="_5">线性回归</h3>
 <h3 id="_6">树回归</h3>
 <h3 id="svm">SVM</h3>
@@ -1392,39 +1683,56 @@ z=w^T x
 <p>桌子上有两种颜色的球，</p>
 <p>```{image} ../images/svm1.png
 :align: center</p>
-<div class="highlight"><pre><span></span><code>我们需要在中间摆一根棍子把它们分开，
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>我们需要在中间摆一根棍子把它们分开，
 
 ```{image} ../images/svm2.png
 :align: center
 </code></pre></div>
+</td></tr></table>
 <p>完美，那么再加点球，发现再找到一个合适位置的话比较难了（但仍然可以找到），</p>
 <p>```{image} ../images/svm3.png
 :align: center</p>
-<div class="highlight"><pre><span></span><code>SVM就是试图把棍放在最佳位置，好让在棍的两边有尽可能大的间隙，
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>SVM就是试图把棍放在最佳位置，好让在棍的两边有尽可能大的间隙，
 
 ```{image} ../images/svm4.png
 :align: center
 </code></pre></div>
+</td></tr></table>
 <p>这根棍仍然可以分开它们，</p>
 <p>```{image} ../images/svm5.png
 :align: center</p>
-<div class="highlight"><pre><span></span><code>如果，这样摆呢？
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>如果，这样摆呢？
 
 ```{image} ../images/svm6.png
 :align: center
 </code></pre></div>
+</td></tr></table>
 <p>你怒拍桌子，将球高高弹起，然后向忍着水果那样在空中划过笔直的一刀。就这样分开了。</p>
 <p>```{image} ../images/svm7.png
 :align: center</p>
-<div class="highlight"><pre><span></span><code>那一瞬，球在另一个维度被完美分开了，像这样。
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>那一瞬，球在另一个维度被完美分开了，像这样。
 
 ```{image} ../images/svm8.png
 :align: center
 </code></pre></div>
+</td></tr></table>
 <p>再之后无聊的大人们，把这些球叫做 data，把棍子 叫做 classifier, 最大间隙的把戏叫做optimization， 拍桌子叫做kernelling, 那张纸叫做hyperplane。</p>
 <p>以2维数据为例，即平面上的点，可以用直线分割，一般形式为y=ax+b，如果不可分割，我们就将其提高一个维度，分割线变成了分割面（超平面），写作：</p>
-<div class="highlight"><pre><span></span><code>|w^T A+b|
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>|w^T A+b|
 </code></pre></div>
+</td></tr></table>
 <h3 id="_7">神经网络（深度学习）</h3>
 <h3 id="_8">强化学习</h3>
 <h3 id="adaboost">AdaBoost</h3>
@@ -1450,15 +1758,18 @@ z=w^T x
 <h3 id="online">Online</h3>
 <h3 id="gui">GUI</h3>
 <p><a href="http://www.cs.waikato.ac.nz/">Weka</a></p>
-<div class="highlight"><pre><span></span><code><span class="n">brew</span> <span class="n">cask</span> <span class="n">install</span> <span class="n">weka</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">brew</span> <span class="n">cask</span> <span class="n">install</span> <span class="n">weka</span>
 </code></pre></div>
+</td></tr></table>
 <p><a href="https://moa.cms.waikato.ac.nz">MOA</a></p>
 <p><a href="https://orange.biolab.si/">Orange</a></p>
-<div class="highlight"><pre><span></span><code><span class="n">pip3</span> <span class="n">install</span> <span class="n">orange</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pip3</span> <span class="n">install</span> <span class="n">orange</span>
 </code></pre></div>
+</td></tr></table>
 <p><a href="https://www.knime.com/">KNIME</a></p>
-<div class="highlight"><pre><span></span><code><span class="n">pip3</span> <span class="n">install</span> <span class="n">knime</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pip3</span> <span class="n">install</span> <span class="n">knime</span>
 </code></pre></div>
+</td></tr></table>
 <h3 id="library">Library</h3>
 <p><a href="http://spark.apache.org/mllib/">Spark MLlib</a></p>
 <p><a href="http://scikit-learn.org/">SciKit</a></p>
@@ -1551,7 +1862,7 @@ z=w^T x
       <script>
         app = initialize({
           base: "../..",
-          features: ['navigation.tabs', 'navigation.tabs.sticky', 'navigation.sections', 'navigation.indexes', 'navigation.instant', 'search.suggest', 'search.highlight', 'search.share'],
+          features: ['navigation.tabs', 'navigation.tabs.sticky', 'navigation.sections', 'navigation.indexes', 'search.suggest', 'search.highlight', 'search.share'],
           search: Object.assign({
             worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
           }, typeof search !== "undefined" && search)

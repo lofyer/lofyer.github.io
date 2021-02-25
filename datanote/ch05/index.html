@@ -11,7 +11,7 @@
       
         <link rel="canonical" href="https://docs.lofyer.org/datanote/ch05/">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
@@ -29,11 +29,6 @@
     
     
     
-      
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -1150,7 +1145,14 @@
 <p>Fake signals prevail in timeframes smaller than 4 hours.</p>
 <p>```{image} ../images/AcceleratorDecelerator.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Acceleration/Deceleration Oscillator Formula (Calculation)**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Acceleration/Deceleration Oscillator Formula (Calculation)**
 
 AC bar chart is the difference between the value of 5/34 of the driving force bar chart and 5-period simple moving average, taken from that bar chart.
 
@@ -1159,6 +1161,7 @@ AC bar chart is the difference between the value of 5/34 of the driving force ba
 AO = SMA(median price, 5)-SMA(median price, 34)
 AC = AO-SMA(AO, 5)
 </code></pre></div>
+</td></tr></table>
 <h4 id="alligator">Alligator</h4>
 <p>Alligator is an indicator designed to signal a trend absence, formation and direction. Bill Williams saw the alligator's behavior as an allegory of the market's one: the resting phase is turning into the price-hunting as the alligator awakes so that to come back to sleep after the feeding is over. The longer the alligator is sleeping the hungrier it gets and the stronger the market move will be.</p>
 <p><strong>How to Use Alligator Indicator</strong></p>
@@ -1168,7 +1171,14 @@ AC = AO-SMA(AO, 5)
 <p>The averages following each other in the reversed order down the slope are a strong signal of an unfolding downtrend so selling at this point would be more than appropriate.</p>
 <p>```{image} ../images/Alligator.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Alligator Indicator Formula (Calculation)**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Alligator Indicator Formula (Calculation)**
 
 ```{code}
 
@@ -1177,6 +1187,7 @@ ALLIGATORS JAW = SMMA (MEDEAN PRICE, 13, 8)
 ALLIGATORS TEETH = SMMA (MEDEAN PRICE, 8, 5)
 ALLIGATORS LIPS = SMMA (MEDEAN PRICE, 5, 3)
 </code></pre></div>
+</td></tr></table>
 <h4 id="awesome-oscillatorao">Awesome Oscillator(AO)</h4>
 <p>Awesome Oscillator (AO) is a momentum indicator reflecting the precise changes in the market driving force which helps to identify the trend’s strength up to the points of formation and reversal.</p>
 <p><strong>How to Use Awesome Oscillator</strong></p>
@@ -1188,7 +1199,24 @@ ALLIGATORS LIPS = SMMA (MEDEAN PRICE, 5, 3)
 </ol>
 <p>```{image} ../images/AwesomeOscillator.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Awesome Oscillator Trading Strategy**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Awesome Oscillator Trading Strategy**
 
 Awesome Oscillator Strategy includes 3 ways of trading. The first way is to open a sell position when the oscillator is below the zero line forming a peak, and open a buy position when the oscillator is above the zero line forming a gap.
 
@@ -1207,6 +1235,7 @@ AO = SMA(MEDIAN PRICE, 5)-SMA(MEDIAN PRICE, 34)
 where
 SMA — Simple Moving Average.
 </code></pre></div>
+</td></tr></table>
 <h4 id="fractals">Fractals</h4>
 <p>Fractals is an indicator highlighting the chart’s local heights and lows where the price movement had stopped and reversed. These reversal points are called respectively Highs and Lows.</p>
 <p><strong>How to Use Fractal Indicator</strong></p>
@@ -1215,7 +1244,25 @@ SMA — Simple Moving Average.
 <p>Sell fractal is an arrow pointing to the bottom</p>
 <p>```{image} ../images/Fractals.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>#### Gator Oscillator(GO)
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>#### Gator Oscillator(GO)
 
 The Gator Oscillator (GO) is a supplement to the Alligator indicator and is used alongside with it showing the absolute degree of convergence/divergence of the Alligator&#39;s three SMAs pointing at the Alligator&#39;s periods of slumber and awakeness (i.e. trending and non-trending market phases).
 
@@ -1235,6 +1282,7 @@ The Alligator&#39;s activity periods are divided into the following four:
 ```{image} ../images/GatorOscillator(GO).jpg
 :align: center
 </code></pre></div>
+</td></tr></table>
 <h4 id="market-facilitation-index">Market Facilitation Index</h4>
 <p>The Market Facilitation Index is designed for evaluation the willingness of the market to move the price. The indicator's absolute values alone cannot provide any trading signals unlike it's dynamics in relation to the dynamics of the volume.</p>
 <p><strong>How to Use Market Facilitation Index</strong></p>
@@ -1245,27 +1293,38 @@ The Alligator&#39;s activity periods are divided into the following four:
 <p>Brown bar - both MFI and volume are down. The market is no longer interested in the current direction and is looking for signs of a future development.</p>
 <p>```{image} ../images/MarketFacilitationIndex.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Market Facilitation Index Formula (Calculation)**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Market Facilitation Index Formula (Calculation)**
 
 ```{code}
 
 BW MFI = (HIGH-LOW)/VOLUME
 </code></pre></div>
+</td></tr></table>
 <h3 id="oscillator">Oscillator</h3>
 <h4 id="aroon">Aroon</h4>
 <p>Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. “Aroon” means “Dawn's Early Light” in Sanskrit. Chande chose this name because the indicators are designed to reveal the beginning of a new trend. The Aroon indicators measure the number of periods since price recorded an x-day high or low. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low. In this sense, the Aroon indicators are quite different from typical momentum oscillators, which focus on price relative to time. Aroon is unique because it focuses on time relative to price. Chartists can use the Aroon indicators to spot emerging trends, identify consolidations, define correction periods and anticipate reversals.</p>
 <p><strong>Calculation</strong></p>
 <p>The Aroon indicators are shown in percentage terms and fluctuate between 0 and 100. Aroon-Up is based on price highs, while Aroon-Down is based on price lows. These two indicators are plotted side-by-side for easy comparison. The default parameter setting in SharpCharts is 25 and the example below is based on 25 days.</p>
-<div class="highlight"><pre><span></span><code>Aroon-Up = ((25 - Days Since 25-day High)/25) x 100
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Aroon-Up = ((25 - Days Since 25-day High)/25) x 100
 Aroon-Down = ((25 - Days Since 25-day Low)/25) x 100
 </code></pre></div>
+</td></tr></table>
 <p>```{image} ../images/aron-1-spyexam.png
 :align: center</p>
-<div class="highlight"><pre><span></span><code>Aroon declines as the elapsed time between a new high or low increases. 50 is the cut off point. Because 12.5 days marks the exact middle, a reading of exactly 50 is impossible on a daily chart. It is possible with other timeframes. On daily charts, Aroon is either below 50 (48) or above 50 (52). A reading above 50 means a new high or low was recorded within the last 12 days or less. This is the most recent half of the look-back period. A reading below 50 means a new high or low was recorded within the last 13 days or more {(25-13)/25 x 100 = 48). This is the latter half of the look-back period. The table below shows the range of values for 25-day Aroon-Up and 25-day Aroon-Down
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Aroon declines as the elapsed time between a new high or low increases. 50 is the cut off point. Because 12.5 days marks the exact middle, a reading of exactly 50 is impossible on a daily chart. It is possible with other timeframes. On daily charts, Aroon is either below 50 (48) or above 50 (52). A reading above 50 means a new high or low was recorded within the last 12 days or less. This is the most recent half of the look-back period. A reading below 50 means a new high or low was recorded within the last 13 days or more {(25-13)/25 x 100 = 48). This is the latter half of the look-back period. The table below shows the range of values for 25-day Aroon-Up and 25-day Aroon-Down
 
 ```{image} ../images/aron-6-xlsheet.png
 :align: center
 </code></pre></div>
+</td></tr></table>
 <p><strong>Interpretation</strong></p>
 <p>The Aroon indicators fluctuate above/below a centerline (50) and are bound between 0 and 100. These three levels are important for interpretation. At its most basic, the bulls have the edge when Aroon-Up is above 50 and Aroon-Down is below 50. This indicates a greater propensity for new x-day highs than lows. The converse is true for a downtrend. The bears have the edge when Aroon-Up is below 50 and Aroon-Down is above 50.</p>
 <p>A surge to 100 indicates that a trend may be emerging. This can be confirmed with a decline in the other Aroon indicator. For example, a move to 100 in Aroon-Up combined with a decline below 30 in Aroon-Down shows upside strength. Consistently high readings mean prices are regularly hitting new highs or new lows for the specified period. Prices are moving consistently higher when Aroon-Up remains in the 70-100 range for an extended period. Conversely, consistently low readings indicate that prices are seldom hitting new highs or lows. Prices are NOT moving lower when Aroon-Down remains in the 0-30 range for an extended period. This does not mean prices are moving higher though. For that we need to check Aroon-Up.</p>
@@ -1273,7 +1332,14 @@ Aroon-Down = ((25 - Days Since 25-day Low)/25) x 100
 <p>There are three stages to an emerging trend signal. First, the Aroon lines will cross. Second, the Aroon lines will cross above/below 50. Third, one of the Aroon lines will reach 100. For example, the first stage of an uptrend signal is when Aroon-Up moves above Aroon-Down. This shows new highs becoming more recent than new lows. Keep in mind that Aroon measures the time elapsed, not the price. The second stage is when Aroon-Up moves above 50 and Aroon-Down moves below 50. The third stage is when Aroon-Up reaches 100 and Aroon-Down remains at relatively low levels. The first and second stages do not always occur in that order. Sometimes Aroon-Up will break above 50 and then above Aroon-Down. Reverse engineering the uptrend stages will give you the emerging downtrend signal. Aroon-Down breaks above Aroon-Up, breaks above 50 and reaches 100.</p>
 <p>```{image} ../images/aron-2-csxtrend.png
 :align: center</p>
-<div class="highlight"><pre><span></span><code>The chart above shows CSX Corp (CSX) with weekly bars and 25-week Aroon. First, notice that the downtrend began weakening as Aroon-Down declined below 50 at the end of 2007 (far left). The first stage of an uptrend was signaled when Aroon-Up moved above Aroon-Down in early 2008 (first orange circle). Aroon-Up continued above 50 and hit 100 as Aroon-Down remained at relatively low levels. Notice how Aroon-Up remained near 100 as the advance continued. This emerging uptrend signal lasted until September 2008 when Aroon-Down broke above Aroon-Up, exceeded 50 and surged to 100 (second orange circle). Notice how Aroon-Down remained near 100 as the downtrend extended. The third trend on this chart was signaled when Aroon-Up surged to 100 in June 2009 and remained above 50 for over a year (third orange circle). Also notice that Aroon-Down remained below 50 for over a year.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>The chart above shows CSX Corp (CSX) with weekly bars and 25-week Aroon. First, notice that the downtrend began weakening as Aroon-Down declined below 50 at the end of 2007 (far left). The first stage of an uptrend was signaled when Aroon-Up moved above Aroon-Down in early 2008 (first orange circle). Aroon-Up continued above 50 and hit 100 as Aroon-Down remained at relatively low levels. Notice how Aroon-Up remained near 100 as the advance continued. This emerging uptrend signal lasted until September 2008 when Aroon-Down broke above Aroon-Up, exceeded 50 and surged to 100 (second orange circle). Notice how Aroon-Down remained near 100 as the downtrend extended. The third trend on this chart was signaled when Aroon-Up surged to 100 in June 2009 and remained above 50 for over a year (third orange circle). Also notice that Aroon-Down remained below 50 for over a year.
 
 **Consolidation Period**
 
@@ -1282,10 +1348,32 @@ The Aroon indicators signal a consolidation when both are below 50 and/or both a
 ```{image} ../images/aron-3-omcflat.png
 :align: center
 </code></pre></div>
+</td></tr></table>
 <p>The chart above shows Omnicom (OMC) with the Aroon indicators moving below 50 in a parallel decline. The width of the channel could be narrower, but we can see the consolidation taking shape on the price chart for confirmation. Both Aroon-Up and Aroon-Down were below 50 in the yellow area. Aroon-Up then broke out and surged to 100, which was before the breakout. Further confirmation came with another Aroon-Up surge at the breakout point. This surge/breakout signaled the end of the consolidation and the beginning of the advance.</p>
 <p>```{image} ../images/aron-4-lpntflat.png
 :align: center</p>
-<div class="highlight"><pre><span></span><code>The next chart shows Lifepoint Hospitals (LPNT) with 25-day Aroon. Both lines moved lower in May with a parallel decline. The distance between the lines was around 25 points throughout the decline. Aroon-Up and Aroon-Down flattened in June and both remained below 50 for around two weeks as the triangle consolidation extended. Aroon-Down (red) was the first to make its move with a break above 50 just before the triangle break on the price chart. Aroon-Down hit 100 as prices broke triangle support to signal a continuation lower.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>The next chart shows Lifepoint Hospitals (LPNT) with 25-day Aroon. Both lines moved lower in May with a parallel decline. The distance between the lines was around 25 points throughout the decline. Aroon-Up and Aroon-Down flattened in June and both remained below 50 for around two weeks as the triangle consolidation extended. Aroon-Down (red) was the first to make its move with a break above 50 just before the triangle break on the price chart. Aroon-Down hit 100 as prices broke triangle support to signal a continuation lower.
 
 **Conclusions**
 
@@ -1308,11 +1396,19 @@ Put an indicator file into the folder MQL4/Indicators of Data Folder;
 Restart the Metatrader 4 terminal;
 In order to insert an indicator, open the group of custom indicators in the main menu: Insert=&gt;Indicators=&gt;Custom indicator.
 </code></pre></div>
+</td></tr></table>
 <p><strong>Advantages of RSI-Bars oscillator</strong></p>
 <p>In contrast to the classical Relative Strength Index, developed by J.Wilder, RSI-Bars evaluates an internal volatility. Minimal and maximum limits of bars are constructed on the basis of 4 prices (OHLC). A calculated set is used for the selection of a minimum and maximum value of RSI-Bars. Then a bar structure is formed.</p>
 <p>```{image} ../images/rsiformula.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>An analysis of a candlestick price chart in some cases allows avoiding of a trend false breakdowns. It happens due to the account of additional price information and it internal volatility. At the same way RSI-Bars takes into account a true range of price oscillations, not only a characteristic value of a given timeframe. Due to this property, RSI-Bars allows a correct and convenient use of a chart technical analysis.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>An analysis of a candlestick price chart in some cases allows avoiding of a trend false breakdowns. It happens due to the account of additional price information and it internal volatility. At the same way RSI-Bars takes into account a true range of price oscillations, not only a characteristic value of a given timeframe. Due to this property, RSI-Bars allows a correct and convenient use of a chart technical analysis.
 
 A comparative analysis of RSI and RSI-Bars is represented on the figure below – we used H4 candlesticks of a most volatile pair, GBP/USD. As it can be seen, RSI(14) has shown and additional breakdown in contrast with RSI-Bars (14). Moreover, RSI-Bars has detected later and therefore more correct finishing of a downtrend.
 
@@ -1321,6 +1417,7 @@ The use of RSI-Bars is demonstrated in trade examples of everyday analytics rele
 ```{image} ../images/RSI-Bars.png
 :align: center
 </code></pre></div>
+</td></tr></table>
 <p><strong>Application</strong></p>
 <p>The oscillator works most efficiently in a flat motion. A lower and higher bounds of oscillator values are introduced subjectively (for example 30% and 70%) and correspond to overbought and oversold levels;</p>
 <ul>
@@ -1336,7 +1433,33 @@ The use of RSI-Bars is demonstrated in trade examples of everyday analytics rele
 Average True Range Indicator</p>
 <p>```{image} ../images/AverageTrueRange.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Average True Range Formula (ATR Calculation)**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Average True Range Formula (ATR Calculation)**
 
 Average True Range is a moving average of the True Range which is the greatest of the following three values:
 
@@ -1364,12 +1487,22 @@ Anyhow the price crossing of the Middle line from below or above may be interpre
 ```{image} ../images/BollingerBands.jpg
 :align: center
 </code></pre></div>
+</td></tr></table>
 <p><strong>Bollinger Bands Trading Strategy</strong></p>
 <p>Bollinger Bands trading strategy aims to profit from oversold or overbought conditions on the market. Prices are considered overextended on the upside when they touch the upper band (overbought). They are overextended on the downside, when they touch the lower band (oversold). This strategy is used as an immediate signal to buy or sell the security. The usage of upper and lower bands as price targets is referred to as the simplest way of using Bollinger Bands strategy. If prices cross below the average, the lower band becomes the lower price target. If the prices cross above the same average, the upper band identifies the upper price target.</p>
 <p>In a Bollinger Band trading system an uptrend is shown by prices fluctuating between upper and middle bands. In such cases if prices cross below the middle band, this warns of a trend reversal to the downside indicating a sell signal.</p>
 <p>In a downtrend, prices fluctuate between middle and lower bands, and the price crossing above the middle band warns of a trend reversal to the upside, indicating a buy signal.</p>
 <p><strong>Bollinger Bands Formula (Calculation)</strong></p>
-<div class="highlight"><pre><span></span><code>The middle line (ML) is a regular Moving Average:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>The middle line (ML) is a regular Moving Average:
 ML = SUM [CLOSE, N]/N
 The top line (TL) is ML a deviation (D) higher:
 TL = ML + (D*StdDev)
@@ -1380,6 +1513,7 @@ N — number of periods used in calculation;
 SMA — Simple Moving Average;
 StdDev — Standard Deviation.
 </code></pre></div>
+</td></tr></table>
 <h4 id="commodity-channel-indexcci">Commodity Channel Index(CCI)</h4>
 <p>The Commodity Channel Index is an indicator by Donald Lambert. Despite the original purpose to identify new trends, it’s nowadays widely used to measure the current price levels in relation to the average one.</p>
 <p><strong>How to Use CCI Indicator</strong></p>
@@ -1396,7 +1530,19 @@ StdDev — Standard Deviation.
 <p>Smaller CCI indicator period increases its sensitivity. Shifting critical levels to 200 allows to exclude insignificant price fluctuations.</p>
 <p>```{image} ../images/CommodityChannelIndex.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**CCI Trading Strategy**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**CCI Trading Strategy**
 
 CCI trading strategy is used by most traders, investors and chartists as an overbought or oversold oscillator. The basic strategy of CCI is to watch the readings above +100 and below -100. The readings above +100 are considered overbought and generate buy signals. The readings below -100 are considered oversold and generate sell signals. Though the Commodity Channel Index was initially developed for commodities, it is also used for trading stock index futures and options.
 
@@ -1410,6 +1556,7 @@ CCI = (Typical Price  -  20-period SMA of TP) / (.015 x Mean Deviation)
 Typical Price (TP) = (High + Low + Close)/3
 Constant = .015
 </code></pre></div>
+</td></tr></table>
 <p>There are four steps to calculating the Mean Deviation. First, subtract
 the most recent 20-period average of the typical price from each period's
 typical price. Second, take the absolute values of these numbers. Third,
@@ -1417,7 +1564,18 @@ sum the absolute values. Fourth, divide by the total number of periods (20).</p>
 <p>Lambert set the constant at .015 to ensure that approximately 70 to 80 percent of CCI values would fall between -100 and +100. This percentage also depends on the look-back period. A shorter CCI (10 periods) will be more volatile with a smaller percentage of values between +100 and -100. Conversely, a longer CCI (40 periods) will have a higher percentage of values between +100 and -100.</p>
 <p>```{image} ../images/cci-1-msftsheet.png
 :align: center</p>
-<div class="highlight"><pre><span></span><code>#### DeMarker(DeM)
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>#### DeMarker(DeM)
 
 This indicator was introduced by Tom DeMark as a tool to identify emerging buying and selling opportunities. It demonstrates the price depletion phases which usually correspond with the price highs and bottoms.
 
@@ -1430,15 +1588,22 @@ The indicator fluctuates with a range between 0 to 1 and is indicative of lower 
 ```{image} ../images/DeMarker.jpg
 :align: center
 </code></pre></div>
+</td></tr></table>
 <p><strong>DeMarker Indicator Formula (Calculation)</strong></p>
 <p>The DeMarker indicator is the sum of all price increment values recorded during the "i" period divided by the price minima:</p>
-<div class="highlight"><pre><span></span><code>The DeMax(i) is calculated:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>The DeMax(i) is calculated:
 If high(i) &gt; high(i-1) , then DeMax(i) = high(i)-high(i-1), otherwise DeMax(i) = 0
 The DeMin(i) is calculated:
 If low(i) &lt; low(i-1), then DeMin(i) = low(i-1)-low(i), otherwise DeMin(i) = 0
 The value of the DeMarker is calculated as:
 DMark(i) = SMA(DeMax, N)/(SMA(DeMax, N)+SMA(DeMin, N))
 </code></pre></div>
+</td></tr></table>
 <h4 id="envelopes">Envelopes</h4>
 <p>The Envelopes indicator reflects the price overbought and oversold conditions helping to identify the entry or exit points as well as possible trend break-downs.</p>
 <p><strong>How to Use Envelopes Indicator</strong></p>
@@ -1447,7 +1612,16 @@ DMark(i) = SMA(DeMax, N)/(SMA(DeMax, N)+SMA(DeMin, N))
 <p>In a ranging market the price reaching the top line serves as a sell signal, while the price at the lower line generates a signal to buy.</p>
 <p>```{image} ../images/Envelopes.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Envelopes Indicator Formula (Calculation)**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Envelopes Indicator Formula (Calculation)**
 
 ```{code}
 
@@ -1458,6 +1632,7 @@ SMA — Simple Moving Average;
 N — averaging period;
 K/1000 — the value of shifting from the average (measured in basis points).
 </code></pre></div>
+</td></tr></table>
 <h4 id="force-index">Force Index</h4>
 <p>The Force Index indicator invented by Alexander Elder measures the power behind every price move based on their three essential elements, e.g., direction, extent and volume. The oscillator fluctuates around the zero, i.e., a point of a relative balance between power shifts.</p>
 <p><strong>How to Use Force Index</strong></p>
@@ -1478,13 +1653,19 @@ K/1000 — the value of shifting from the average (measured in basis points).
 </ul>
 <p>```{image} ../images/ForceIndex.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Force Index Formula (Calculation)**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Force Index Formula (Calculation)**
 
 ```{code}
 
 Force Index(1) = {Close (current period) - Close (prior period)} x Volume
 Force Index(13) = 13-period EMA of Force Index(1)
 </code></pre></div>
+</td></tr></table>
 <h4 id="ichimoku">Ichimoku</h4>
 <p>The Ichimoku Kinko Hyo (Equilibrium chart at a glance) is a comprehensive technical analysis tool introduced in 1968 by Tokyo columnist Goichi Hosoda. The concept of the system was to provide an immediate vision of trend sentiment, momentum and strength at a glance perceiving all the Ichimoku's five components and a price in terms of interactions among them of a cyclical type related to that of human group dynamics.</p>
 <p><strong>How to Use Ichimoku Indicator</strong></p>
@@ -1524,7 +1705,28 @@ Force Index(13) = 13-period EMA of Force Index(1)
 </ul>
 <p>```{image} ../images/Ichimoku.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Ichimoku Trading Strategy**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Ichimoku Trading Strategy**
 
 Traders use the Ichimoku strategy to identify the trend. For a bullish signal this trading strategy sets three criteria. First, the trend is bullish when prices reach above the lowest line of the cloud. Second, a bullish signal triggers when prices reverse and reach above the Conversion Line. And third, the trend is bullish when the price moves below the Base Line.
 
@@ -1547,6 +1749,7 @@ Senkou Span B (Leading span B, red boundary of the cloud) is
 Chikou Span (Lagging span, green) is
 close price plotted 26 periods in the past
 </code></pre></div>
+</td></tr></table>
 <h4 id="macd">MACD</h4>
 <p>Moving-Average Convergence/Divergence Oscillator, commonly referred to as MACD indicator, is developed by Gerald Appel which is designed to reveal changes in the direction and strength of the trend by combining signals from three time series of moving average curves.</p>
 <p><strong>How to Use MACD Indicator</strong></p>
@@ -1568,7 +1771,13 @@ close price plotted 26 periods in the past
 </ul>
 <p>```{image} ../images/MACD.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**MACD Indicator Formula (MACD Calculation)**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**MACD Indicator Formula (MACD Calculation)**
 
 ```{code}
 
@@ -1576,6 +1785,7 @@ MACD line = 12-period EMA – 26-period EMA
 Signal line = 9-period EMA
 Histogram = MACD line – Signal line
 </code></pre></div>
+</td></tr></table>
 <h4 id="momentum">Momentum</h4>
 <p>Momentum Oscillator is an indicator that shows trend direction and measures how quickly the price is changing by comparing current and past prices.</p>
 <p><strong>How to Use Momentum Indicator</strong></p>
@@ -1597,12 +1807,17 @@ Histogram = MACD line – Signal line
 </ul>
 <p>```{image} ../images/Momentum.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Momentum Indicator Formula (Calculation)**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Momentum Indicator Formula (Calculation)**
 
 ```{code}
 
 Momentum = (Current close price / Lagged close price) x 100
 </code></pre></div>
+</td></tr></table>
 <h4 id="relative-vigor-indexrvi">Relative Vigor Index(RVI)</h4>
 <p>Relative Vigor Index, developed by John Ehlers, is a technical indicator designed to determine price trend direction. The underlying logic is based on the assumption that close prices tend to be higher than open prices in a bullish environment and lower in a bearish environment.</p>
 <p><strong>How to Use RVI Indicator</strong></p>
@@ -1618,13 +1833,19 @@ Momentum = (Current close price / Lagged close price) x 100
 </ul>
 <p>```{image} ../images/RVI.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Relative Vigor Index Formula (RVI Calculation)**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Relative Vigor Index Formula (RVI Calculation)**
 
 ```{code}
 
 Relative Vigor Index (1) = (Close - Open) / (High - Low)
 Relative Vigor Index (10) = 10-period SMA of Relative Vigor Index (1)
 </code></pre></div>
+</td></tr></table>
 <h4 id="relative-strenth-indexrsi">Relative Strenth Index(RSI)</h4>
 <p>Relative Strength Index is an indicator developed by Welles Wilder to assess the strength or the weakness of the current price movements and to measure the velocity of price changes by comparing price increases with its losses over a certain period.</p>
 <p><strong>How to Use RSI Indicator</strong></p>
@@ -1645,7 +1866,18 @@ Relative Vigor Index (10) = 10-period SMA of Relative Vigor Index (1)
 </ul>
 <p>```{image} ../images/RSI.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**RSI Trading Strategy**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**RSI Trading Strategy**
 
 RSI trading strategy aims to generate buy and sell signals by the horizontal lines that appear on the chart at the 70 and 30 values. As we have already mentioned above, a move under 30 indicates an oversold condition and a move above 70 signals an overbought condition.
 
@@ -1658,6 +1890,7 @@ Thus, if a trader is looking for a buying opportunity, he watches the indicator 
 RSI = 100 – 100/(1 + RS)
 RS (14) = Σ(Upward movements)/Σ(|Downward movements|)
 </code></pre></div>
+</td></tr></table>
 <h4 id="stochastic">Stochastic</h4>
 <p>Stochastic indicator is introduced by George Lane to identify price trend direction and possible reversal points by determining the place of the current close price in the most recent price range, as in a sustainable uptrend close prices tend to the higher end of the range and to the lower end in a downtrend.</p>
 <p><strong>How to Use Stochastic Oscillator</strong></p>
@@ -1683,7 +1916,22 @@ RS (14) = Σ(Upward movements)/Σ(|Downward movements|)
 </ul>
 <p>```{image} ../images/Stochastic.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Stochastic Oscillator Trading Strategy**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Stochastic Oscillator Trading Strategy**
 
 Stochastic system is based on the observation that in an uptrend closing prices tend to be near the upper end of the price range, and in a downtrend the closing prices tend to be near the lower end of the price range.
 
@@ -1700,6 +1948,7 @@ C – latest close price;
 L – the lowest price over a given period;
 H – the highest price over a given period.
 </code></pre></div>
+</td></tr></table>
 <h4 id="williams-percent-rangewprr">Williams Percent Range(WPR,%R)</h4>
 <p>Williams Percent Range (%R) is a technical indicator developed by Larry Williams to identify whether an asset is overbought or oversold and therefore to determine possible turning points. Unlike the Stochastic oscillator Williams Percent Range is a single line fluctuating on a reverse scale.</p>
 <p><strong>How to Use %R</strong></p>
@@ -1720,7 +1969,19 @@ H – the highest price over a given period.
 </ul>
 <p>```{image} ../images/Rpercent.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Williams %R Trading Strategy**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Williams %R Trading Strategy**
 
 Williams %r indicator, as already mentioned, helps to determine the points when the market is oversold or overbought. The trading rules of %R strategy are simple: buying when the market is oversold (%R reaches -80% or lower) and selling when the market is overbought (%R reaches -20% or higher).
 
@@ -1734,6 +1995,7 @@ C – latest close price;
 L – the lowest price over a given period;
 H – the highest price over a given period.
 </code></pre></div>
+</td></tr></table>
 <h3 id="trend-indicators">Trend Indicators</h3>
 <h4 id="average-directional-indexadi">Average Directional Index(ADI)</h4>
 <p>Average Directional Index (ADX) is a technical indicator developed by Welles Wilder to estimate trend strength and determine probable further price movements by comparing the difference between two consecutive lows with the difference between the highs.</p>
@@ -1751,7 +2013,22 @@ H – the highest price over a given period.
 </ul>
 <p>```{image} ../images/ADX.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**ADX Trading Strategy**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**ADX Trading Strategy**
 
 ADX trading strategy aims to identify the strongest trends and distinguish between trending and non-trending conditions.
 
@@ -1768,6 +2045,7 @@ where:
 +DI – Plus Directional Indicator;
 -DI – Minus Directional Indicator.
 </code></pre></div>
+</td></tr></table>
 <h4 id="moving-averagema">Moving Average(MA)</h4>
 <p>Moving Average is a technical analysis tool that shows average price over a given period of time, which is used to smoothen price fluctuations and therefore to determine trend direction and strength.</p>
 <p>Depending of the method of averaging, distinguish between simple moving average (SMA), smoothed moving average (SMMA) and exponential moving average (EMA).</p>
@@ -1791,7 +2069,22 @@ where:
 </ul>
 <p>```{image} ../images/MA.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Moving Average Trading Strategy**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Moving Average Trading Strategy**
 
 Moving average strategy is essentially a trend following means. Its objective is to signal the beginning of a new trend or a trend reversal. Herein, its main purpose is to track the progress of the trend and not to predict market action in the same sense that technical analysis attempts to do. By its nature, Moving Average is a follower; it follows the market telling that a new trend has begun or reversed only after the fact.
 
@@ -1808,6 +2101,7 @@ where:
 t – current period;
 K = 2 / (N + 1), N – period of averaging.
 </code></pre></div>
+</td></tr></table>
 <h4 id="sma">SMA</h4>
 <p>Generally, the term ''Moving Average'' refers to Simple Moving Average. The latter does not predict price direction; it is a lagging indicator and rather defines the current direction. It is an indicator that shows the average value of the instrument's price over a specified period of time.</p>
 <p><strong>Simple Moving Average Example</strong></p>
@@ -1829,12 +2123,17 @@ K = 2 / (N + 1), N – period of averaging.
 </ul>
 <p>```{image} ../images/OsMA.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Moving Average of Oscillator Formula (Calculation)**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Moving Average of Oscillator Formula (Calculation)**
 
 ```{code}
 
 OsMA = MACD – Signal
 </code></pre></div>
+</td></tr></table>
 <h4 id="parabolicsar">Parabolic(SAR)</h4>
 <p>Parabolic is a trend following indicator developed by Welles Wilder and designed to confirm or reject trend direction, to determine trend end, correction or flat stages as well as to indicate possible exit points. The underlying principle of the indicator can be described as “stop and reverse” (SAR).</p>
 <p><strong>How to Use Parabolic SAR</strong></p>
@@ -1853,7 +2152,16 @@ OsMA = MACD – Signal
 <p>Signal significance is determined with the use of the acceleration factor. The acceleration factor increases each time the close price is higher than its previous value in an uptrend and lower in a downtrend. It is believed that the indicator is more reliable when the price’s and the indicator’s moves are parallel and less reliable when they converge.</p>
 <p>```{image} ../images/Parabolic.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Parabolic SAR Formula (Calculation)**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Parabolic SAR Formula (Calculation)**
 
 ```{code}
 
@@ -1864,6 +2172,7 @@ P(t-1) – value in the previous period;
 AF – acceleration factor, generally rising from 0.02 to 0.2 with a step of 0.02;
 EP(t-1) – extreme price in the previous period.
 </code></pre></div>
+</td></tr></table>
 <h4 id="zigzag">ZigZag</h4>
 <p>The ZigZag feature on SharpCharts is not an indicator per se, but rather a means to filter out smaller price movements. A ZigZag set at 10% would ignore all price movements less than 10%. Only price movements greater than 10% would be shown. Filtering out smaller movements gives chartists the ability to see the forest instead of just trees. It is important to remember that the ZigZag feature has no predictive power because it draws lines base on hindsight. Any predictive power will come from applications such as Elliott Wave, price pattern analysis or indicators. Chartists can also use the ZigZag with retracements feature to identify Fibonacci retracements and projections.</p>
 <p><strong>Calculation</strong></p>
@@ -1871,22 +2180,32 @@ EP(t-1) – extreme price in the previous period.
 <p>The parameters box allows chartists to set the sensitivity of the ZigZag feature. A ZigZag with 5 in the parameter box will filter out all movements less than 5%. A ZigZag(10) will filter out movements less than 10%. If a stock traded from a reaction low of 100 to a high of 109 (+9%), there would not be a line because the move was less than 10%. If the stock advanced from a low of 100 to a high of 110 (+10%), there would be a line from 100 to 110. If the stock continued on to 112, this line would extend to 112 (100 to 112). The ZigZag would not reverse until the stock declined 10% or more from its high. From a high of 112, a stock would have to decline 11.2 points (or to a low of 100.8) to warrant another line. The chart below shows a QQQQ line chart with a 7% ZigZag. The early June bounce was ignored because it was less than 7% (black arrow). The two pullbacks in July were ignored because they were much less than 7% (red arrows).</p>
 <p>```{image} ../images/zigz-1-qqqqexam.png
 :align: center</p>
-<div class="highlight"><pre><span></span><code>Be careful with the last ZigZag line. Astute chartists will notice that the last ZigZag line is up even though QQQQ advanced just 4.13% (43.36 to 45.15). This is just a temporary line because QQQQ has yet to reach the 7% change threshold. A move to 46.40 is needed for a gain of 7%, which would then warrant a permanent ZigZag line. Should QQQQ fail to reach the 7% threshold on this bounce and then decline below 43, this temporary line would disappear and the prior ZigZag line would continue from the early August high.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Be careful with the last ZigZag line. Astute chartists will notice that the last ZigZag line is up even though QQQQ advanced just 4.13% (43.36 to 45.15). This is just a temporary line because QQQQ has yet to reach the 7% change threshold. A move to 46.40 is needed for a gain of 7%, which would then warrant a permanent ZigZag line. Should QQQQ fail to reach the 7% threshold on this bounce and then decline below 43, this temporary line would disappear and the prior ZigZag line would continue from the early August high.
 
 ```{image} ../images/zigz-2-qqqqexam.png
 :align: center
 </code></pre></div>
+</td></tr></table>
 <p><strong>Elliott Wave Counts</strong></p>
 <p>The ZigZag feature can be used to filter out small moves and make Elliott Wave counts more straight-forward. The chart below shows the S&amp;P 500 ETF with a 6% ZigZag to filter moves less than 6%. After a little trial and error, 6% was deemed the threshold of importance. An advance or decline greater than 6% was deemed significant enough to warrant a wave for an Elliott count. Keep in mind that this is just an example. The threshold and the wave count are subjective and dependent on individual preferences. Based on the 6% ZigZag, a complete cycle was identified from March 2009 until July 2010. A complete cycle consists of 8 waves, 5 up and 3 down.</p>
 <p>```{image} ../images/zigz-4-spyelliott.png
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Retracements and Projections**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Retracements and Projections**
 
 Sharpcharts users can choose between the normal “ZigZag” and “ZigZag (Retrace.).” As shown in the examples above, the normal ZigZag shows lines that move at least a specific percentage. The ZigZag (Retrace.) connects the reaction highs and lows with labels that measure the prior move. The numbers on the dotted lines reflect the difference between the current Zigzag line and the ZigZag line immediately before it. For example, the chart below shows Altera (ALTR) with the 15% ZigZag (Retrace.) feature. Three ZigZag lines have been labeled (1, 2 and 3). The dotted line connecting the low of Line 1 with the low of Line 2 shows a box with 0.638. This means Line 2 is .638 (63.8%) of Line 1. A number below 1 means the line is shorter than the prior line. The dotted line connecting the high of Line 2 with the high of Line 3 shows a box with 1.646. This means Line 3 is 1.646 (164.6%) of Line 2. A number above 1 means the line is longer than the prior line.
 
 ```{image} ../images/zigz-3-altrrretrace.png
 :align: center
 </code></pre></div>
+</td></tr></table>
 <p>As you may have guessed, seeing these lines as a percentage of the prior lines makes it possible to assess Fibonacci retracements Fibonacci projections. The August decline (Line 2) retraced around 61.8% of the June-July advance (Line 1). This is a classic Fibonacci retracement. The advance from early September to early November was 1.646 times the August decline. In this sense, the ZigZag (Retrace.) can be used to project the length of an advance. Again, 1.646 is close to the Fibonacci 1.618, which is the Golden Ratio used in many projection estimates. See our ChartSchool article for more on Fibonacci retracements.</p>
 <p><strong>Conclusions</strong></p>
 <p>The ZigZag and ZigZag (Retrace.) filter price action and do not have any predictive power. The ZigZag lines simply react when prices move a certain percentage. Chartists can apply an array of technical analysis tools to the ZigZag. Chartists can perform basic trend analysis by comparing reaction highs and lows. Chartists can also overlay the ZigZag feature to look for price patterns that might not be as visible on a normal bar or line chart. The ZigZag has a way of highlighting the important movements and ignoring the noise. When using the ZigZag feature, don't forget to measure the last line to determine if it is temporary or permanent. The last ZigZag line is temporary if the current price change is less than the ZigZag parameter. The last line is permanent when the price change is greater than or equal to the ZigZag parameter.</p>
@@ -1907,7 +2226,18 @@ Sharpcharts users can choose between the normal “ZigZag” and “ZigZag (Retr
 </ul>
 <p>```{image} ../images/AD.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Accumulation/Distribution Indicator Formula (Calculation)**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Accumulation/Distribution Indicator Formula (Calculation)**
 
 ```{code}
 
@@ -1920,6 +2250,7 @@ L – current low;
 C – close price;
 Vol – volume.
 </code></pre></div>
+</td></tr></table>
 <h4 id="money-flow-indexmfi">Money Flow Index(MFI)</h4>
 <p>Money Flow Index (MFI) is a technical indicator developed to estimate money inflow intensity into a certain asset by comparing price increases and decreases over a given period, but also taking into consideration trading volumes.
 <strong>How to Use Money Flow Index</strong></p>
@@ -1936,7 +2267,23 @@ Vol – volume.
 </ul>
 <p>```{image} ../images/MFI.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Money Flow Index Formula (Calculation)**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Money Flow Index Formula (Calculation)**
 
 ```{code}
 
@@ -1954,6 +2301,7 @@ MF – money flow (positive (MF+) if current TP &gt; previous TP, negative (MF-)
 Vol – volume;
 MR – money ratio.
 </code></pre></div>
+</td></tr></table>
 <h4 id="on-balance-volumeobv">On-Balance Volume(OBV)</h4>
 <p>On-Balance Volume (OBV) is a cumulative volume-based tool intended to show the relation between the amount of deals and asset’s price movements.</p>
 <p><strong>How to Use On Balance Volume</strong></p>
@@ -1970,7 +2318,18 @@ MR – money ratio.
 </ul>
 <p>```{image} ../images/OBV.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**On-Balance Volume Formula (Calculation)**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**On-Balance Volume Formula (Calculation)**
 
 ```{code}
 
@@ -1983,6 +2342,7 @@ t-1 – previous period;
 C – close price;
 Vol – volume.
 </code></pre></div>
+</td></tr></table>
 <h4 id="volumes">Volumes</h4>
 <p>Volume indicator is a technical analysis tool, which reflects trading activity of investors for a given time period.</p>
 <p><strong>How to Use Volume Indicator</strong></p>
@@ -1998,12 +2358,17 @@ Vol – volume.
 </ul>
 <p>```{image} ../images/Volumes.jpg
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Forex Volumes Calculation**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Forex Volumes Calculation**
 
 ```{code}
 
 Volume = total value/number of transactions during a given period.
 </code></pre></div>
+</td></tr></table>
 <h2 id="52">5.2 自动交易基础</h2>
 <p>笔者编写了一些交易脚本，包括EA和script，可访问https://github.com/lofyer/mt4-scripts进行下载。</p>
 <h2 id="53">5.3 基本分析基础</h2>
@@ -2087,7 +2452,7 @@ Volume = total value/number of transactions during a given period.
       <script>
         app = initialize({
           base: "../..",
-          features: ['navigation.tabs', 'navigation.tabs.sticky', 'navigation.sections', 'navigation.indexes', 'navigation.instant', 'search.suggest', 'search.highlight', 'search.share'],
+          features: ['navigation.tabs', 'navigation.tabs.sticky', 'navigation.sections', 'navigation.indexes', 'search.suggest', 'search.highlight', 'search.share'],
           search: Object.assign({
             worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
           }, typeof search !== "undefined" && search)

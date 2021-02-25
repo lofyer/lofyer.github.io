@@ -11,7 +11,7 @@
       
         <link rel="canonical" href="https://docs.lofyer.org/datanote/ch03/">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
@@ -29,11 +29,6 @@
     
     
     
-      
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -786,14 +781,22 @@ A game-theoretic auction model is a mathematical game represented by a set of pl
 When it is necessary to make explicit assumptions about bidders' value distributions, most of the published research assumes symmetric bidders. This means that the probability distribution from which the bidders obtain their values (or signals) is identical across bidders. In a private values model which assumes independence, symmetry implies that the bidders' values are independently and identically distributed (i.i.d.).</p>
 <p>An important example (which does not assume independence) is Milgrom and Weber's "general symmetric model" (1982).[4][5] One of the earlier published theoretical research addressing properties of auctions among asymmetric bidders is Keith Waehrer's 1999 article.[6] Later published research include Susan Athey's 2001 Econometrica article,[7] as well as Reny and Zamir (2004).[8]</p>
 <p>The first formal analysis of auctions was by William Vickrey (1961). Vickrey considers two buyers bidding for a single item. Each buyer's value, v, is an independent draw from a uniform distribution with support [0,1]. Vickrey showed that in the sealed first-price auction it is an equilibrium bidding strategy for each bidder to bid half his valuation. With more bidders, all drawing a value from the same uniform distribution it is easy to show that the symmetric equilibrium bidding strategy is</p>
-<div class="highlight"><pre><span></span><code>B(v)=\left(\frac{n-1}{n}\right)v
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>B(v)=\left(\frac{n-1}{n}\right)v
 </code></pre></div>
+</td></tr></table>
 <p><strong>Automata</strong></p>
 <p>Automata(or Automaton), is a self-operating machine, or a machine or control mechanism designed to automatically follow a predetermined sequence of operations, or respond to predetermined instructions. Some automata, such as bellstrikers in mechanical clocks, are designed to give the illusion to the casual observer that they are operating under their own power.</p>
 <p>One of the most famous is "A new kind of science" by Stephen Wolfram(founder of Wolfram Research Inc.). The writer researched lots patterns of cellular automata.</p>
 <p>```{image} ../images/Gospers_glider_gun.gif
 :align: center</p>
-<div class="highlight"><pre><span></span><code>**Bell Curves**
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>**Bell Curves**
 
 The Bell Curve: Intelligence and Class Structure in American Life is a 1994 book by psychologist Richard J. Herrnstein and political scientist Charles Murray, in which the authors argue that human intelligence is substantially influenced by both inherited and environmental factors and that it is a better predictor of many personal dynamics, including financial income, job performance, birth out of wedlock, and involvement in crime than are an individual&#39;s parental socioeconomic status. They also argue that those with high intelligence, the &quot;cognitive elite&quot;, are becoming separated from those of average and below-average intelligence. The book was controversial, especially where the authors wrote about racial differences in intelligence and discussed the implications of those differences.
 
@@ -802,6 +805,7 @@ Shortly after its publication, many people rallied both in criticism and defense
 ```{image} ../images/TheBellCurve.gif
 :align: center
 </code></pre></div>
+</td></tr></table>
 <p><strong>Collective Coorperation</strong></p>
 <p><strong>DIKW</strong></p>
 <p><strong>Entropy</strong></p>
@@ -918,7 +922,7 @@ Shortly after its publication, many people rallied both in criticism and defense
       <script>
         app = initialize({
           base: "../..",
-          features: ['navigation.tabs', 'navigation.tabs.sticky', 'navigation.sections', 'navigation.indexes', 'navigation.instant', 'search.suggest', 'search.highlight', 'search.share'],
+          features: ['navigation.tabs', 'navigation.tabs.sticky', 'navigation.sections', 'navigation.indexes', 'search.suggest', 'search.highlight', 'search.share'],
           search: Object.assign({
             worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
           }, typeof search !== "undefined" && search)
