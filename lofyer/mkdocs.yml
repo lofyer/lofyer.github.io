@@ -1,39 +1,63 @@
-site_name: My Docs
-site_url: https://lofyer.github.io
+site_name: Lofyer's Docs
+site_url: https://docs.lofyer.org
+site_author: lofyer
+# Repository
+repo_name: lofyer/lofyer.github.io
+repo_url: https://github.com/lofyer/lofyer.github.io
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2008 - 2021 lofyer
 
 nav:
   - Home: index.md
   - Blog:
     - Post1: blog/2020/10/01/blogxx.md
-  - Page1: 
-    - Page2: docs3/index.md
   - DataNote: 
     - datanote/index.md
-    - Ch01: datanote/ch01.md
-    - Ch02: datanote/ch02.md
-    - Ch03: datanote/ch03.md
-    - Ch04: datanote/ch04.md
-    - Ch05: datanote/ch05.md
-    - Ch06: datanote/ch06.md
-    - Ch07: datanote/ch07.md
-    - About: datanote/about.md
+    - 第一章 数据收集、统计: datanote/ch01.md
+    - 第二章 机器学习基础: datanote/ch02.md
+    - 第三章 ABM建模基础: datanote/ch03.md
+    - 第四章 数据处理平台: datanote/ch04.md
+    - 第五章 外汇交易基础: datanote/ch05.md
+    - 第六章 信号交易系统: datanote/ch06.md
+    - 第七章 指导白皮书: datanote/ch07.md
+    - 关于: datanote/about.md
+  - InTheCloud: 
+    - inthecloud/index.md
+    - 第一章 随便说些什么: inthecloud/ch01.md
+    - 第二章 一个可靠的存储后端: inthecloud/ch02.md
+    - 第三章 合适的虚拟化平台: inthecloud/ch03.md
+    - 第四章 数据抓取与机器学习算法: inthecloud/ch04.md
+    - 第五章 数据处理平台: inthecloud/ch05.md
+    - 附录一 OpenStack概念、部署、与高级网络应用: inthecloud/appendix01.md
+    - 附录二 公有云参考: inthecloud/appendix02.md
+    - 附录三 PaaS/OpenShif: inthecloud/appendix03.md
+    - 附录四  Docker 使用及自建repo: inthecloud/appendix04.md
+    - 附录五 常用功能运维工具: inthecloud/appendix05.md
+    - 附录六 文档参考资源以及建议书单: inthecloud/appendix06.md
+    - 待整理扩展内容: inthecloud/appendix07.md
+    - 关于作者与文档: inthecloud/about.md
+    - 《运维前线》私有云桌面网络组建草稿: inthecloud/frontline-network.md
+    - 《运维前线》虚拟化存储启动风暴草稿: inthecloud/frontline-storage.md
+
 
 theme:
   name: material
   language: zh
+  favicon: images/favicon.ico
+  font: false
   features:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
-    - navigation.instant
+    #- navigation.instant
     - search.suggest
     - search.highlight
     - search.share
 
 plugins:
-  - search:
-      prebuild_index: true
   - blog:
       folder: blog
       articles: 10
@@ -43,6 +67,15 @@ plugins:
       display-article-date: true
       pagination: "Page % of %"
       more-articles: "More articles(%)"
+  #- macros:
+  #    include_dir: snippets
+  - minify:
+      minify_html: true
+      minify_js: true
+      htmlmin_opts:
+          remove_comments: true
+  - search:
+      prebuild_index: false
 
 markdown_extensions:
   - abbr
@@ -56,22 +89,21 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      linenums: true
   - pymdownx.inlinehilite
+  - pymdownx.keys
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid-experimental
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.snippets
-  #- meta
+  - meta
 
 extra:
   disqus: lofyer
-  version:
-    provider: mike
 
 extra_javascript:
   - javascripts/config.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

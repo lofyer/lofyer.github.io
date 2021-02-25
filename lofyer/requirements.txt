@@ -5,3 +5,5 @@ pymdown-extensions>=7.0
 mkdocs-material-extensions>=1.0
 mkdocs-blog-plugin
 mike
+mkdocs-minify-plugin
+mkdocs-macros-plugin
