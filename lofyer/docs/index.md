@@ -1,17 +1,19 @@
-# Welcome to MkDocs
+# Lofyer's Docs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+???+ success "说明"
 
-## Commands
+    这个站点是我写一些长文或者系列文时候用的，里面的内容比较随意。
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+    另外，随着我年龄的增长，知识不断更新，之前写的可能也是错的，毕竟成长就是否定自己的过程。
 
-## Project layout
+博客地址 [lofyer.org](https://blog.lofyer.org){:target="_blank" }。
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+文档地址 [docs.lofyer.org](https://docs.lofyer.org)。
+
+## 当前内容
+
+1. [DataNote](/datanote)
+    * 学习代理人建模时的笔记吧，综合了很多期间应用的别的乱七八糟的知识，比如外汇、机器学习等。
+
+2. [InTheCloud](/inthecloud)
+    * 2012年刚入行到2017年间学习的笔记，已经成书了，《KVM私有云架构与实践》。

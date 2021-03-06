@@ -1,46 +1,41 @@
 site_name: Lofyer's Docs
 site_url: https://docs.lofyer.org
 site_author: lofyer
-# Repository
 repo_name: lofyer/lofyer.github.io
 repo_url: https://github.com/lofyer/lofyer.github.io
 edit_uri: ""
-
-# Copyright
 copyright: Copyright &copy; 2008 - 2021 lofyer
 
 nav:
   - Home: index.md
-  - Blog:
-    - Post1: blog/2020/10/01/blogxx.md
-  - DataNote: 
-    - datanote/index.md
-    - 第一章 数据收集、统计: datanote/ch01.md
-    - 第二章 机器学习基础: datanote/ch02.md
-    - 第三章 ABM建模基础: datanote/ch03.md
-    - 第四章 数据处理平台: datanote/ch04.md
-    - 第五章 外汇交易基础: datanote/ch05.md
-    - 第六章 信号交易系统: datanote/ch06.md
-    - 第七章 指导白皮书: datanote/ch07.md
-    - 关于: datanote/about.md
-  - InTheCloud: 
-    - inthecloud/index.md
-    - 第一章 随便说些什么: inthecloud/ch01.md
-    - 第二章 一个可靠的存储后端: inthecloud/ch02.md
-    - 第三章 合适的虚拟化平台: inthecloud/ch03.md
-    - 第四章 数据抓取与机器学习算法: inthecloud/ch04.md
-    - 第五章 数据处理平台: inthecloud/ch05.md
-    - 附录一 OpenStack概念、部署、与高级网络应用: inthecloud/appendix01.md
-    - 附录二 公有云参考: inthecloud/appendix02.md
-    - 附录三 PaaS/OpenShif: inthecloud/appendix03.md
-    - 附录四  Docker 使用及自建repo: inthecloud/appendix04.md
-    - 附录五 常用功能运维工具: inthecloud/appendix05.md
-    - 附录六 文档参考资源以及建议书单: inthecloud/appendix06.md
-    - 待整理扩展内容: inthecloud/appendix07.md
-    - 关于作者与文档: inthecloud/about.md
-    - 《运维前线》私有云桌面网络组建草稿: inthecloud/frontline-network.md
-    - 《运维前线》虚拟化存储启动风暴草稿: inthecloud/frontline-storage.md
-
+  #- ... | blog/**/*.md
+  - DataNote:
+      - datanote/index.md
+      - 第一章 数据收集、统计: datanote/ch01.md
+      - 第二章 机器学习基础: datanote/ch02.md
+      - 第三章 ABM建模基础: datanote/ch03.md
+      - 第四章 数据处理平台: datanote/ch04.md
+      - 第五章 外汇交易基础: datanote/ch05.md
+      - 第六章 信号交易系统: datanote/ch06.md
+      - 第七章 指导白皮书: datanote/ch07.md
+      - 关于: datanote/about.md
+  - InTheCloud:
+      - inthecloud/index.md
+      - 第一章 随便说些什么: inthecloud/ch01.md
+      - 第二章 一个可靠的存储后端: inthecloud/ch02.md
+      - 第三章 合适的虚拟化平台: inthecloud/ch03.md
+      - 第四章 数据抓取与机器学习算法: inthecloud/ch04.md
+      - 第五章 数据处理平台: inthecloud/ch05.md
+      - 附录一 OpenStack概念、部署、与高级网络应用: inthecloud/appendix01.md
+      - 附录二 公有云参考: inthecloud/appendix02.md
+      - 附录三 PaaS/OpenShif: inthecloud/appendix03.md
+      - 附录四  Docker 使用及自建repo: inthecloud/appendix04.md
+      - 附录五 常用功能运维工具: inthecloud/appendix05.md
+      - 附录六 文档参考资源以及建议书单: inthecloud/appendix06.md
+      - 待整理扩展内容: inthecloud/appendix07.md
+      - 关于作者与文档: inthecloud/about.md
+      - 《运维前线》私有云桌面网络组建草稿: inthecloud/frontline-network.md
+      - 《运维前线》虚拟化存储启动风暴草稿: inthecloud/frontline-storage.md
 
 theme:
   name: material
@@ -58,24 +53,28 @@ theme:
     - search.share
 
 plugins:
-  - blog:
-      folder: blog
-      articles: 10
-      format: "(%y/%m/%d)"
-      text-align: "right"
-      display-more-articles: true
-      display-article-date: true
-      pagination: "Page % of %"
-      more-articles: "More articles(%)"
-  #- macros:
-  #    include_dir: snippets
   - minify:
       minify_html: true
       minify_js: true
       htmlmin_opts:
-          remove_comments: true
+        remove_comments: true
   - search:
       prebuild_index: false
+  - awesome-pages:
+      collapse_single_pages: false
+  - mkdocs-jupyter:
+      # include_source: True
+  # - blog:
+  #     folder: blog
+  #     articles: 50
+  #     format: "(%y/%m)"
+  #     text-align: "right"
+  #     display-more-articles: true
+  #     display-article-date: true
+  #     pagination: "Page % of %"
+  #     more-articles: "More articles(%)"
+  # - macros:
+  #   include_dir: snippets
 
 markdown_extensions:
   - abbr
