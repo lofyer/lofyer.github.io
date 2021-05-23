@@ -18,6 +18,8 @@ nav:
       - 第五章 外汇交易基础: datanote/ch05.md
       - 第六章 信号交易系统: datanote/ch06.md
       - 第七章 指导白皮书: datanote/ch07.md
+      - 第八章 代理人模型: datanote/ch08.md
+      - 第八章 区块链货币套利模型: datanote/ch08.md
       - 关于: datanote/about.md
   - InTheCloud:
       - inthecloud/index.md
@@ -62,7 +64,7 @@ plugins:
       prebuild_index: false
   - awesome-pages:
       collapse_single_pages: false
-  - mkdocs-jupyter:
+  #- mkdocs-jupyter:
       # include_source: True
   # - blog:
   #     folder: blog
@@ -98,6 +100,8 @@ markdown_extensions:
           class: mermaid-experimental
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed
   - meta
 
 extra:

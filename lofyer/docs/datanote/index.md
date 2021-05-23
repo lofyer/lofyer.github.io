@@ -32,30 +32,11 @@ contain the root `toctree` directive.
 
     好久没更新了 :smile:
 
-```{image} ./images/logo.jpg
-:align: center
-
-```
+![image1](../images/datanote/logo.jpg)
 
 这里是主架构图。
+![image2](../images/datanote/infra-1.png)
 
-```{image} ./images/infra-1.png
-
-```
-
-```{toctree}
-:maxdepth: 2
-
-posts/ch01.rst
-posts/ch02.rst
-posts/ch03.rst
-posts/ch04.rst
-posts/ch05.rst
-posts/ch06.rst
-posts/ch07.rst
-posts/about.rst
-
-```
 
 TODO:
 
