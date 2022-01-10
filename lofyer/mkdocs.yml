@@ -9,6 +9,7 @@ copyright: Copyright &copy; 2008 - 2021 lofyer
 nav:
   - Home: index.md
   #- ... | blog/**/*.md
+  #- 500PX: https://500px.com.cn/lofyer
   - DataNote:
       - datanote/index.md
       - 第一章 数据收集、统计: datanote/ch01.md
@@ -19,7 +20,6 @@ nav:
       - 第六章 信号交易系统: datanote/ch06.md
       - 第七章 指导白皮书: datanote/ch07.md
       - 第八章 代理人模型: datanote/ch08.md
-      - 第八章 区块链货币套利模型: datanote/ch08.md
       - 关于: datanote/about.md
   - InTheCloud:
       - inthecloud/index.md
@@ -41,6 +41,7 @@ nav:
 
 theme:
   name: material
+  custom_dir: !ENV [THEME_DIR, "overrides/"]
   language: zh
   favicon: images/favicon.ico
   font: false
@@ -53,6 +54,15 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Light mode
 
 plugins:
   - minify:
@@ -66,10 +76,10 @@ plugins:
       collapse_single_pages: false
   #- mkdocs-jupyter:
       # include_source: True
-  # - blog:
-  #     folder: blog
+  #- blog:
+  #    folder: blog
   #     articles: 50
-  #     format: "(%y/%m)"
+  #    format: "(%y/%m/%d)"
   #     text-align: "right"
   #     display-more-articles: true
   #     display-article-date: true
@@ -86,6 +96,8 @@ markdown_extensions:
   - footnotes
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.critic
+  - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
@@ -94,6 +106,7 @@ markdown_extensions:
       linenums: true
   - pymdownx.inlinehilite
   - pymdownx.keys
+  - pymdownx.mark
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -102,6 +115,8 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tabbed
+  - pymdownx.tilde
+  #- tags
   - meta
 
 extra:

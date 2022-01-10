@@ -1,3 +1,9 @@
+---
+tags:
+    - index
+    - blog
+---
+
 # Lofyer's Docs
 
 ???+ success "说明"

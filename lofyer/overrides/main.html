@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if page and page.meta and page.meta.date %}
+    <p><small>日期: {{ page.meta.date }}</small></p>
+  {% endif %}
+  {% if page and page.meta and page.meta.categories %}
+    <p><small>分类: {{ page.meta.categories }}</small></p>
+  {% endif %}
+  {{ super() }}
+{% endblock %}
