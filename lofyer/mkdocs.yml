@@ -38,6 +38,8 @@ nav:
       - 关于作者与文档: inthecloud/about.md
       - 《运维前线》私有云桌面网络组建草稿: inthecloud/frontline-network.md
       - 《运维前线》虚拟化存储启动风暴草稿: inthecloud/frontline-storage.md
+  - WangSheng:
+      - wangsheng/index.md
 
 theme:
   name: material

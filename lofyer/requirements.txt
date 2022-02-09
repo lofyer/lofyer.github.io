@@ -9,3 +9,4 @@ mkdocs-minify-plugin
 mkdocs
 pymdown-extensions>=7.0
 mkdocs-redirects
+mkdocs-material
