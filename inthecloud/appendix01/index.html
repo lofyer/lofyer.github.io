@@ -1,13 +1,13 @@
-<!doctype html><html lang=zh class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content=lofyer><link href=https://docs.lofyer.org/inthecloud/appendix01/ rel=canonical><link rel=icon href=../../images/favicon.ico><meta name=generator content="mkdocs-1.3.0, mkdocs-material-8.2.8"><title>附录一 OpenStack概念、部署、与高级网络应用 - Lofyer's Docs</title><link rel=stylesheet href=../../assets/stylesheets/main.644de097.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.e6a45f82.min.css><script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary data-md-color-accent> <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#openstack class=md-skip> 跳转至 </a> </div> <div data-md-component=announce> </div> <header class="md-header md-header--lifted" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=页眉> <a href=../.. title="Lofyer's Docs" class="md-header__button md-logo" aria-label="Lofyer's Docs" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> Lofyer's Docs </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> 附录一 OpenStack概念、部署、与高级网络应用 </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=default data-md-color-primary data-md-color-accent aria-label="Dark mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Dark mode" for=__palette_2 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> </label> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary data-md-color-accent aria-label="Light mode" type=radio name=__palette id=__palette_2> <label class="md-header__button md-icon" title="Light mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg> </label> </form> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=搜索 placeholder=搜索 autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </label> <nav class=md-search__options aria-label=查找> <a href=javascript:void(0) class="md-search__icon md-icon" aria-label=分享 data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg> </a> <button type=reset class="md-search__icon md-icon" aria-label=清空当前内容 tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> 正在初始化搜索引擎 </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/lofyer/lofyer.github.io title=前往仓库 class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> lofyer/lofyer.github.io </div> </a> </div> </nav> <nav class=md-tabs aria-label=标签 data-md-component=tabs> <div class="md-tabs__inner md-grid"> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../.. class=md-tabs__link> Home </a> </li> <li class=md-tabs__item> <a href=../../datanote/ class=md-tabs__link> DataNote </a> </li> <li class=md-tabs__item> <a href=../ class="md-tabs__link md-tabs__link--active"> InTheCloud </a> </li> <li class=md-tabs__item> <a href=../../wangsheng/ class=md-tabs__link> WangSheng </a> </li> </ul> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted" aria-label=导航栏 data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title="Lofyer's Docs" class="md-nav__button md-logo" aria-label="Lofyer's Docs" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg> </a> Lofyer's Docs </label> <div class=md-nav__source> <a href=https://github.com/lofyer/lofyer.github.io title=前往仓库 class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> lofyer/lofyer.github.io </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. class=md-nav__link> Home </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2 type=checkbox id=__nav_2> <div class="md-nav__link md-nav__link--index "> <a href=../../datanote/ >DataNote</a> <label for=__nav_2> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav aria-label=DataNote data-md-level=1> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> DataNote </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../datanote/ch01/ class=md-nav__link> 第一章 数据收集、统计 </a> </li> <li class=md-nav__item> <a href=../../datanote/ch02/ class=md-nav__link> 第二章 机器学习基础 </a> </li> <li class=md-nav__item> <a href=../../datanote/ch03/ class=md-nav__link> 第三章 ABM建模基础 </a> </li> <li class=md-nav__item> <a href=../../datanote/ch04/ class=md-nav__link> 第四章 数据处理平台 </a> </li> <li class=md-nav__item> <a href=../../datanote/ch05/ class=md-nav__link> 第五章 外汇交易基础 </a> </li> <li class=md-nav__item> <a href=../../datanote/ch06/ class=md-nav__link> 第六章 信号交易系统 </a> </li> <li class=md-nav__item> <a href=../../datanote/ch07/ class=md-nav__link> 第七章 指导白皮书 </a> </li> <li class=md-nav__item> <a href=../../datanote/ch08/ class=md-nav__link> 第八章 代理人模型 </a> </li> <li class=md-nav__item> <a href=../../datanote/about/ class=md-nav__link> 关于 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3 type=checkbox id=__nav_3 checked> <div class="md-nav__link md-nav__link--index "> <a href=../ >InTheCloud</a> <label for=__nav_3> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav aria-label=InTheCloud data-md-level=1> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> InTheCloud </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../ch01/ class=md-nav__link> 第一章 随便说些什么 </a> </li> <li class=md-nav__item> <a href=../ch02/ class=md-nav__link> 第二章 一个可靠的存储后端 </a> </li> <li class=md-nav__item> <a href=../ch03/ class=md-nav__link> 第三章 合适的虚拟化平台 </a> </li> <li class=md-nav__item> <a href=../ch04/ class=md-nav__link> 第四章 数据抓取与机器学习算法 </a> </li> <li class=md-nav__item> <a href=../ch05/ class=md-nav__link> 第五章 数据处理平台 </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> 附录一 OpenStack概念、部署、与高级网络应用 <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> 附录一 OpenStack概念、部署、与高级网络应用 </a> <nav class="md-nav md-nav--secondary" aria-label=目录> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> 目录 </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#openstack_1 class=md-nav__link> OpenStack 部署 </a> <nav class=md-nav aria-label="OpenStack 部署"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#mirantis-fuel class=md-nav__link> Mirantis Fuel 部署 </a> </li> <li class=md-nav__item> <a href=#rdo class=md-nav__link> RDO 快速部署 </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../appendix02/ class=md-nav__link> 附录二 公有云参考 </a> </li> <li class=md-nav__item> <a href=../appendix03/ class=md-nav__link> 附录三 PaaS/OpenShif </a> </li> <li class=md-nav__item> <a href=../appendix04/ class=md-nav__link> 附录四 Docker 使用及自建repo </a> </li> <li class=md-nav__item> <a href=../appendix05/ class=md-nav__link> 附录五 常用功能运维工具 </a> </li> <li class=md-nav__item> <a href=../appendix06/ class=md-nav__link> 附录六 文档参考资源以及建议书单 </a> </li> <li class=md-nav__item> <a href=../appendix07/ class=md-nav__link> 待整理扩展内容 </a> </li> <li class=md-nav__item> <a href=../about/ class=md-nav__link> 关于作者与文档 </a> </li> <li class=md-nav__item> <a href=../frontline-network/ class=md-nav__link> 《运维前线》私有云桌面网络组建草稿 </a> </li> <li class=md-nav__item> <a href=../frontline-storage/ class=md-nav__link> 《运维前线》虚拟化存储启动风暴草稿 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_4 type=checkbox id=__nav_4> <div class="md-nav__link md-nav__link--index "> <a href=../../wangsheng/ >WangSheng</a> </div> <nav class=md-nav aria-label=WangSheng data-md-level=1> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> WangSheng </label> <ul class=md-nav__list data-md-scrollfix> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label=目录> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> 目录 </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#openstack_1 class=md-nav__link> OpenStack 部署 </a> <nav class=md-nav aria-label="OpenStack 部署"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#mirantis-fuel class=md-nav__link> Mirantis Fuel 部署 </a> </li> <li class=md-nav__item> <a href=#rdo class=md-nav__link> RDO 快速部署 </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1 id=openstack>附录一 OpenStack概念、部署、与高级网络应用</h1> <p>首先在这里我会使用RDO快速部署一个具有基本功能的OpenStack环境，如果你想要更完整的部署（比如Heat、Trove组件），可以参考 <a href=http://docs.openstack.org/icehouse/install-guide/install/yum/content>官方文档</a> 。</p> <p>也可以使用Mirantis来进行快速部署，参考 <a href=https://software.mirantis.com/ >Mirantis</a> ；StackOps部署，参考 <a href=https://www.stackops.com>StackOps</a> 。</p> <p>如果不想安装任何东西，只是在线使用的话，可以访问 <a href=http://trystack.org/ >http://trystack.org/</a> 。</p> <p>要学习更多关于OpenStack的内容，可以参考 <a href=http://www.chenshake.com/cloud-computing/ >陈沙克的日志</a> 。</p> <p>API使用请参考http://developer.openstack.org/api-ref.html 以及 <a href=http://docs.openstack.org/developer/openstack-projects.html>http://docs.openstack.org/developer/openstack-projects.html</a> 。</p> <p>关于在centos/ubuntu/debian上部署OpenStack请参考 <a href=http://www.server-world.info/en/ >Server-World</a> ，这个更新较为及时。</p> <p>笔者最近仿照Mirantis撸了一个脚本，全自动安装部署OpenStack，打算再写个Django拖拽安装。当然，要配上kubernestes部署了。请参考 <a href=https://github.com/lofyer/openstack-pxe-deployment>https://github.com/lofyer/openstack-pxe-deployment</a> 。</p> <h2 id=openstack_1>OpenStack 部署</h2> <p>在开始之前需要将这些关键组件关系理清。</p> <ul> <li>nova：提供compute服务，即保证虚拟机运行的必须服务之一，虚拟机运行于所有提供compute服务的主机之上。</li> <li>neutron：提供network服务，同时提供Open vSwitch、L3、DHCP代理服务。</li> <li>cinder：提供块存储服务，可配合swift使用。</li> <li>swift：提供对象存储服务，目录与文件皆视为对象，外部可以方便取用。</li> <li>glance：提供镜像管理服务。</li> <li>ceilometer：主要功能是监测、收集用户对资源的使用情况，以方便计费、报警等。</li> <li>heat：orchestration模块驱动服务，即从模板根据需求更改配置创建新虚拟机。</li> <li>keystone：身份认证服务。</li> <li>trove：数据库服务。</li> <li>sahara：Hadoop模块。</li> <li>ironic：提供从模板创建新应用程序。</li> </ul> <h3 id=mirantis-fuel>Mirantis Fuel 部署</h3> <p>现在国内使用Mirantis部署的人已经越来越多了，而我们同样使用它来一次快速部署。精通了Mirantis就掌握了大规模集群的部署方式，不只是OpenStack。</p> <h3 id=rdo>RDO 快速部署</h3> <p>使用 <a href=http://openstack.redhat.com/Main_Page>RDO</a> 来部署OpenStack。</p> <p>:::{note}</p> <p><strong>安装说明</strong></p> <p>在一台安装有RedHat系列（CentOS）系统上部署，将selinux置为permissive；禁用NetworkManager，启用network服务，详细配置请参考以前章节。</p> <p>如果安装失败，请查看你的CentOS或者Fedora是否为最新发行版。笔者在写时使用的是CentOS6，目前为CentOS7。</p> <p>:::</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<!doctype html><html lang=zh class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content=lofyer><link href=https://docs.lofyer.org/inthecloud/appendix01/ rel=canonical><link rel=icon href=../../images/favicon.ico><meta name=generator content="mkdocs-1.3.0, mkdocs-material-8.2.15"><title>附录一 OpenStack概念、部署、与高级网络应用 - Lofyer's Blog</title><link rel=stylesheet href=../../assets/stylesheets/main.c382b1dc.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.cc9b2e1e.min.css><script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary data-md-color-accent> <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#openstack class=md-skip> 跳转至 </a> </div> <div data-md-component=announce> </div> <header class="md-header md-header--lifted" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=页眉> <a href=../.. title="Lofyer's Blog" class="md-header__button md-logo" aria-label="Lofyer's Blog" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> Lofyer's Blog </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> 附录一 OpenStack概念、部署、与高级网络应用 </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=default data-md-color-primary data-md-color-accent aria-label="Dark mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Dark mode" for=__palette_2 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> </label> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary data-md-color-accent aria-label="Light mode" type=radio name=__palette id=__palette_2> <label class="md-header__button md-icon" title="Light mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg> </label> </form> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=搜索 placeholder=搜索 autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </label> <nav class=md-search__options aria-label=查找> <a href=javascript:void(0) class="md-search__icon md-icon" aria-label=分享 data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg> </a> <button type=reset class="md-search__icon md-icon" aria-label=清空当前内容 tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> 正在初始化搜索引擎 </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/lofyer/lofyer.github.io title=前往仓库 class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> lofyer/lofyer.github.io </div> </a> </div> </nav> <nav class=md-tabs aria-label=标签 data-md-component=tabs> <div class="md-tabs__inner md-grid"> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../.. class=md-tabs__link> Index </a> </li> <li class=md-tabs__item> <a href=../../blog/Tech/2-%E8%99%9A%E6%8B%9F%E5%8C%96%E5%B9%B3%E5%8F%B0%E9%95%9C%E5%83%8F%E5%8E%BB%E5%86%97%E6%B5%8B%E8%AF%95/ class=md-tabs__link> BlogNew（迁移中） </a> </li> <li class=md-tabs__item> <a href=../../blog/ABM/a-minimal-growth-model/ class=md-tabs__link> Blog </a> </li> <li class=md-tabs__item> <a href=../../datanote/ class="md-tabs__link md-tabs__link--active"> Docs </a> </li> <li class=md-tabs__item> <a href=../../tags/ class=md-tabs__link> Tags </a> </li> <li class=md-tabs__item> <a href=../../about/about/ class=md-tabs__link> About </a> </li> </ul> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted" aria-label=导航栏 data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title="Lofyer's Blog" class="md-nav__button md-logo" aria-label="Lofyer's Blog" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg> </a> Lofyer's Blog </label> <div class=md-nav__source> <a href=https://github.com/lofyer/lofyer.github.io title=前往仓库 class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> lofyer/lofyer.github.io </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. class=md-nav__link> Index </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2 type=checkbox id=__nav_2> <label class=md-nav__link for=__nav_2> BlogNew（迁移中） <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=BlogNew（迁移中） data-md-level=1> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> BlogNew（迁移中） </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_1 type=checkbox id=__nav_2_1> <label class=md-nav__link for=__nav_2_1> Tech <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Tech data-md-level=2> <label class=md-nav__title for=__nav_2_1> <span class="md-nav__icon md-icon"></span> Tech </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_1_1 type=checkbox id=__nav_2_1_1> <label class=md-nav__link for=__nav_2_1_1> Virtualization <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Virtualization data-md-level=3> <label class=md-nav__title for=__nav_2_1_1> <span class="md-nav__icon md-icon"></span> Virtualization </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../blog/Tech/2-%E8%99%9A%E6%8B%9F%E5%8C%96%E5%B9%B3%E5%8F%B0%E9%95%9C%E5%83%8F%E5%8E%BB%E5%86%97%E6%B5%8B%E8%AF%95/ class=md-nav__link> 虚拟化平台存储去冗余测试（OpenDedup） </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/5-%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8E%E4%BA%91%E5%B9%B3%E5%8F%B0%E8%B4%9F%E8%BD%BD%E7%9A%84%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/ class=md-nav__link> 一种基于云平台负载的非线性控制系统设计 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/6-%E5%9C%A8linux-bridge-ovs%E4%B8%AD%E4%BD%BF%E7%94%A8vxlan%E7%BB%84%E7%BD%91%E4%BB%A5%E5%8F%8A%E5%88%9B%E5%BB%BAvtep/ class=md-nav__link> 在Linux Bridge或OVS中使用VxLAN组网 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/7-%E5%9C%A8zstack%E9%9B%86%E6%88%90opendaylight/ class=md-nav__link> 在ZStack中集成OpenDayLight </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/8-%E5%9C%A8zstack%E4%B8%AD%E9%9B%86%E6%88%90openstack-neutron%E7%BB%84%E4%BB%B6/ class=md-nav__link> 在ZStack中集成Neutron组件 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/9-a-design-of-user-frontend-for-kinds-of-cloud-with-accounting/ class=md-nav__link> 一种用户账户体系的设计 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../.. class=md-nav__link> BareMetal </a> </li> <li class=md-nav__item> <a href=../.. class=md-nav__link> SDR </a> </li> <li class=md-nav__item> <a href=../.. class=md-nav__link> Network </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_1_5 type=checkbox id=__nav_2_1_5> <label class=md-nav__link for=__nav_2_1_5> Linux <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Linux data-md-level=3> <label class=md-nav__title for=__nav_2_1_5> <span class="md-nav__icon md-icon"></span> Linux </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../blog/Tech/1-%E5%A4%87%E4%BB%BD%E5%B7%A5%E5%85%B7%EF%BC%88%E8%BF%81%E4%BA%91%E5%BF%85%E5%A4%87%EF%BC%89/ class=md-nav__link> 上云的一些备份工具 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/3-%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E3%80%81raid%E7%BB%84%E4%B8%8E%E7%A1%AC%E7%9B%98iops%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/ class=md-nav__link> 存储IOPS计算速记 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/4-%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E8%AE%A1%E7%AE%97cpu%E5%88%A9%E7%94%A8%E7%8E%87%EF%BC%9F/ class=md-nav__link> 计算CPU利用率的正确方法（翻译） </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/10-a-way-to-use-git/ class=md-nav__link> 一种使用Git的方法 </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_2 type=checkbox id=__nav_2_2> <label class=md-nav__link for=__nav_2_2> ABM <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=ABM data-md-level=2> <label class=md-nav__title for=__nav_2_2> <span class="md-nav__icon md-icon"></span> ABM </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_2_1 type=checkbox id=__nav_2_2_1> <label class=md-nav__link for=__nav_2_2_1> Models <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Models data-md-level=3> <label class=md-nav__title for=__nav_2_2_1> <span class="md-nav__icon md-icon"></span> Models </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../blog/ABM/3-%E4%BA%A7%E5%93%81%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BB%B7/ class=md-nav__link> 产品如何定价的模型讨论 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_2_2 type=checkbox id=__nav_2_2_2> <label class=md-nav__link for=__nav_2_2_2> Forex <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Forex data-md-level=3> <label class=md-nav__title for=__nav_2_2_2> <span class="md-nav__icon md-icon"></span> Forex </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../blog/ABM/Forex/forex-indicator/ class=md-nav__link> 外汇指标 </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3 type=checkbox id=__nav_3> <label class=md-nav__link for=__nav_3> Blog <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Blog data-md-level=1> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> Blog </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3_1 type=checkbox id=__nav_3_1> <label class=md-nav__link for=__nav_3_1> ABM <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=ABM data-md-level=2> <label class=md-nav__title for=__nav_3_1> <span class="md-nav__icon md-icon"></span> ABM </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../blog/ABM/a-minimal-growth-model/ class=md-nav__link> A minimal growth model </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/abm-based-controller-for-openstackvmwareovirtmaybe-container/ class=md-nav__link> ABM-based Automatic System for OpenStack(VMWare/oVirt/maybe container...) </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/abm-eightfold/ class=md-nav__link> Eightfold Mapping of ABM </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/abm%E5%BB%BA%E6%A8%A1%E5%AF%BC%E8%AF%BB/ class=md-nav__link> ABM建模导读 </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/campell-law/ class=md-nav__link> Campell's Law </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/markov-model/ class=md-nav__link> Markov model </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/model-thinking-collect/ class=md-nav__link> 模型思考汇总 </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/models-diversity/ class=md-nav__link> Models Diversity </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/monty-hall-problem/ class=md-nav__link> Monty Hall Problem </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/open-source-trading-platforms-list/ class=md-nav__link> Open Source Trading Platforms List </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/the-first-attempt-to-build-an-automated-trading-system/ class=md-nav__link> The first attempt to build an automated trading and signal system </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/the-forex-quantum-trade-system-and-infrastructure/ class=md-nav__link> The Forex Quantum Trade System and Infrastructure </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/world-pre/ class=md-nav__link> 新世界 序章 流白 </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/%E5%85%B3%E4%BA%8E%E4%BA%A7%E5%93%81%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/ class=md-nav__link> 关于产品化的产品的一点思考 </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/%E5%9B%BD%E5%AE%B6%E3%80%81%E8%A1%8C%E4%B8%9A%E3%80%81%E4%BA%BA%E7%89%A9%E3%80%81%E7%8E%B0%E8%B1%A1%E4%B8%8E%E6%80%BB%E7%BB%93%E7%9A%84%E5%8E%86%E5%8F%B2%E7%9F%A5%E8%AF%86%E9%99%8D%E7%BB%B4%E6%96%B9/ class=md-nav__link> 国家、行业、人物、现象与总结的历史知识降维方法 </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3_1_16 type=checkbox id=__nav_3_1_16> <label class=md-nav__link for=__nav_3_1_16> Forex <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Forex data-md-level=3> <label class=md-nav__title for=__nav_3_1_16> <span class="md-nav__icon md-icon"></span> Forex </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../blog/ABM/Forex/agent-based-modeling-in-economics/ class=md-nav__link> Agent-Based Modeling in Economics </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/Forex/agent-based-modeling-strategy-in-forex-trading-market/ class=md-nav__link> Agent based modeling Strategy in forex trading market </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/Forex/forex-data-collection-from-histdata-and-gaincapital/ class=md-nav__link> Forex data collection and backtesting with python/netlogo </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/Forex/forex-data-ml-relationship/ class=md-nav__link> Forex Data ML Relationship </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/Forex/get-ready-for-forex/ class=md-nav__link> Get ready for forex </a> </li> <li class=md-nav__item> <a href=../../blog/ABM/Forex/%E5%9F%BA%E4%BA%8E%E5%A4%96%E6%B1%87%E5%B8%82%E5%9C%BA%E6%8A%80%E6%9C%AF%E6%8C%87%E6%A0%87%E7%9A%84abm%E5%BB%BA%E6%A8%A1/ class=md-nav__link> 基于外汇市场技术指标的ABM建模 </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3_2 type=checkbox id=__nav_3_2> <label class=md-nav__link for=__nav_3_2> Tech <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Tech data-md-level=2> <label class=md-nav__title for=__nav_3_2> <span class="md-nav__icon md-icon"></span> Tech </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../blog/Tech/add-nat-ovirt-vdsm-hooks/ class=md-nav__link> Add nat to ovirt via vdsm hooks </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/add-usbdevice-libvirt-modifying-cgroup/ class=md-nav__link> Add usbdevice to libvirt by modifying cgroup </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/all-about-curl/ class=md-nav__link> Something about curl -- Connecting IPA Server using json as an example </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/android-container-or-virtualization-on-arm-x86-server/ class=md-nav__link> ARM/X86服务器的安卓市场（虚拟化、容器） </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/arduino-io%E7%94%9F%E6%88%90%E6%B3%A2%E5%BD%A2%E7%9A%84%E9%97%AE%E9%A2%98/ class=md-nav__link> Arduino IO生成波形的问题 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/arduino/ class=md-nav__link> arduino </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/arduinocpuloadserialled/ class=md-nav__link> arduino+cpuload+serial+led </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/blockchain-based-architecture/ class=md-nav__link> Blockchain based architecture </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/boost-virtualization-performance-with-xilinx-intel-fpga/ class=md-nav__link> 使用Xilinx/Intel FPGA加速虚拟化 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/build-a-robot-assistant-with-nowadays-cloud-apis/ class=md-nav__link> Build a robot assistant with nowadays cloud apis </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/build-netlogo-for-armnvidia-jetson-nano/ class=md-nav__link> 基于ARM(NVIDIA-JETSON-NANO)编译NetLogo </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/build-your-own-nitro-smartnicfpga-arm-based-bare-metal-hypervisor/ class=md-nav__link> 动手做自己的Nitro SmartNIC(FPGA/ARM-based Bare Metal Hypervisor) </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/building-the-infrastructure-for-cloud-security/ class=md-nav__link> Building the infrastructure for cloud security </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/cloud-init-how-to/ class=md-nav__link> Cloud Init how to </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/configure-corosync-and-pacemaker/ class=md-nav__link> Configure corosync and pacemaker </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/create-dummy-vga-adpter/ class=md-nav__link> Create a dummy VGA adpter </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/deploy-asterisk-centos/ class=md-nav__link> Deploy Asterisk on CentOS </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/deploy-debug-earwar-in-intellij-ide/ class=md-nav__link> deploy & debug ovirt in the intellij ide </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/deploy-skype-for-business-server-2015/ class=md-nav__link> Deploy Skype for Business Server 2015 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/design-of-fault-tolerance-x86-server-with-fpga/ class=md-nav__link> 基于FPGA的物理机容错（FT）或者虚拟机容错设计 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/docker-using-linux-bridge/ class=md-nav__link> docker using linux bridge </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/ejabber-howto/ class=md-nav__link> use MAXS to control your device via ejabberd(plus ssh, jingle voice talk as a bonus) </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/ez430-chronos%E5%85%A5%E6%89%8B/ class=md-nav__link> eZ430-Chronos入手 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/foremanpuppetcfenginebcfg2chef-howto/ class=md-nav__link> foreman/puppet/cfengine/bcfg2/chef howto </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/gitlab-quick-deploy/ class=md-nav__link> Gitlab quick deploy </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/gpu-raspberry-pi/ class=md-nav__link> Using Gpu in Pi </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/gpupassthrough-xen/ class=md-nav__link> Gpu Passthrough in Xen </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/grafanainfluxdbcollectdtelegraf-on-rpi2/ class=md-nav__link> Grafana+InfluxDB+Collectd/Telegraf on RPi2 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/heartbeat-drbd-test-high-availability/ class=md-nav__link> Heartbeat and drbd test high availability </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/hercules-with-jason-ui/ class=md-nav__link> Hercules with Jason UI, emulator of IBM mainframe </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/home-based-hybridcloud%EF%BC%88%E5%AE%B6%E5%BA%AD%E4%BD%9C%E5%9D%8A%E5%BC%8F%E6%B7%B7%E5%90%88%E4%BA%91%EF%BC%89/ class=md-nav__link> Home-based hybridcloud（家庭作坊式混合云） </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/how-to-build-an-arm-hpc-cluster/ class=md-nav__link> 构建基于ARM的超算集群 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/how-to-resolve-the-boot-storm/ class=md-nav__link> How to solve the 'boot storm' problem: BCACHE </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/hpc-2/ class=md-nav__link> HPC增补 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/hpc-guideline-for-newbie/ class=md-nav__link> HPC入门指南 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/httpwiki-phys-ethz-chreadmesetting_up_an_ltsp_server_for_diskless_clients/ class=md-nav__link> ltsp相关 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/incrontab-howto-filesystem-status-change-notify/ class=md-nav__link> incrontab howto - filesystem status change notify </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/inspire/ class=md-nav__link> inspire设计 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/intel-igvt-g-vgpu-in-kvm-kvmgt-howto/ class=md-nav__link> Intel iGVT-g vGPU in KVM - KVMGT howto </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/intel-igvt-g-vgpu-in-xen-howto/ class=md-nav__link> Intel iGVT-g vGPU in Xen - XenGT howto </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/intergrate-owncloud-adldap/ class=md-nav__link> Intergrate owncloud with AD(LDAP) </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/ipa-server/ class=md-nav__link> IPA服务器搭建 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/kvm-perfermance-test-including-periphery-virtual-device/ class=md-nav__link> kvm perfermance test, including periphery virtual device </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/kvmgt-in-linux-4-10/ class=md-nav__link> KVMGT in Linux 4.10 - 流媒体服务器、游戏、车载大屏等场景的应用技术预研 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/leap-motion-relative/ class=md-nav__link> Leap Motion Relative </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/leapmotion-controlled-x4/ class=md-nav__link> LeapMotion controlled X4 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/leapmotion-relative/ class=md-nav__link> Leapmotion 相关 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/leapmotion-%E5%85%A5%E6%89%8B%EF%BC%8C%E6%99%92%E4%B8%80%E4%B8%8B%E5%BC%80%E7%AE%B1%E4%BB%A5%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/ class=md-nav__link> LeapMotion 入手，晒一下开箱以及基本操作 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/light-weighted-vm-webadmin/ class=md-nav__link> A light-weighted VM webadmin </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/lockunlockroot-nexus-5/ class=md-nav__link> how to lock/unlock/root nexus 5 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/lotus-howto/ class=md-nav__link> Filecoin 搭建 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/migrate-vm-esxi-ovirt/ class=md-nav__link> Migrate vm from ESXi to oVirt </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/mingw%E7%BC%96%E8%AF%91remoteviewer/ class=md-nav__link> mingw编译remoteviewer </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/myidc-everythings-traceable/ class=md-nav__link> MyIDC--Everything's traceable </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/nagiosicinga-event-handler-life-easy/ class=md-nav__link> use Foreman/Nagios/Icinga to make life easy... </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/ndk-compile-android-spiceaspice/ class=md-nav__link> Compile Android Spice(aSpice) </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/nvidia-grid-vgpu-and-kvmgt-for-kvm/ class=md-nav__link> NVIDIA GRID vGPU and KVMGT for KVM </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/nvidia-jetson-end-user-guide/ class=md-nav__link> NVIDIA Jetson使用指导 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/nvme-in-the-cloudtbd-zstack/ class=md-nav__link> NVMe in the Cloud(ZStack)，（适合）云原生的存储 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/oauth2-guide/ class=md-nav__link> OAuth2 Guide </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/openflow-openvswitch-in-openwrt/ class=md-nav__link> openflow & openvswitch in openwrt </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/openldap-kerberos-howto/ class=md-nav__link> OpenLDAP step by step how-to </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/openstack-auto-deployment-and-hosted-controller/ class=md-nav__link> OpenStack自动化部署与高可用虚拟控制节点设计 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/openstack-configure-and-api/ class=md-nav__link> Openstack 配置及其API的简单使用 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/openstack%E3%80%81opendaylight%E3%80%81%E7%A1%AC%E4%BB%B6sdn%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%9B%86%E6%88%90/ class=md-nav__link> OpenStack、OpenDayLight、硬件SDN交换机集成 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/openvpn/ class=md-nav__link> OpenVPN </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/openvswitch-howto/ class=md-nav__link> openvswitch howto </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/ovirt-notes/ class=md-nav__link> ovirt notes </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/owncloud-intergration/ class=md-nav__link> owncloud webdav intergration </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/p4-network-with-xilinx-fpga/ class=md-nav__link> Xilinx FPGA中应用P4网络数据面编程 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/pass-host-gpu-to-guest-via-qemu-ncursescurses/ class=md-nav__link> GPU Passthrough, VGA Passthrough in KVM </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/petalinux-in-qemu/ class=md-nav__link> PetaLinux/Pynq中使用QEMU（裸金属探索的路子） </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/porting-kvm-to-nvidia-jetson-nano/ class=md-nav__link> 向NVIDIA Jetson Nano中移植QEMU-KVM </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/private-cloud-design/ class=md-nav__link> 《KVM私有云架构设计与实践》目录 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/pynq-overlay-networking-test/ class=md-nav__link> Xilinx Pynq的overlay网络测试 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/qemu-3d/ class=md-nav__link> QEMU 3D </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/qemu-uefi/ class=md-nav__link> qemu uefi </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/quick-notes/ class=md-nav__link> 实用笔记 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/rex/ class=md-nav__link> Rex设计 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/rtx%E5%86%85%E6%A0%B8/ class=md-nav__link> RTX内核 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/sdn-windows-linux-baremetal/ class=md-nav__link> Windows中使用overlay网络的一些方案 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/setup-k8s-with-realtime-linux/ class=md-nav__link> 实时操作系统中应用K8S </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/slic-for-qemu-kvm/ class=md-nav__link> Slic for qemu-kvm </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/software-defined-radio-device-software-application-guide/ class=md-nav__link> 软件定义无线电（SDR）的设备、软件与应用指南 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/tcp%E5%8D%8F%E8%AE%AE%E4%B9%8B%E4%B8%8A%E7%9A%84ccnx/ class=md-nav__link> tcp协议之上的CCNx </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/tensorflow-in-netlogo-make-your-agent-more-intelligent/ class=md-nav__link> TensorFlow in NetLogo, Make Your Agent More Intelligent </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/text-terminal-history/ class=md-nav__link> All about text terminal </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/transfer-ipv6-to-ipv4-via-socat/ class=md-nav__link> transfer IPv6 to IPv4 via socat </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/unixlinuxmacos-monitor-tools/ class=md-nav__link> Unix/Linux/MacOS Monitor Tools </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/use-dhcp-or-dnsmasq-as-dhcp-server-in-libvirt-based-environment/ class=md-nav__link> Use dhcp or dnsmasq as DHCP server in libvirt-based environment </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/using-solrnutchdjango-to-build-your-own-search-engine-portal/ class=md-nav__link> Using solr+nutch+django to build your own search engine portal </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/using-x-server-in-windows-linux-subsystem/ class=md-nav__link> Using X server in Windows Linux Subsystem </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/vdsm/ class=md-nav__link> VDSM </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/vmware-vcenter-converter-sdk/ class=md-nav__link> VMWare vCenter Converter SDK </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/windows%E4%B8%AD%E4%BD%BF%E7%94%A8ebpf/ class=md-nav__link> Windows中使用eBPF </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/wrt54gs-64ram-8flash/ class=md-nav__link> wrt54g v5添加usb </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/yacy-2/ class=md-nav__link> Yacy </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/zstack-kubernetesk8sdocker-intergration/ class=md-nav__link> ZStack Kubernetes/k8s/Docker Intergration </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/zstack-openstack-api-wrapper/ class=md-nav__link> ZStack OpenStack API wrapper </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/zstackglusterfs%E8%B6%85%E8%9E%8D%E5%90%88%E6%96%B9%E6%A1%88/ class=md-nav__link> ZStack Glusterfs 超融合方案 </a> </li> <li class=md-nav__item> <a href=../../blog/Tech/%E6%95%B0%E6%8D%AE%E7%AC%94%E8%AE%B0/ class=md-nav__link> 数据笔记 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3_3 type=checkbox id=__nav_3_3> <label class=md-nav__link for=__nav_3_3> 归档 <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=归档 data-md-level=2> <label class=md-nav__title for=__nav_3_3> <span class="md-nav__icon md-icon"></span> 归档 </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3_3_1 type=checkbox id=__nav_3_3_1> <label class=md-nav__link for=__nav_3_3_1> InTheCloudDraft <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=InTheCloudDraft data-md-level=3> <label class=md-nav__title for=__nav_3_3_1> <span class="md-nav__icon md-icon"></span> InTheCloudDraft </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/5-1-1-fuse/ class=md-nav__link> 6. FUSE </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/5-2-cloud-gluster-des/ class=md-nav__link> 7. Gluster简述 </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/5-3-glusterfs-howto/ class=md-nav__link> 8. 搭建glusterfs作为基础存储 </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/5-4-gluster-trick/ class=md-nav__link> 9. glusterfs应用示例及技巧 </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/6-2-1-deploy-ovirt-admin/ class=md-nav__link> 11. 搭建oVirt虚拟化平台 </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/6-2-2-cloud-ha-ovirt/ class=md-nav__link> 12. 搭建高可用oVirt（hosted engine） </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/6-4-complete-ovirt/ class=md-nav__link> 13. 完善平台 </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/6-5-1-ovirt-shell/ class=md-nav__link> 15. ovirt-shell </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/7-1-hadoop-storm-intro/ class=md-nav__link> 21. Hadoop/Storm 介绍 </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/cloud-0-how-is-today/ class=md-nav__link> 0. 今天天气怎么样？ </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/cloud-1-nowaday/ class=md-nav__link> 1. 众说纷纭 </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/cloud-2-yummy/ class=md-nav__link> 2. 畅想吧 </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/cloud-3-arch/ class=md-nav__link> 3. 要有光 </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/cloud-4-architecture-directory/ class=md-nav__link> 4. 在云端--目录--进度 </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/cloud-5-glusterfs-story/ class=md-nav__link> 5. 分布式存储的故事 </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/cloud-6-1-ovirt-description/ class=md-nav__link> 10. oVirt简介 </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/cloud-6-5-advanced-ovirt/ class=md-nav__link> 14. oVirt使用进阶 </a> </li> <li class=md-nav__item> <a href=../../blog/%E5%BD%92%E6%A1%A3/InTheCloudDraft/cloud-minus-1-pre/ class=md-nav__link> -1. 为什么我的序号那么奇葩 </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3_4 type=checkbox id=__nav_3_4> <label class=md-nav__link for=__nav_3_4> 散文 <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=散文 data-md-level=2> <label class=md-nav__title for=__nav_3_4> <span class="md-nav__icon md-icon"></span> 散文 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/bio-hack/ class=md-nav__link> 《想当厨子的生物学家是个好黑客》观感 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/if-christmas-never-came/ class=md-nav__link> if christmas never came </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/importance-body/ class=md-nav__link> 论身体的重要性 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/living/ class=md-nav__link> Living </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/lord-land/ class=md-nav__link> 无主之地 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/paint-cat/ class=md-nav__link> 油画：猫 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/sam-haris-it-is-always-now/ class=md-nav__link> Sam Haris - It is always now </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/solace/ class=md-nav__link> Solace </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/they-are-all-gone/ class=md-nav__link> 他们都不见了 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/this-while/ class=md-nav__link> 近来 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/unite/ class=md-nav__link> Unité </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/v/ class=md-nav__link> V字仇杀队--经典台词 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E3%80%8Akvm%E7%A7%81%E6%9C%89%E4%BA%91%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5%E3%80%8B%E7%AC%AC%E4%B8%80%E7%89%88%E9%94%99%E8%AF%AF%E4%BF%AE%E8%AE%A2/ class=md-nav__link> 《KVM私有云架构设计与实践》第1版错误修订记录 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E4%B8%89%E6%9C%88%E4%BB%BD/ class=md-nav__link> 三月份 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E5%81%B6%E7%84%B6-%E5%BE%90%E5%BF%97%E6%91%A9/ class=md-nav__link> 偶然--徐志摩 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E5%86%8D%E4%B8%80%E4%B8%AA%E8%BF%91%E6%9C%9F/ class=md-nav__link> 再一个近期 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E5%90%83%E7%83%9F%E8%AE%B0/ class=md-nav__link> 吃烟记 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E5%90%8D%E4%BA%BA%E7%83%9F%E6%96%97%EF%BC%9A%E6%80%A7%E6%A0%BC%E4%B8%8E%E9%A3%8E%E9%AA%A8%E7%9A%84%E5%BB%B6%E4%BC%B8/ class=md-nav__link> 名人烟斗：性格与风骨的延伸(后附《斗友话丝》) </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E5%9B%9E%E5%AE%B6%E4%BA%86/ class=md-nav__link> 回家了 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E5%B9%B4%E7%BB%88/ class=md-nav__link> 年终 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E6%8D%A2%E4%B8%AA%E9%A6%96%E9%A1%B5/ class=md-nav__link> 设计，kvm前端，mybox </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E6%96%B0%E5%BC%80%E5%A7%8B/ class=md-nav__link> 新开始 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E6%9C%80%E8%BF%91/ class=md-nav__link> 最近 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E6%9C%AA%E5%90%8D/ class=md-nav__link> 未名 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E6%9E%81%E9%99%90%E4%B8%8E%E7%8E%B0%E5%AE%9E/ class=md-nav__link> 极限与现实 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E6%AF%95%E4%B8%9A/ class=md-nav__link> 毕业 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E6%AF%95%E4%B8%9A%E5%89%8D%E7%9A%84%E6%97%A5%E5%AD%90/ class=md-nav__link> 毕业前的日子 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E7%94%BB-%E5%A2%9E%E8%A1%A5/ class=md-nav__link> 画--增补 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E7%96%91%E6%83%91/ class=md-nav__link> 疑惑 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E8%8F%9C%E6%A0%B9%E8%B0%AD%E5%B0%8F%E8%AE%B0/ class=md-nav__link> 菜根谭小记 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E8%AE%A9dnspod%E8%A7%A3%E6%9E%90%E4%BA%86/ class=md-nav__link> 让dnspod解析了 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E8%BF%91%E6%9C%9F-2/ class=md-nav__link> 近期 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E8%BF%91%E6%9C%9F-2016-08/ class=md-nav__link> 近期-2016-08 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E8%BF%91%E6%9C%9F/ class=md-nav__link> 近期 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E8%A1%A8%E8%BE%BE/ class=md-nav__link> 这是一篇表达 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E8%BF%99%E7%A4%BE%E4%BC%9A%E8%BF%9B%E6%AD%A5%E5%BF%AB/ class=md-nav__link> 虚拟桌面中通过RDMA进行GPU跨节点调用从而加速渲染 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E9%BB%84%E9%85%92%E6%94%B6%E9%9B%86/ class=md-nav__link> 黄酒篇 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%EF%BC%88%E6%91%98%E6%8A%84%EF%BC%89/ class=md-nav__link> 黑客与画家（摘抄） </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3_4_39 type=checkbox id=__nav_3_4_39> <label class=md-nav__link for=__nav_3_4_39> Fantasy <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Fantasy data-md-level=3> <label class=md-nav__title for=__nav_3_4_39> <span class="md-nav__icon md-icon"></span> Fantasy </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/doc-dream/ class=md-nav__link> 追逐梦想的医生 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E4%BD%A0%E6%83%B3%E8%A6%81%E7%9A%84/ class=md-nav__link> 你想要的 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E4%BD%A0%E8%BF%98%E5%8F%AF%E7%88%B1%E4%B9%88/ class=md-nav__link> 你还可爱么 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E5%85%B3%E4%BA%8E%E7%BA%AA%E5%BF%B5%E6%97%A5/ class=md-nav__link> 关于纪念日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E5%86%B7%E4%BA%91-2/ class=md-nav__link> 冷云 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E5%9B%9A%E5%BE%92%E6%89%8B%E8%AE%B0/ class=md-nav__link> 囚徒手记 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E5%9B%9E%E4%B8%8D%E5%8E%BB%E5%B0%B1%E5%BE%80%E5%89%8D%E8%B5%B0/ class=md-nav__link> 回不去就往前走 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E6%83%8A%E6%A2%A6/ class=md-nav__link> 惊梦 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E6%84%A4%E6%80%92%E7%9A%84%E5%87%AF%E5%A5%87/ class=md-nav__link> 愤怒的凯奇 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E6%98%8E%E5%A4%A9/ class=md-nav__link> 明天 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E7%AC%AC%E4%B8%80%E7%AB%A0/ class=md-nav__link> 遗迹 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E7%AC%AC%E4%B8%89%E7%AB%A0-im-still-here/ class=md-nav__link> I'm still here </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%8F%98%E5%BC%82/ class=md-nav__link> 变异 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E8%88%9E%E8%80%85/ class=md-nav__link> 舞者 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E8%8D%92%E8%8A%9C%E7%9A%84%E5%BF%83%E8%BF%B9/ class=md-nav__link> 荒芜的心迹 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E8%A3%82%E7%97%95-2/ class=md-nav__link> 裂痕 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/Fantasy/%E9%A3%8E%E4%BF%A1%E5%AD%90/ class=md-nav__link> 风信子 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3_4_40 type=checkbox id=__nav_3_4_40> <label class=md-nav__link for=__nav_3_4_40> LofyerDiary <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=LofyerDiary data-md-level=3> <label class=md-nav__title for=__nav_3_4_40> <span class="md-nav__icon md-icon"></span> LofyerDiary </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/10-4/ class=md-nav__link> 2011年10月4日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/201/ class=md-nav__link> 2011年8月24日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8810%E6%97%A5/ class=md-nav__link> 2011年10月10日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8811%E6%97%A5/ class=md-nav__link> 2011年10月11日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8813%E6%97%A5/ class=md-nav__link> 2011年10月12日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8814%E6%97%A5/ class=md-nav__link> 2011年10月14日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8815%E6%97%A5/ class=md-nav__link> 2011年10月15日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8820%E6%97%A5/ class=md-nav__link> 2011年10月20日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8821%E6%97%A5/ class=md-nav__link> 2011年10月21日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8822%E6%97%A5/ class=md-nav__link> 2011年10月22日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8823%E6%97%A5/ class=md-nav__link> 2011年10月23日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8824%E6%97%A5/ class=md-nav__link> 2011年10月24日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8825%E6%97%A5/ class=md-nav__link> 2011年10月25日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8826%E6%97%A5/ class=md-nav__link> 2011年10月26日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8827%E6%97%A5/ class=md-nav__link> 2011年10月27日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8828%E6%97%A5/ class=md-nav__link> 2011年10月28日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8829%E6%97%A5/ class=md-nav__link> 2011年10月29日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%8830%E6%97%A5/ class=md-nav__link> 2011年10月30日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%883%E6%97%A5/ class=md-nav__link> 2011年10月3日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%885%E6%97%A5/ class=md-nav__link> 2011年10月5日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%886%E6%97%A5/ class=md-nav__link> 2011年10月6日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%887%E6%97%A5/ class=md-nav__link> 2011年10月7日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B410%E6%9C%888%E6%97%A5/ class=md-nav__link> 2011年10月8日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E5%B9%B420%E6%97%A5/ class=md-nav__link> 2011年11年20日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8810%E6%97%A5/ class=md-nav__link> 2011年11月10日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8811%E6%97%A5/ class=md-nav__link> 2011年11月11日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8813%E6%97%A5/ class=md-nav__link> 2011年11月13日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8814%E6%97%A5/ class=md-nav__link> 2011年11月14日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8815%E6%97%A5/ class=md-nav__link> 2011年11月15日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8816%E6%97%A5/ class=md-nav__link> 2011年11月16日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8817%E6%97%A5/ class=md-nav__link> 2011年11月17日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8819%E6%97%A5/ class=md-nav__link> 2011年11月19日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%881%E6%97%A5/ class=md-nav__link> 2011年11月1日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8821%E6%97%A5/ class=md-nav__link> 2011年11月21日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8823%E6%97%A5/ class=md-nav__link> 2011年11月23日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8824%E6%97%A5/ class=md-nav__link> 2011年11月24日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8826%E6%97%A5/ class=md-nav__link> 2011年11月26日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8827%E6%97%A5/ class=md-nav__link> 2011年11月27日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8828%E6%97%A5/ class=md-nav__link> 2011年11月28日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%8829%E6%97%A5/ class=md-nav__link> 2011年11月29日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%883%E6%97%A5/ class=md-nav__link> 2011年11月3日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%884%E6%97%A5/ class=md-nav__link> 2011年11月4日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%885%E6%97%A5/ class=md-nav__link> 2011年11月5日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%887%E6%97%A5/ class=md-nav__link> 2011年11月7日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%888%E6%97%A5/ class=md-nav__link> 2011年11月8日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B411%E6%9C%889%E6%97%A5/ class=md-nav__link> 2011年11月9日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%8811%E6%97%A5/ class=md-nav__link> 2011年12月11日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%8812%E6%97%A5/ class=md-nav__link> 2011年12月12日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%8813%E6%97%A5/ class=md-nav__link> 2011年12月13日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%8814%E6%97%A5/ class=md-nav__link> 2011年12月14日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%8815%E6%97%A5/ class=md-nav__link> 2011年12月15日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%8817%E6%97%A5/ class=md-nav__link> 2011年12月17日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%8818%E6%97%A5/ class=md-nav__link> 2011年12月18日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%881%E6%97%A5/ class=md-nav__link> 2011年12月1日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%8820%E6%97%A5/ class=md-nav__link> 2011年12月20日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%8821%E6%97%A5/ class=md-nav__link> 2011年12月21日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%8823%E6%97%A5/ class=md-nav__link> 2011年12月23日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%8826%E6%97%A5/ class=md-nav__link> 2011年12月26日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%8828%E6%97%A5/ class=md-nav__link> 2011年12月28日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%8829%E6%97%A5/ class=md-nav__link> 2011年12月29日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%883%E6%97%A5/ class=md-nav__link> 2011年12月3日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%885%E6%97%A5/ class=md-nav__link> 2011年12月5日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%886%E6%97%A5/ class=md-nav__link> 2011年12月6日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%887%E6%97%A5/ class=md-nav__link> 2011年12月7日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%888%E6%97%A5/ class=md-nav__link> 2011年12月8日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B412%E6%9C%889%E6%97%A5/ class=md-nav__link> 2011年12月9日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B41%E6%9C%884%E6%97%A5/ class=md-nav__link> 2012年1月4日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B43%E6%9C%8811%E6%97%A5/ class=md-nav__link> 2011年3月11日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B43%E6%9C%8827%E6%97%A5/ class=md-nav__link> 2012年3月27日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B44%E6%9C%8820%E6%97%A5/ class=md-nav__link> 2011年4月20日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8814/ class=md-nav__link> 2011年8月14日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8815%E6%97%A5/ class=md-nav__link> 2011年8月15日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8816%E6%97%A5/ class=md-nav__link> 2011年8月16日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8817%E6%97%A5/ class=md-nav__link> 2011年8月17日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8818%E6%97%A5/ class=md-nav__link> 2011年8月18日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8819%E6%97%A5/ class=md-nav__link> 2011年8月19日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8820%E6%97%A5/ class=md-nav__link> 2011年8月20日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8822%E6%97%A5/ class=md-nav__link> 2011年8月22日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8823%E6%97%A5/ class=md-nav__link> 2011年8月23日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8825%E6%97%A5/ class=md-nav__link> 2011年8月25日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8827%E6%97%A5/ class=md-nav__link> 2011年8月27日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8828%E6%97%A5/ class=md-nav__link> 2011年8月28日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8829%E6%97%A5/ class=md-nav__link> 2011年8月29日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8830/ class=md-nav__link> 2011年8月30 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B48%E6%9C%8831%E6%97%A5/ class=md-nav__link> 2011年8月31日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8810%E6%97%A5/ class=md-nav__link> 2011年9月10日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8812%E6%97%A5/ class=md-nav__link> 2011年9月12日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8813%E6%97%A5/ class=md-nav__link> 2011年9月13日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8814%E6%97%A5/ class=md-nav__link> 2011年9月14日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8816%E6%97%A5/ class=md-nav__link> 2011年9月16日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8817%E6%97%A5/ class=md-nav__link> 2011年9月17日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8818%E6%97%A5/ class=md-nav__link> 2011年9月18日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8821%E6%97%A5/ class=md-nav__link> 2011年9月21日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8822%E6%97%A5/ class=md-nav__link> 2011年9月22日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8824%E6%97%A5/ class=md-nav__link> 2011年9月24日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8825%E6%97%A5/ class=md-nav__link> 2011年9月25日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8826%E6%97%A5/ class=md-nav__link> 2011年9月26日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8828%E6%97%A5/ class=md-nav__link> 2011年9月28日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8829%E6%97%A5/ class=md-nav__link> 2011年9月29日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%8830%E6%97%A5/ class=md-nav__link> 2011年9月30日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%883%E6%97%A5/ class=md-nav__link> 2011年9月3日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%884%E6%97%A5/ class=md-nav__link> 2011年9月4日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%885%E6%97%A5/ class=md-nav__link> 2011年9月5日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%886%E6%97%A5-2/ class=md-nav__link> 2011年9月6日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%887%E6%97%A5/ class=md-nav__link> 2011年9月7日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2011%E5%B9%B49%E6%9C%889%E6%97%A5/ class=md-nav__link> 2011年9月9日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B410%E6%9C%8813%E6%97%A5/ class=md-nav__link> 2011年10月13日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B41%E6%9C%881%E6%97%A5/ class=md-nav__link> 2012年1月1日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B41%E6%9C%882%E6%97%A5/ class=md-nav__link> 2012年1月2日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B41%E6%9C%887%E6%97%A5/ class=md-nav__link> 2012年1月7日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B43%E6%9C%8825%E6%97%A5/ class=md-nav__link> 2012年3月25日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B43%E6%9C%8829%E6%97%A5/ class=md-nav__link> 2012年3月29日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B43%E6%9C%8830%E6%97%A5-2/ class=md-nav__link> 2012年3月30日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B43%E6%9C%884%E6%97%A5/ class=md-nav__link> 2012年3月4日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%8812%E6%97%A5/ class=md-nav__link> 2012年4月12日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%8814%E6%97%A5/ class=md-nav__link> 2012年4月14日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%8815%E6%97%A5/ class=md-nav__link> 2012年4月15日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%8817%E6%97%A5/ class=md-nav__link> 2012年4月17日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%8819%E6%97%A5/ class=md-nav__link> 2012年4月19日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%8821%E6%97%A5/ class=md-nav__link> 2012年4月21日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%8823%E6%97%A5/ class=md-nav__link> 2012年4月23日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%8824%E6%97%A5/ class=md-nav__link> 2012年4月24日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%8826%E6%97%A5/ class=md-nav__link> 2012年4月26日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%8827%E6%97%A5/ class=md-nav__link> 2012年4月27日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%8828%E6%97%A5/ class=md-nav__link> 2012年4月28日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%8830%E6%97%A5/ class=md-nav__link> 2012年4月30日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%885%E6%97%A5-2/ class=md-nav__link> 2012年4月5日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%886%E6%97%A5/ class=md-nav__link> 2012年4月6日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B44%E6%9C%889%E6%97%A5/ class=md-nav__link> 2012年4月9日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B45%E6%9C%8821%E6%97%A5/ class=md-nav__link> 2012年5月21日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B45%E6%9C%882%E6%97%A5/ class=md-nav__link> 2012年5月2日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B45%E6%9C%883%E6%97%A5/ class=md-nav__link> 2012年5月3日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B45%E6%9C%885%E6%97%A5/ class=md-nav__link> 2012年5月5日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B45%E6%9C%887%E6%97%A5/ class=md-nav__link> 2012年5月7日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2012%E5%B9%B46%E6%9C%888%E6%97%A5/ class=md-nav__link> 2012年6月8日 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2013-2014/ class=md-nav__link> 2013-2014 </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2015-roadmap/ class=md-nav__link> 2015 Roadmap </a> </li> <li class=md-nav__item> <a href=../../blog/%E6%95%A3%E6%96%87/LofyerDiary/2052%E5%B9%B412%E6%9C%882%E6%97%A5/ class=md-nav__link> 2011年8月13日 </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_4 type=checkbox id=__nav_4 checked> <label class=md-nav__link for=__nav_4> Docs <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Docs data-md-level=1> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Docs </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_4_1 type=checkbox id=__nav_4_1> <label class=md-nav__link for=__nav_4_1> DataNote <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=DataNote data-md-level=2> <label class=md-nav__title for=__nav_4_1> <span class="md-nav__icon md-icon"></span> DataNote </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../datanote/ class=md-nav__link> Index </a> </li> <li class=md-nav__item> <a href=../../datanote/ch01/ class=md-nav__link> 第一章 数据收集、统计 </a> </li> <li class=md-nav__item> <a href=../../datanote/ch02/ class=md-nav__link> 第二章 机器学习基础 </a> </li> <li class=md-nav__item> <a href=../../datanote/ch03/ class=md-nav__link> 第三章 ABM建模基础 </a> </li> <li class=md-nav__item> <a href=../../datanote/ch04/ class=md-nav__link> 第四章 数据处理平台 </a> </li> <li class=md-nav__item> <a href=../../datanote/ch05/ class=md-nav__link> 第五章 外汇交易基础 </a> </li> <li class=md-nav__item> <a href=../../datanote/ch06/ class=md-nav__link> 第六章 信号交易系统 </a> </li> <li class=md-nav__item> <a href=../../datanote/ch07/ class=md-nav__link> 第七章 指导白皮书 </a> </li> <li class=md-nav__item> <a href=../../datanote/ch08/ class=md-nav__link> 第八章 代理人模型 </a> </li> <li class=md-nav__item> <a href=../../datanote/about/ class=md-nav__link> 关于 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_4_2 type=checkbox id=__nav_4_2 checked> <label class=md-nav__link for=__nav_4_2> InTheCloud <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=InTheCloud data-md-level=2> <label class=md-nav__title for=__nav_4_2> <span class="md-nav__icon md-icon"></span> InTheCloud </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../ class=md-nav__link> Index </a> </li> <li class=md-nav__item> <a href=../ch01/ class=md-nav__link> 第一章 随便说些什么 </a> </li> <li class=md-nav__item> <a href=../ch02/ class=md-nav__link> 第二章 一个可靠的存储后端 </a> </li> <li class=md-nav__item> <a href=../ch03/ class=md-nav__link> 第三章 合适的虚拟化平台 </a> </li> <li class=md-nav__item> <a href=../ch04/ class=md-nav__link> 第四章 数据抓取与机器学习算法 </a> </li> <li class=md-nav__item> <a href=../ch05/ class=md-nav__link> 第五章 数据处理平台 </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> 附录一 OpenStack概念、部署、与高级网络应用 <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> 附录一 OpenStack概念、部署、与高级网络应用 </a> <nav class="md-nav md-nav--secondary" aria-label=目录> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> 目录 </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#openstack_1 class=md-nav__link> OpenStack 部署 </a> <nav class=md-nav aria-label="OpenStack 部署"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#mirantis-fuel class=md-nav__link> Mirantis Fuel 部署 </a> </li> <li class=md-nav__item> <a href=#rdo class=md-nav__link> RDO 快速部署 </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../appendix02/ class=md-nav__link> 附录二 公有云参考 </a> </li> <li class=md-nav__item> <a href=../appendix03/ class=md-nav__link> 附录三 PaaS/OpenShif </a> </li> <li class=md-nav__item> <a href=../appendix04/ class=md-nav__link> 附录四 Docker 使用及自建repo </a> </li> <li class=md-nav__item> <a href=../appendix05/ class=md-nav__link> 附录五 常用功能运维工具 </a> </li> <li class=md-nav__item> <a href=../appendix06/ class=md-nav__link> 附录六 文档参考资源以及建议书单 </a> </li> <li class=md-nav__item> <a href=../appendix07/ class=md-nav__link> 待整理扩展内容 </a> </li> <li class=md-nav__item> <a href=../about/ class=md-nav__link> 关于作者与文档 </a> </li> <li class=md-nav__item> <a href=../frontline-network/ class=md-nav__link> 《运维前线》私有云桌面网络组建草稿 </a> </li> <li class=md-nav__item> <a href=../frontline-storage/ class=md-nav__link> 《运维前线》虚拟化存储启动风暴草稿 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_4_3 type=checkbox id=__nav_4_3> <label class=md-nav__link for=__nav_4_3> WangSheng <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=WangSheng data-md-level=2> <label class=md-nav__title for=__nav_4_3> <span class="md-nav__icon md-icon"></span> WangSheng </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../wangsheng/ class=md-nav__link> 往生 </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../tags/ class=md-nav__link> Tags </a> </li> <li class=md-nav__item> <a href=../../about/about/ class=md-nav__link> About </a> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label=目录> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> 目录 </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#openstack_1 class=md-nav__link> OpenStack 部署 </a> <nav class=md-nav aria-label="OpenStack 部署"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#mirantis-fuel class=md-nav__link> Mirantis Fuel 部署 </a> </li> <li class=md-nav__item> <a href=#rdo class=md-nav__link> RDO 快速部署 </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1 id=openstack>附录一 OpenStack概念、部署、与高级网络应用</h1> <p>首先在这里我会使用RDO快速部署一个具有基本功能的OpenStack环境，如果你想要更完整的部署（比如Heat、Trove组件），可以参考 <a href=http://docs.openstack.org/icehouse/install-guide/install/yum/content>官方文档</a> 。</p> <p>也可以使用Mirantis来进行快速部署，参考 <a href=https://software.mirantis.com/ >Mirantis</a> ；StackOps部署，参考 <a href=https://www.stackops.com>StackOps</a> 。</p> <p>如果不想安装任何东西，只是在线使用的话，可以访问 <a href=http://trystack.org/ >http://trystack.org/</a> 。</p> <p>要学习更多关于OpenStack的内容，可以参考 <a href=http://www.chenshake.com/cloud-computing/ >陈沙克的日志</a> 。</p> <p>API使用请参考http://developer.openstack.org/api-ref.html 以及 <a href=http://docs.openstack.org/developer/openstack-projects.html>http://docs.openstack.org/developer/openstack-projects.html</a> 。</p> <p>关于在centos/ubuntu/debian上部署OpenStack请参考 <a href=http://www.server-world.info/en/ >Server-World</a> ，这个更新较为及时。</p> <p>笔者最近仿照Mirantis撸了一个脚本，全自动安装部署OpenStack，打算再写个Django拖拽安装。当然，要配上kubernestes部署了。请参考 <a href=https://github.com/lofyer/openstack-pxe-deployment>https://github.com/lofyer/openstack-pxe-deployment</a> 。</p> <h2 id=openstack_1>OpenStack 部署</h2> <p>在开始之前需要将这些关键组件关系理清。</p> <ul> <li>nova：提供compute服务，即保证虚拟机运行的必须服务之一，虚拟机运行于所有提供compute服务的主机之上。</li> <li>neutron：提供network服务，同时提供Open vSwitch、L3、DHCP代理服务。</li> <li>cinder：提供块存储服务，可配合swift使用。</li> <li>swift：提供对象存储服务，目录与文件皆视为对象，外部可以方便取用。</li> <li>glance：提供镜像管理服务。</li> <li>ceilometer：主要功能是监测、收集用户对资源的使用情况，以方便计费、报警等。</li> <li>heat：orchestration模块驱动服务，即从模板根据需求更改配置创建新虚拟机。</li> <li>keystone：身份认证服务。</li> <li>trove：数据库服务。</li> <li>sahara：Hadoop模块。</li> <li>ironic：提供从模板创建新应用程序。</li> </ul> <h3 id=mirantis-fuel>Mirantis Fuel 部署</h3> <p>现在国内使用Mirantis部署的人已经越来越多了，而我们同样使用它来一次快速部署。精通了Mirantis就掌握了大规模集群的部署方式，不只是OpenStack。</p> <h3 id=rdo>RDO 快速部署</h3> <p>使用 <a href=http://openstack.redhat.com/Main_Page>RDO</a> 来部署OpenStack。</p> <p>:::{note}</p> <p><strong>安装说明</strong></p> <p>在一台安装有RedHat系列（CentOS）系统上部署，将selinux置为permissive；禁用NetworkManager，启用network服务，详细配置请参考以前章节。</p> <p>如果安装失败，请查看你的CentOS或者Fedora是否为最新发行版。笔者在写时使用的是CentOS6，目前为CentOS7。</p> <p>:::</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
 <span class=normal>4</span>
-<span class=normal>5</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># yum install -y http://rdo.fedorapeople.org/rdo-release.rpm
+<span class=normal>5</span></pre></div></td><td class=code><div><pre><span></span><code># yum install -y http://rdo.fedorapeople.org/rdo-release.rpm
 # yum install -y epel-release
 # yum update -y
 # yum install -y openstack-packstack
 # packstack --allinone
-</code></pre></div> </td></tr></table> <p>请耐心等待，以上过程预计花费一到两小时。有关此次部署的详细信息，在安装完成后可以看到：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>请耐心等待，以上过程预计花费一到两小时。有关此次部署的详细信息，在安装完成后可以看到：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -18,7 +18,7 @@
 <span class=normal> 9</span>
 <span class=normal>10</span>
 <span class=normal>11</span>
-<span class=normal>12</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>**** Installation completed successfully ******
+<span class=normal>12</span></pre></div></td><td class=code><div><pre><span></span><code>**** Installation completed successfully ******
 
 Additional information:
 * A new answerfile was created in: /root/packstack-answers-20140730-110621.txt
@@ -30,7 +30,7 @@ Please, find your login credentials stored in the keystonerc_admin in your home 
 * Because of the kernel update the host 192.168.2.160 requires reboot.
 * The installation log file is available at: /var/tmp/packstack/20140730-110621-upxlZJ/openstack-setup.log
 * The generated manifests are available at: /var/tmp/packstack/20140730-110621-upxlZJ/manifests
-</code></pre></div> </td></tr></table> <p>可修改 <em>/root/packstack-answers-20140730-110621.txt</em> 内容以 <a href=http://openstack.redhat.com/Adding_a_compute_node>增加计算节点</a> ；同理可增加网络节点（待实验）。</p> <p>:::{note}</p> <p>假如更换了admin/demo/services的密码，不要忘记在此配置文件中将其修改为新密码。</p> <h1 id=packstack-answer-filerootpackstack-answers-20140730-110621txt>packstack --answer-file=/root/packstack-answers-20140730-110621.txt</h1> <p>:::</p> <h4 id=_1>添加计算节点</h4> <h4 id=neutron>使用Neutron网络</h4> <h3 id=_2>分步详细部署</h3> <p>CentOS 7以及Ubuntu等发行版部署OpenStack的过程基本一致，在此以CentOS 7示例。</p> <h4 id=_3>机器准备</h4> <p>控制节点：controller0(192.168.77.50)</p> <p>计算节点：controller0(192.168.77.50)，compute0(192.168.77.51)</p> <p>网络节点：neutron0(192.168.77.30)</p> <p>存储节点：cinder0(192.168.77.60)，swift0(192.168.77.70)，swift-stor0(192.168.77.71)，swift-stor1(192.168.77.72)，swift-stor2(192.168.77.73)</p> <p>Heat节点：heat0(192.168.77.80)</p> <p>每台机器首先将selinux设置为permissive或者disable、打开ssh服务、禁用防火墙（可安装iptables-services服务，关闭firewalld，iptables -F后再service iptables save）、关闭NetworkManager服务、打开network服务并配置IP。</p> <p>:::{note}</p> <p>bash_rc文件用例</p> <p>bash_rc文件比如os_bootstrap、admin_keystone，其中os_bootstrap用于创建基本keystone服务使用，admin_keystone为创建的admin用户。</p> <p>:::</p> <p>:::{note}</p> <p>认证服务</p> <p>OpenStack中的keystone服务负责绝大部分authentication的工作，其中属于service组的用户（nova、glance）也是基于keystone认证的，所以不要认为service中的服务仅仅是一个服务而已。</p> <p>:::</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>可修改 <em>/root/packstack-answers-20140730-110621.txt</em> 内容以 <a href=http://openstack.redhat.com/Adding_a_compute_node>增加计算节点</a> ；同理可增加网络节点（待实验）。</p> <p>:::{note}</p> <p>假如更换了admin/demo/services的密码，不要忘记在此配置文件中将其修改为新密码。</p> <h1 id=packstack-answer-filerootpackstack-answers-20140730-110621txt>packstack --answer-file=/root/packstack-answers-20140730-110621.txt</h1> <p>:::</p> <h4 id=_1>添加计算节点</h4> <h4 id=neutron>使用Neutron网络</h4> <h3 id=_2>分步详细部署</h3> <p>CentOS 7以及Ubuntu等发行版部署OpenStack的过程基本一致，在此以CentOS 7示例。</p> <h4 id=_3>机器准备</h4> <p>控制节点：controller0(192.168.77.50)</p> <p>计算节点：controller0(192.168.77.50)，compute0(192.168.77.51)</p> <p>网络节点：neutron0(192.168.77.30)</p> <p>存储节点：cinder0(192.168.77.60)，swift0(192.168.77.70)，swift-stor0(192.168.77.71)，swift-stor1(192.168.77.72)，swift-stor2(192.168.77.73)</p> <p>Heat节点：heat0(192.168.77.80)</p> <p>每台机器首先将selinux设置为permissive或者disable、打开ssh服务、禁用防火墙（可安装iptables-services服务，关闭firewalld，iptables -F后再service iptables save）、关闭NetworkManager服务、打开network服务并配置IP。</p> <p>:::{note}</p> <p>bash_rc文件用例</p> <p>bash_rc文件比如os_bootstrap、admin_keystone，其中os_bootstrap用于创建基本keystone服务使用，admin_keystone为创建的admin用户。</p> <p>:::</p> <p>:::{note}</p> <p>认证服务</p> <p>OpenStack中的keystone服务负责绝大部分authentication的工作，其中属于service组的用户（nova、glance）也是基于keystone认证的，所以不要认为service中的服务仅仅是一个服务而已。</p> <p>:::</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -39,7 +39,7 @@ Please, find your login credentials stored in the keystonerc_admin in your home 
 <span class=normal> 7</span>
 <span class=normal> 8</span>
 <span class=normal> 9</span>
-<span class=normal>10</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># cat os_bootstrap
+<span class=normal>10</span></pre></div></td><td class=code><div><pre><span></span><code># cat os_bootstrap
 export SERVICE_TOKEN=admin
 export SERVICE_ENDPOINT=http://192.168.77.50:35357/v2.0/
 
@@ -49,7 +49,7 @@ export OS_PASSWORD=admin
 export OS_TENANT_NAME=admin
 export OS_AUTH_URL=http://localhost:35357/v2.0/
 export PS1=&#39;[\u@\h \W(keystone)]\$ &#39;
-</code></pre></div> </td></tr></table> <h4 id=_4>初始化控制节点</h4> <p>在控制节点controller0，配置源、数据库、RabbitMQ、Memcached。</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h4 id=_4>初始化控制节点</h4> <p>在控制节点controller0，配置源、数据库、RabbitMQ、Memcached。</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -126,7 +126,7 @@ export PS1=&#39;[\u@\h \W(keystone)]\$ &#39;
 <span class=normal>75</span>
 <span class=normal>76</span>
 <span class=normal>77</span>
-<span class=normal>78</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~]# yum -y install http://repos.fedorapeople.org/repos/openstack/openstack-kilo/rdo-release-kilo.rpm epel-release
+<span class=normal>78</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~]# yum -y install http://repos.fedorapeople.org/repos/openstack/openstack-kilo/rdo-release-kilo.rpm epel-release
 [root@controller0 ~]# yum install -y galera mariadb-galera-server rabbitmq-server memcached
 [root@controller0 ~]# systemctl start mariadb
 [root@controller0 ~]# systemctl enable mariadb
@@ -204,7 +204,7 @@ Remove test database and access to it? [Y/n] y
 
 # 重置rabbitmq密码
 [root@controller0 ~]# rabbitmqctl change_password guest password
-</code></pre></div> </td></tr></table> <h4 id=keystone>配置KeyStone</h4> <h5 id=keystone_1>初始化Keystone</h5> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h4 id=keystone>配置KeyStone</h4> <h5 id=keystone_1>初始化Keystone</h5> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -226,7 +226,7 @@ Remove test database and access to it? [Y/n] y
 <span class=normal>20</span>
 <span class=normal>21</span>
 <span class=normal>22</span>
-<span class=normal>23</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 安装keystone
+<span class=normal>23</span></pre></div></td><td class=code><div><pre><span></span><code># 安装keystone
 [root@controller0 ~]# yum install -y openstack-keystone openstack-utils
 # 添加数据库
 [root@controller0 ~]# mysql -u root -p
@@ -249,7 +249,7 @@ MariaDB [(none)]&gt; flush privileges;
 Query OK, 0 rows affected (0.00 sec)
 MariaDB [(none)]&gt; exit
 Bye
-</code></pre></div> </td></tr></table> <h5 id=keystone_2>配置keystone</h5> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h5 id=keystone_2>配置keystone</h5> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -276,7 +276,7 @@ Bye
 <span class=normal>25</span>
 <span class=normal>26</span>
 <span class=normal>27</span>
-<span class=normal>28</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~]# vi /etc/keystone/keystone.conf
+<span class=normal>28</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~]# vi /etc/keystone/keystone.conf
 
 # line 13:  超级管理员密码为admin，此密码仅供设置keystone，在生产环境中应该禁用
 admin_token=admin
@@ -304,14 +304,14 @@ cert_subject=/C=CN/ST=Di/L=Jiang/O=InTheCloud/CN=controller0.lofyer.org
 [root@controller0 ~]# rm /var/log/keystone/keystone.log
 [root@controller0 ~]# systemctl start openstack-keystone
 [root@controller0 ~]# systemctl enable openstack-keystone
-</code></pre></div> </td></tr></table> <h5 id=endpoint>添加用户、角色、服务与endpoint</h5> <p>将超级管理员配置保存到文件，方便以后管理：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+</code></pre></div></td></tr></table></div> <h5 id=endpoint>添加用户、角色、服务与endpoint</h5> <p>将超级管理员配置保存到文件，方便以后管理：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
-<span class=normal>4</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~]# cat os_bootstrap
+<span class=normal>4</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~]# cat os_bootstrap
 export SERVICE_TOKEN=admin
 export SERVICE_ENDPOINT=http://192.168.77.50:35357/v2.0/
 [root@controller0 ~]# source os_bootstrap
-</code></pre></div> </td></tr></table> <p>添加admin及service的tenant组：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>添加admin及service的tenant组：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -337,7 +337,7 @@ export SERVICE_ENDPOINT=http://192.168.77.50:35357/v2.0/
 <span class=normal>24</span>
 <span class=normal>25</span>
 <span class=normal>26</span>
-<span class=normal>27</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~]# keystone tenant-create --name admin --description &quot;Admin Tenant&quot; --enabled true
+<span class=normal>27</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~]# keystone tenant-create --name admin --description &quot;Admin Tenant&quot; --enabled true
   +-------------+----------------------------------+
   |   Property  |              Value               |
   +-------------+----------------------------------+
@@ -364,7 +364,7 @@ export SERVICE_ENDPOINT=http://192.168.77.50:35357/v2.0/
   | c0c4e7b797bb41798202b55872fba074 |  admin  |   True  |
   | 9acf83020ae34047b6f1e320c352ae44 | service |   True  |
   +----------------------------------+---------+---------+
-</code></pre></div> </td></tr></table> <p>创建角色：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>创建角色：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -389,7 +389,7 @@ export SERVICE_ENDPOINT=http://192.168.77.50:35357/v2.0/
 <span class=normal>23</span>
 <span class=normal>24</span>
 <span class=normal>25</span>
-<span class=normal>26</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 创建admin角色
+<span class=normal>26</span></pre></div></td><td class=code><div><pre><span></span><code># 创建admin角色
 [root@controller0 ~]# keystone role-create --name admin
   +----------+----------------------------------+
   | Property |              Value               |
@@ -415,7 +415,7 @@ export SERVICE_ENDPOINT=http://192.168.77.50:35357/v2.0/
   | 9fe2ff9ee4384b1894a90878d3e92bab | _member_ |
   | 95c4b8fb8d97424eb52a4e8a00a357e7 |  admin   |
   +----------------------------------+----------+
-</code></pre></div> </td></tr></table> <p>添加用户并赋予角色：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>添加用户并赋予角色：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -455,7 +455,7 @@ export SERVICE_ENDPOINT=http://192.168.77.50:35357/v2.0/
 <span class=normal>38</span>
 <span class=normal>39</span>
 <span class=normal>40</span>
-<span class=normal>41</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 添加admin用户至admin组，此处的密码仅仅是admin用户密码，与之前的admin_token可以不同
+<span class=normal>41</span></pre></div></td><td class=code><div><pre><span></span><code># 添加admin用户至admin组，此处的密码仅仅是admin用户密码，与之前的admin_token可以不同
 [root@controller0 ~]# keystone user-create --tenant admin --name admin --pass admin --enabled true
   +----------+----------------------------------+
   | Property |              Value               |
@@ -496,7 +496,7 @@ export SERVICE_ENDPOINT=http://192.168.77.50:35357/v2.0/
   | username |               nova               |
   +----------+----------------------------------+
 [root@controller0 ~]# keystone user-role-add --user nova --tenant service --role admin
-</code></pre></div> </td></tr></table> <p>添加服务：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>添加服务：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -536,7 +536,7 @@ export SERVICE_ENDPOINT=http://192.168.77.50:35357/v2.0/
 <span class=normal>38</span>
 <span class=normal>39</span>
 <span class=normal>40</span>
-<span class=normal>41</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~]# keystone service-create --name=keystone --type=identity --description=&quot;Keystone Identity Service&quot;
+<span class=normal>41</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~]# keystone service-create --name=keystone --type=identity --description=&quot;Keystone Identity Service&quot;
   +-------------+----------------------------------+
   |   Property  |              Value               |
   +-------------+----------------------------------+
@@ -577,7 +577,7 @@ export SERVICE_ENDPOINT=http://192.168.77.50:35357/v2.0/
   | b3ea5d31edce4c10b3b4c18359de0d09 | keystone | identity | Keystone Identity Service |
   | 80edb3d3914644c4b0570fd8d8dabdaa |   nova   | compute  |    Nova Compute Service   |
   +----------------------------------+----------+----------+---------------------------+
-</code></pre></div> </td></tr></table> <p>添加endpoint：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>添加endpoint：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -637,7 +637,7 @@ export SERVICE_ENDPOINT=http://192.168.77.50:35357/v2.0/
 <span class=normal>58</span>
 <span class=normal>59</span>
 <span class=normal>60</span>
-<span class=normal>61</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~]# export my_host=192.168.77.50
+<span class=normal>61</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~]# export my_host=192.168.77.50
 
 # 添加keystone的endpoint
 [root@controller0 ~]# keystone endpoint-create --region RegionOne \
@@ -698,7 +698,7 @@ keystone endpoint-create --region RegionOne \
   | 194b7ddd24c94a0ebf79cd7275478dfc | RegionOne | http://192.168.77.50:$(compute_port)s/v2/$(tenant_id)s | http://192.168.77.50:$(compute_port)s/v2/$(tenant_id)s | http://192.168.77.50:$(compute_port)s/v2/$(tenant_id)s | 80edb3d3914644c4b0570fd8d8dabdaa |
   | 975ff2836b264e299c669372076666ee | RegionOne |              http://192.168.77.50:9292/v1              |              http://192.168.77.50:9292/v1              |              http://192.168.77.50:9292/v1              | 6afe8a067e2945fca023f85c7760ae53 |
   +----------------------------------+-----------+--------------------------------------------------------+--------------------------------------------------------+--------------------------------------------------------+----------------------------------+
-</code></pre></div> </td></tr></table> <h4 id=glance>配置Glance</h4> <h5 id=glance_1>初始化glance</h5> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h4 id=glance>配置Glance</h4> <h5 id=glance_1>初始化glance</h5> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -721,7 +721,7 @@ keystone endpoint-create --region RegionOne \
 <span class=normal>21</span>
 <span class=normal>22</span>
 <span class=normal>23</span>
-<span class=normal>24</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 安装glance
+<span class=normal>24</span></pre></div></td><td class=code><div><pre><span></span><code># 安装glance
 [root@controller0 ~]# yum install -y openstack-glance
 
 # 初始化数据库
@@ -745,7 +745,7 @@ MariaDB [(none)]&gt; flush privileges;
 Query OK, 0 rows affected (0.00 sec)
 MariaDB [(none)]&gt; exit
 Bye
-</code></pre></div> </td></tr></table> <h5 id=glance_2>配置glance</h5> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h5 id=glance_2>配置glance</h5> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -785,7 +785,7 @@ Bye
 <span class=normal>38</span>
 <span class=normal>39</span>
 <span class=normal>40</span>
-<span class=normal>41</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~]# vi /etc/glance/glance-registry.conf
+<span class=normal>41</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~]# vi /etc/glance/glance-registry.conf
 
 # line 165: database
 connection=mysql://glance:password@localhost/glance
@@ -826,7 +826,7 @@ flavor=keystone
 systemctl start openstack-glance-$service
 systemctl enable openstack-glance-$service
 done
-</code></pre></div> </td></tr></table> <h4 id=nova>配置Nova</h4> <h5 id=nova_1>初始化nova</h5> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h4 id=nova>配置Nova</h4> <h5 id=nova_1>初始化nova</h5> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -846,7 +846,7 @@ done
 <span class=normal>18</span>
 <span class=normal>19</span>
 <span class=normal>20</span>
-<span class=normal>21</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~]# yum install -y openstack-nova
+<span class=normal>21</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~]# yum install -y openstack-nova
 [root@controller0 ~]# mysql -u root -p
 Enter password:
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
@@ -867,7 +867,7 @@ MariaDB [(none)]&gt; flush privileges;
 Query OK, 0 rows affected (0.00 sec)
 MariaDB [(none)]&gt; exit
 Bye
-</code></pre></div> </td></tr></table> <h5 id=nova_2>配置nova</h5> <p>基本配置：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h5 id=nova_2>配置nova</h5> <p>基本配置：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -912,7 +912,7 @@ Bye
 <span class=normal>43</span>
 <span class=normal>44</span>
 <span class=normal>45</span>
-<span class=normal>46</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~]# mv /etc/nova/nova.conf /etc/nova/nova.conf.org
+<span class=normal>46</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~]# mv /etc/nova/nova.conf /etc/nova/nova.conf.org
 [root@controller0 ~]# vi /etc/nova/nova.conf
 # 新建以下内容
 [DEFAULT]
@@ -958,7 +958,7 @@ admin_tenant_name=service
 signing_dir=/var/lib/nova/keystone-signing
 [root@controller0 ~]# chmod 640 /etc/nova/nova.conf
 [root@controller0 ~]# chgrp nova /etc/nova/nova.conf
-</code></pre></div> </td></tr></table> <p>接下来配置network服务，虽然nova-network并不是官方推荐的配置，但是它配置较为简单，所以在此仍然写出，可待后来 {ref}<code>neutron</code> 时再修改或则直接略过（注意服务以及配置文件）：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>接下来配置network服务，虽然nova-network并不是官方推荐的配置，但是它配置较为简单，所以在此仍然写出，可待后来 {ref}<code>neutron</code> 时再修改或则直接略过（注意服务以及配置文件）：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -992,7 +992,7 @@ signing_dir=/var/lib/nova/keystone-signing
 <span class=normal>32</span>
 <span class=normal>33</span>
 <span class=normal>34</span>
-<span class=normal>35</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~]# vi /etc/nova/nova.conf
+<span class=normal>35</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~]# vi /etc/nova/nova.conf
 # 在DEFAULT段中添加如下内容
 # nova-network
 network_driver=nova.network.linux_net
@@ -1027,7 +1027,7 @@ EOF
 # 加载dummy模块，用于虚拟机内网流量路由
 [root@controller0 ~]# echo &quot;alias dummy0 dummy&quot; &gt; /etc/modprobe.d/dummy.conf
 [root@controller0 ~]# ifconfig dummy0 up
-</code></pre></div> </td></tr></table> <p>启用服务，如果没用使用nova-network，请忽略数组中的network</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>启用服务，如果没用使用nova-network，请忽略数组中的network</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -1043,7 +1043,7 @@ EOF
 <span class=normal>14</span>
 <span class=normal>15</span>
 <span class=normal>16</span>
-<span class=normal>17</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~]# nova-manage db sync
+<span class=normal>17</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~]# nova-manage db sync
 [root@controller0 ~]# for service in api objectstore conductor scheduler cert consoleauth compute network; do
 systemctl start openstack-nova-$service
 systemctl enable openstack-nova-$service
@@ -1060,7 +1060,7 @@ done
 | 5  | nova-compute     | controller0 | nova     | enabled | up    | 2015-06-19T01:40:14.000000 | -               |
 | 6  | nova-network     | controller0 | internal | enabled | up    | 2015-06-19T01:40:15.000000 | -               |
 +----+------------------+-------------+----------+---------+-------+----------------------------+-----------------+
-</code></pre></div> </td></tr></table> <h5 id=_5>添加镜像</h5> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h5 id=_5>添加镜像</h5> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -1075,7 +1075,7 @@ done
 <span class=normal>13</span>
 <span class=normal>14</span>
 <span class=normal>15</span>
-<span class=normal>16</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 以admin用户认证
+<span class=normal>16</span></pre></div></td><td class=code><div><pre><span></span><code># 以admin用户认证
 [root@controller0 ~]# cat ~/admin_keystone
 export OS_USERNAME=admin
 export OS_PASSWORD=admin
@@ -1091,7 +1091,7 @@ export PS1=&#39;[\u@\h \W(keystone)]\$ &#39;
 | ID | Name | Disk Format | Container Format | Size | Status |
 +----+------+-------------+------------------+------+--------+
 +----+------+-------------+------------------+------+--------+
-</code></pre></div> </td></tr></table> <p>导入之前已经创建好的镜像：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>导入之前已经创建好的镜像：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -1119,7 +1119,7 @@ export PS1=&#39;[\u@\h \W(keystone)]\$ &#39;
 <span class=normal>26</span>
 <span class=normal>27</span>
 <span class=normal>28</span>
-<span class=normal>29</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~(keystone)]# glance image-create --name=&quot;centos7&quot; --is-public=true --disk-format=qcow2 --container-format=bare &lt; rhel7.0.qcow2
+<span class=normal>29</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~(keystone)]# glance image-create --name=&quot;centos7&quot; --is-public=true --disk-format=qcow2 --container-format=bare &lt; rhel7.0.qcow2
 +------------------+--------------------------------------+
 | Property         | Value                                |
 +------------------+--------------------------------------+
@@ -1148,7 +1148,7 @@ export PS1=&#39;[\u@\h \W(keystone)]\$ &#39;
 +--------------------------------------+---------+-------------+------------------+-------------+--------+
 | 7f1f376c-0dff-44a3-87e8-d13883f795fc | centos7 | qcow2       | bare             | 21478375424 | active |
 +--------------------------------------+---------+-------------+------------------+-------------+--------+
-</code></pre></div> </td></tr></table> <h5 id=nova-network>配置Nova Network（可选）</h5> <p>如果使用nova-network请参考此处，否则请忽略：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>  1</span>
+</code></pre></div></td></tr></table></div> <h5 id=nova-network>配置Nova Network（可选）</h5> <p>如果使用nova-network请参考此处，否则请忽略：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>  1</span>
 <span class=normal>  2</span>
 <span class=normal>  3</span>
 <span class=normal>  4</span>
@@ -1256,7 +1256,7 @@ export PS1=&#39;[\u@\h \W(keystone)]\$ &#39;
 <span class=normal>106</span>
 <span class=normal>107</span>
 <span class=normal>108</span>
-<span class=normal>109</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 以admin用户认证
+<span class=normal>109</span></pre></div></td><td class=code><div><pre><span></span><code># 以admin用户认证
 [root@controller0 ~]# cat ~/admin_keystone
 export OS_USERNAME=admin
 export OS_PASSWORD=admin
@@ -1365,7 +1365,7 @@ None    10.0.0.254  None    nova    eno16777736
 +--------------------------------------+------------+--------+------------+-------------+--------------------------------------------+
 | a0cae25e-4629-48da-a054-99aed02baff9 | centos7iso | BUILD  | spawning   | NOSTATE     | neutron01=10.1.0.2, 10.0.0.249, 10.0.0.250 |
 +--------------------------------------+------------+--------+------------+-------------+--------------------------------------------+
-</code></pre></div> </td></tr></table> <h4 id=horizon>配置Horizon</h4> <p>添加web界面。</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h4 id=horizon>配置Horizon</h4> <p>添加web界面。</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -1391,7 +1391,7 @@ None    10.0.0.254  None    nova    eno16777736
 <span class=normal>24</span>
 <span class=normal>25</span>
 <span class=normal>26</span>
-<span class=normal>27</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 安装必需包
+<span class=normal>27</span></pre></div></td><td class=code><div><pre><span></span><code># 安装必需包
 [root@controller0 ~(keystone)]# yum --enablerepo=openstack-juno,epel -y install openstack-dashboard openstack-nova-novncproxy
 
 # 配置vnc
@@ -1418,7 +1418,7 @@ OPENSTACK_HOST = &quot;192.168.77.50&quot;
 [root@controller0 ~(keystone)]# systemctl restart httpd
 [root@controller0 ~(keystone)]# systemctl enable openstack-nova-novncproxy
 [root@controller0 ~(keystone)]# systemctl enable httpd
-</code></pre></div> </td></tr></table> <h4 id=_6>添加计算节点</h4> <p>现在开始加入第二个计算节点compute0：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h4 id=_6>添加计算节点</h4> <p>现在开始加入第二个计算节点compute0：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -1460,7 +1460,7 @@ OPENSTACK_HOST = &quot;192.168.77.50&quot;
 <span class=normal>40</span>
 <span class=normal>41</span>
 <span class=normal>42</span>
-<span class=normal>43</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 安装必需包
+<span class=normal>43</span></pre></div></td><td class=code><div><pre><span></span><code># 安装必需包
 [root@compute0 ~]# yum install -y openstack-nova-compute openstack-nova-api openstack-nova-network
 
 # 配置nova
@@ -1503,7 +1503,7 @@ signing_dir=/var/lib/nova/keystone-signing
 
 [root@compute0 ~]# chmod 640 /etc/nova/nova.conf
 [root@compute0 ~]# chgrp nova /etc/nova/nova.conf
-</code></pre></div> </td></tr></table> <p>配置nova-network：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>配置nova-network：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -1526,7 +1526,7 @@ signing_dir=/var/lib/nova/keystone-signing
 <span class=normal>21</span>
 <span class=normal>22</span>
 <span class=normal>23</span>
-<span class=normal>24</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~]# vi /etc/nova/nova.conf
+<span class=normal>24</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~]# vi /etc/nova/nova.conf
 # 在DEFAULT段中添加如下内容
 # nova-network
 network_driver=nova.network.linux_net
@@ -1550,7 +1550,7 @@ flat_network_bridge=br100
 flat_interface=dummy0
 # 如果需要自动floating-ip
 auto_assign_floating_ip=true
-</code></pre></div> </td></tr></table> <p>启动服务，如果不需要nova-network请同样省略数组中的network：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>启动服务，如果不需要nova-network请同样省略数组中的network：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -1560,7 +1560,7 @@ auto_assign_floating_ip=true
 <span class=normal> 8</span>
 <span class=normal> 9</span>
 <span class=normal>10</span>
-<span class=normal>11</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@compute0 ~]# for service in metadata-api compute network; do systemctl start openstack-nova-$service; systemctl enable openstack-nova-$service; done
+<span class=normal>11</span></pre></div></td><td class=code><div><pre><span></span><code>[root@compute0 ~]# for service in metadata-api compute network; do systemctl start openstack-nova-$service; systemctl enable openstack-nova-$service; done
 [root@compute0 ~]# nova-manage service list
 Binary           Host                                 Zone             Status     State Updated_At
 nova-conductor   controller0                          internal         enabled    :-)   2015-06-19 05:31:48
@@ -1571,7 +1571,7 @@ nova-compute     controller0                          nova             enabled  
 nova-network     controller0                          internal         enabled    :-)   2015-06-19 05:31:44
 nova-compute     compute0                             nova             enabled    :-)   2015-06-19 05:31:50
 nova-network     compute0                             internal         enabled    :-)   2015-06-19 05:31:51
-</code></pre></div> </td></tr></table> <p>(id14)=</p> <h4 id=neutron_1>配置Neutron（推荐）</h4> <p>如果已经安装上面的顺序（排除nova-networking）配置下来，现在应该有两个计算节点了。</p> <p>那么我们的配置如下：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>(id14)=</p> <h4 id=neutron_1>配置Neutron（推荐）</h4> <p>如果已经安装上面的顺序（排除nova-networking）配置下来，现在应该有两个计算节点了。</p> <p>那么我们的配置如下：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -1584,7 +1584,7 @@ nova-network     compute0                             internal         enabled  
 <span class=normal>11</span>
 <span class=normal>12</span>
 <span class=normal>13</span>
-<span class=normal>14</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>+------------------+               |               +------------------------+
+<span class=normal>14</span></pre></div></td><td class=code><div><pre><span></span><code>+------------------+               |               +------------------------+
 | [ contoller0   ] |               |               |     [  neutron0  ]     |
 |     Keystone     |192.168.77.50  |  192.168.77.30|        DHCP Agent      |
 |      Glance      |---------------+---------------|        L3 Agent        |
@@ -1598,7 +1598,7 @@ nova-network     compute0                             internal         enabled  
                         |    Nova Compute    |
                         |      L2 Agent      |
                         +--------------------+
-</code></pre></div> </td></tr></table> <h5 id=controller0>控制节点controller0配置</h5> <p>安装neutron</p> <p>neutron依赖于各种插件（openvswitch、linuxbridge等），我们在此使用openvswitch。</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>  1</span>
+</code></pre></div></td></tr></table></div> <h5 id=controller0>控制节点controller0配置</h5> <p>安装neutron</p> <p>neutron依赖于各种插件（openvswitch、linuxbridge等），我们在此使用openvswitch。</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>  1</span>
 <span class=normal>  2</span>
 <span class=normal>  3</span>
 <span class=normal>  4</span>
@@ -1757,7 +1757,7 @@ nova-network     compute0                             internal         enabled  
 <span class=normal>157</span>
 <span class=normal>158</span>
 <span class=normal>159</span>
-<span class=normal>160</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 安装neutron
+<span class=normal>160</span></pre></div></td><td class=code><div><pre><span></span><code># 安装neutron
 [root@controller0 ~(keystone)]# yum install -y openstack-neutron openstack-neutron-ml2
 
 # 初始化数据库
@@ -1917,7 +1917,7 @@ admin_password = servicepassword
 [root@controller0 ~(keystone)]# systemctl start neutron-server
 [root@controller0 ~(keystone)]# systemctl enable neutron-server
 [root@controller0 ~(keystone)]# systemctl restart openstack-nova-api
-</code></pre></div> </td></tr></table> <h5 id=neutron0>网络节点neutron0配置</h5> <p>在节点neutron0上，我们进行如下配置。</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h5 id=neutron0>网络节点neutron0配置</h5> <p>在节点neutron0上，我们进行如下配置。</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -2008,7 +2008,7 @@ admin_password = servicepassword
 <span class=normal>89</span>
 <span class=normal>90</span>
 <span class=normal>91</span>
-<span class=normal>92</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 安装必需包
+<span class=normal>92</span></pre></div></td><td class=code><div><pre><span></span><code># 安装必需包
 [root@neutron0 ~]# yum install openstack-neutron openstack-neutron-ml2 openstack-neutron-openvswitch
 
 # 打开ip_forward
@@ -2100,7 +2100,7 @@ firewall_driver = neutron.agent.linux.iptables_firewall.OVSHybridIptablesFirewal
 systemctl start neutron-$service
 systemctl enable neutron-$service
 done
-</code></pre></div> </td></tr></table> <h5 id=compute0>计算节点compute0配置</h5> <p>在除controller0的另一个计算节点compute0上，我们进行如下配置。</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h5 id=compute0>计算节点compute0配置</h5> <p>在除controller0的另一个计算节点compute0上，我们进行如下配置。</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -2185,7 +2185,7 @@ done
 <span class=normal>83</span>
 <span class=normal>84</span>
 <span class=normal>85</span>
-<span class=normal>86</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 安装必需包
+<span class=normal>86</span></pre></div></td><td class=code><div><pre><span></span><code># 安装必需包
 [root@compute0 ~]# yum install -y openstack-neutron openstack-neutron-ml2 openstack-neutron-openvswitch
 
 # 调节rp_filter
@@ -2271,7 +2271,7 @@ vif_plugging_timeout=0
 [root@compute0 ~]# systemctl restart openstack-nova-metadata-api
 [root@compute0 ~]# systemctl start neutron-openvswitch-agent
 [root@compute0 ~]# systemctl enable neutron-openvswitch-agent
-</code></pre></div> </td></tr></table> <h5 id=neutron_2>使用Neutron</h5> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h5 id=neutron_2>使用Neutron</h5> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -2294,7 +2294,7 @@ vif_plugging_timeout=0
 <span class=normal>21</span>
 <span class=normal>22</span>
 <span class=normal>23</span>
-<span class=normal>24</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>  +-------------+                    +----+----+
+<span class=normal>24</span></pre></div></td><td class=code><div><pre><span></span><code>  +-------------+                    +----+----+
   | Name Server |                    | Gateway |
   +------+------+                    +----+----+
          |192.168.77.2                    |192.168.77.2
@@ -2318,7 +2318,7 @@ vif_plugging_timeout=0
                               +----------------------+                         +-----------------+
 
   其中，controller0、compute0都有两个物理网口，neutron0有三个物理网口。
-</code></pre></div> </td></tr></table> <p>修改控制节点配置：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+</code></pre></div></td></tr></table></div> <p>修改控制节点配置：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
 <span class=normal>4</span>
@@ -2326,7 +2326,7 @@ vif_plugging_timeout=0
 <span class=normal>6</span>
 <span class=normal>7</span>
 <span class=normal>8</span>
-<span class=normal>9</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~(keystone)]# vi /etc/neutron/plugins/ml2/ml2_conf.ini
+<span class=normal>9</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~(keystone)]# vi /etc/neutron/plugins/ml2/ml2_conf.ini
 # line 64
 [ml2_type_vlan]
 network_vlan_ranges = physnet1:1000:2999
@@ -2335,7 +2335,7 @@ network_vlan_ranges = physnet1:1000:2999
 tenant_network_type = vlan
 bridge_mappings = physnet1:br-eth1
 [root@controller0 ~(keystone)]# systemctl restart neutron-server
-</code></pre></div> </td></tr></table> <p>在网络节点和计算节点同时添加eth1作内网：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>在网络节点和计算节点同时添加eth1作内网：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -2347,7 +2347,7 @@ bridge_mappings = physnet1:br-eth1
 <span class=normal>10</span>
 <span class=normal>11</span>
 <span class=normal>12</span>
-<span class=normal>13</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 添加一个桥
+<span class=normal>13</span></pre></div></td><td class=code><div><pre><span></span><code># 添加一个桥
 [root@neutron0 ~]# ovs-vsctl add-br br-eth1
 # 将eno33554984网口附加到桥，即对应eth1
 [root@neutron0 ~]# ovs-vsctl add-port br-eth1 eno33554984
@@ -2360,20 +2360,20 @@ network_vlan_ranges = physnet1:1000:2999
 tenant_network_type = vlan
 bridge_mappings = physnet1:br-eth1
 [root@neutron0 ~]# systemctl restart neutron-openvswitch-agent
-</code></pre></div> </td></tr></table> <p>在网络节点添加eth2作外网：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+</code></pre></div></td></tr></table></div> <p>在网络节点添加eth2作外网：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
 <span class=normal>4</span>
 <span class=normal>5</span>
 <span class=normal>6</span>
-<span class=normal>7</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@neutron0 ~]# ovs-vsctl add-br br-ext
+<span class=normal>7</span></pre></div></td><td class=code><div><pre><span></span><code>[root@neutron0 ~]# ovs-vsctl add-br br-ext
 # eno50332208对应eth2
 [root@neutron0 ~]# ovs-vsctl add-port br-ext eno50332208
 [root@neutron0 ~]# vi /etc/neutron/l3_agent.ini
 # line 63
 external_network_bridge = br-ext
 [root@neutron0 ~]# systemctl restart neutron-l3-agent
-</code></pre></div> </td></tr></table> <p>在任意节点修改（neutron的配置属于集群全局配置，此处在控制节点修改，其他节点也可）：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>  1</span>
+</code></pre></div></td></tr></table></div> <p>在任意节点修改（neutron的配置属于集群全局配置，此处在控制节点修改，其他节点也可）：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>  1</span>
 <span class=normal>  2</span>
 <span class=normal>  3</span>
 <span class=normal>  4</span>
@@ -2562,7 +2562,7 @@ external_network_bridge = br-ext
 <span class=normal>187</span>
 <span class=normal>188</span>
 <span class=normal>189</span>
-<span class=normal>190</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># create a virtual router
+<span class=normal>190</span></pre></div></td><td class=code><div><pre><span></span><code># create a virtual router
 [root@controller0 ~(keystone)]# neutron router-create router01
 Created a new router:
 +-----------------------+--------------------------------------+
@@ -2752,7 +2752,7 @@ Associated floating IP da8eef0d-5bc8-488e-8fd4-0c6df1f5922a
 | tcp         | 22        | 22      | 0.0.0.0/0 |              |
 | icmp        | -1        | -1      | 0.0.0.0/0 |              |
 +-------------+-----------+---------+-----------+--------------+
-</code></pre></div> </td></tr></table> <h4 id=cinder>配置Cinder</h4> <p>结构图如下：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h4 id=cinder>配置Cinder</h4> <p>结构图如下：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -2762,7 +2762,7 @@ Associated floating IP da8eef0d-5bc8-488e-8fd4-0c6df1f5922a
 <span class=normal> 8</span>
 <span class=normal> 9</span>
 <span class=normal>10</span>
-<span class=normal>11</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>                                         +------------------+
+<span class=normal>11</span></pre></div></td><td class=code><div><pre><span></span><code>                                         +------------------+
                             192.168.77.60|   [ cinder0 ]    |
 +------------------+               +-----+   Cinder-Volume  |
 | [ controller0 ]  |               | eth0|                  |
@@ -2773,7 +2773,7 @@ Associated floating IP da8eef0d-5bc8-488e-8fd4-0c6df1f5922a
 +------------------+               +-----+   Nova Compute   |
                             192.168.77.51|                  |
                                          +------------------+
-</code></pre></div> </td></tr></table> <p>控制节点初始化Cinder信息：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>  1</span>
+</code></pre></div></td></tr></table></div> <p>控制节点初始化Cinder信息：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>  1</span>
 <span class=normal>  2</span>
 <span class=normal>  3</span>
 <span class=normal>  4</span>
@@ -2907,7 +2907,7 @@ Associated floating IP da8eef0d-5bc8-488e-8fd4-0c6df1f5922a
 <span class=normal>132</span>
 <span class=normal>133</span>
 <span class=normal>134</span>
-<span class=normal>135</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 安装Cinder服务
+<span class=normal>135</span></pre></div></td><td class=code><div><pre><span></span><code># 安装Cinder服务
 [root@controller0 ~(keystone)]# yum install -y openstack-cinder
 
 # 配置keystone，添加endpoint
@@ -3042,7 +3042,7 @@ done
 [root@controller0 ~(keystone)]# cinder-manage service list
 Binary           Host                                 Zone             Status     State Updated At
 cinder-scheduler controller0                          nova             enabled    :-)   None
-</code></pre></div> </td></tr></table> <p>配置Cinder节点：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>配置Cinder节点：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -3095,7 +3095,7 @@ cinder-scheduler controller0                          nova             enabled  
 <span class=normal>51</span>
 <span class=normal>52</span>
 <span class=normal>53</span>
-<span class=normal>54</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 安装Cinder服务
+<span class=normal>54</span></pre></div></td><td class=code><div><pre><span></span><code># 安装Cinder服务
 [root@cinder0 ~(keystone)]# yum install -y openstack-cinder
 [root@cinder0 ~]# mv /etc/cinder/cinder.conf /etc/cinder/cinder.conf.org
 [root@cinder0 ~]# vi /etc/cinder/cinder.conf
@@ -3149,7 +3149,7 @@ ln -s &#39;/usr/lib/systemd/system/openstack-cinder-volume.service&#39; &#39;/et
 Binary           Host                                 Zone             Status     State Updated At
 cinder-scheduler controller0                          nova             enabled    :-)   2015-07-21 03:29:39
 cinder-volume    cinder0                              nova             enabled    :-)   None
-</code></pre></div> </td></tr></table> <h5 id=lvm>配置LVM后端</h5> <p>存储节点配置</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h5 id=lvm>配置LVM后端</h5> <p>存储节点配置</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -3207,7 +3207,7 @@ cinder-volume    cinder0                              nova             enabled  
 <span class=normal>56</span>
 <span class=normal>57</span>
 <span class=normal>58</span>
-<span class=normal>59</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 创建PV
+<span class=normal>59</span></pre></div></td><td class=code><div><pre><span></span><code># 创建PV
 [root@cinder0 ~]# pvcreate /dev/sdb
   Physical volume &quot;/dev/sdb&quot; successfully created
 [root@cinder0 ~]# pvcreate /dev/sdb1
@@ -3266,16 +3266,16 @@ iscsi_protocol = iscsi
 
 # 重启服务
 [root@cinder0 ~]# systemctl restart openstack-cinder-volume
-</code></pre></div> </td></tr></table> <p>计算节点配置，在所有计算节点中都要配置</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+</code></pre></div></td></tr></table></div> <p>计算节点配置，在所有计算节点中都要配置</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
 <span class=normal>4</span>
-<span class=normal>5</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~]# vi /etc/nova/nova.conf
+<span class=normal>5</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~]# vi /etc/nova/nova.conf
 # add follows into [DEFAULT] section
 osapi_volume_listen=0.0.0.0
 volume_api_class=nova.volume.cinder.API
 [root@controller0 ~]# systemctl restart openstack-nova-compute
-</code></pre></div> </td></tr></table> <p>创建测试磁盘</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>创建测试磁盘</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -3312,7 +3312,7 @@ volume_api_class=nova.volume.cinder.API
 <span class=normal>35</span>
 <span class=normal>36</span>
 <span class=normal>37</span>
-<span class=normal>38</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 在任意计算节点中都可执行cinder命令创建磁盘
+<span class=normal>38</span></pre></div></td><td class=code><div><pre><span></span><code># 在任意计算节点中都可执行cinder命令创建磁盘
 [root@controller0 ~]# echo &quot;export OS_VOLUME_API_VERSION=2&quot; &gt;&gt; ~/keystonerc
 [root@controller0 ~]# source admin_keystone
 [root@controller0 ~(keystone)]# cinder create --display_name disk01 10
@@ -3350,7 +3350,7 @@ volume_api_class=nova.volume.cinder.API
 +--------------------------------------+-----------+--------+------+-------------+----------+-------------+
 | 7a974afe-a71a-479f-b63d-b208daae1707 | available | disk01 |  10  |     None    |  false   |             |
 +--------------------------------------+-----------+--------+------+-------------+----------+-------------+
-</code></pre></div> </td></tr></table> <p>存储节点上查看</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>存储节点上查看</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -3366,7 +3366,7 @@ volume_api_class=nova.volume.cinder.API
 <span class=normal>14</span>
 <span class=normal>15</span>
 <span class=normal>16</span>
-<span class=normal>17</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@cinder0 ~]# lvdisplay
+<span class=normal>17</span></pre></div></td><td class=code><div><pre><span></span><code>[root@cinder0 ~]# lvdisplay
   --- Logical volume ---
   LV Path                /dev/vg_volume01/volume-7a974afe-a71a-479f-b63d-b208daae1707
   LV Name                volume-7a974afe-a71a-479f-b63d-b208daae1707
@@ -3383,7 +3383,7 @@ volume_api_class=nova.volume.cinder.API
   Read ahead sectors     auto
   - currently set to     8192
   Block device           253:0
-</code></pre></div> </td></tr></table> <p>计算节点上附加磁盘到虚拟机</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>计算节点上附加磁盘到虚拟机</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -3401,7 +3401,7 @@ volume_api_class=nova.volume.cinder.API
 <span class=normal>16</span>
 <span class=normal>17</span>
 <span class=normal>18</span>
-<span class=normal>19</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~(keystone)]# nova list
+<span class=normal>19</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~(keystone)]# nova list
 +----------------+----------+---------+------------+-------------+-----------------------+
 | ID             | Name     | Status  | Task State | Power State | Networks              |
 +----------------+----------+---------+------------+-------------+-----------------------+
@@ -3420,7 +3420,7 @@ volume_api_class=nova.volume.cinder.API
 
 # the status of attached disk turns &quot;in-use&quot; like follows
 [root@controller0 ~(keystone)]# cinder list
-</code></pre></div> </td></tr></table> <h5 id=nfsglusterfs>配置NFS、Glusterfs混合后端</h5> <p>此处使用NFS、Glusterfs混合后端，也可根据实际需求添加LVM后端或者使用三者之一。</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h5 id=nfsglusterfs>配置NFS、Glusterfs混合后端</h5> <p>此处使用NFS、Glusterfs混合后端，也可根据实际需求添加LVM后端或者使用三者之一。</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -3436,7 +3436,7 @@ volume_api_class=nova.volume.cinder.API
 <span class=normal>14</span>
 <span class=normal>15</span>
 <span class=normal>16</span>
-<span class=normal>17</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>                                          +------------------+                +------------------+
+<span class=normal>17</span></pre></div></td><td class=code><div><pre><span></span><code>                                          +------------------+                +------------------+
                              192.168.77.60|   [ cinder0 ]    |  192.168.77.100|                  |
 +------------------+                +-----+   Cinder-Volume  |     +----------+   GlusterFS #1   |
 |  [ controller0 ] |                | eth0|                  |     |      eth0| gfs01.lofyer.org |
@@ -3453,7 +3453,7 @@ volume_api_class=nova.volume.cinder.API
                                                                    +----------+        NFS       |
                                                                 192.168.77.110|  nfs.lofyer.org  |
                                                                               +------------------+
-</code></pre></div> </td></tr></table> <p>存储节点配置</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>存储节点配置</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -3483,7 +3483,7 @@ volume_api_class=nova.volume.cinder.API
 <span class=normal>28</span>
 <span class=normal>29</span>
 <span class=normal>30</span>
-<span class=normal>31</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 安装软件包
+<span class=normal>31</span></pre></div></td><td class=code><div><pre><span></span><code># 安装软件包
 [root@cinder0 ~]# yum -y install nfs-utils glusterfs glusterfs
 
 # 修改cinder配置
@@ -3514,14 +3514,14 @@ gfs01.lofyer.org:/vol_replica
 [root@cinder0 ~]# chmod 640 /etc/cinder/glusterfs_shares
 [root@cinder0 ~]# chgrp cinder /etc/cinder/glusterfs_shares
 [root@cinder0 ~]# systemctl restart openstack-cinder-volume
-</code></pre></div> </td></tr></table> <p>计算节点配置，所有计算节点都要配置</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+</code></pre></div></td></tr></table></div> <p>计算节点配置，所有计算节点都要配置</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
 <span class=normal>4</span>
 <span class=normal>5</span>
 <span class=normal>6</span>
 <span class=normal>7</span>
-<span class=normal>8</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 安装软件包
+<span class=normal>8</span></pre></div></td><td class=code><div><pre><span></span><code># 安装软件包
 [root@controller0 ~]# yum --enablerepo=epel -y install nfs-utils glusterfs glusterfs-fuse
 [root@controller0 ~]# vi /etc/nova/nova.conf
 # 于DEFAULT段中添加
@@ -3529,7 +3529,7 @@ osapi_volume_listen=0.0.0.0
 volume_api_class=nova.volume.cinder.API
 # 重启计算服务
 [root@controller0 ~]# systemctl restart openstack-nova-compute
-</code></pre></div> </td></tr></table> <p>添加卷种类</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>添加卷种类</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -3552,7 +3552,7 @@ volume_api_class=nova.volume.cinder.API
 <span class=normal>21</span>
 <span class=normal>22</span>
 <span class=normal>23</span>
-<span class=normal>24</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 在任意计算节点中都可执行cinder命令创建磁盘
+<span class=normal>24</span></pre></div></td><td class=code><div><pre><span></span><code># 在任意计算节点中都可执行cinder命令创建磁盘
 [root@controller0 ~]# echo &quot;export OS_VOLUME_API_VERSION=2&quot; &gt;&gt; ~/keystonerc
 [root@controller0 ~]# source admin_keystone
 [root@controller0 ~(keystone)]# cinder type-create nfs
@@ -3576,7 +3576,7 @@ volume_api_class=nova.volume.cinder.API
 | 7ac3a255-cf70-498d-97d8-2a7fcdd84d2c |    nfs    |
 | e2608bee-cc52-48e8-ba72-b94124f36a57 | glusterfs |
 +--------------------------------------+-----------+
-</code></pre></div> </td></tr></table> <p>添加存储种类别名</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+</code></pre></div></td></tr></table></div> <p>添加存储种类别名</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
 <span class=normal>4</span>
@@ -3584,7 +3584,7 @@ volume_api_class=nova.volume.cinder.API
 <span class=normal>6</span>
 <span class=normal>7</span>
 <span class=normal>8</span>
-<span class=normal>9</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~(keystone)]# cinder type-key nfs set volume_backend_name=NFS
+<span class=normal>9</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~(keystone)]# cinder type-key nfs set volume_backend_name=NFS
 [root@controller0 ~(keystone)]# cinder type-key glusterfs set volume_backend_name=GlusterFS
 [root@controller0 ~(keystone)]# cinder extra-specs-list
 +--------------------------------------+-----------+----------------------------------------+
@@ -3593,7 +3593,7 @@ volume_api_class=nova.volume.cinder.API
 | 7ac3a255-cf70-498d-97d8-2a7fcdd84d2c |    nfs    |    {u&#39;volume_backend_name&#39;: u&#39;NFS&#39;}    |
 | e2608bee-cc52-48e8-ba72-b94124f36a57 | glusterfs | {u&#39;volume_backend_name&#39;: u&#39;GlusterFS&#39;} |
 +--------------------------------------+-----------+----------------------------------------+
-</code></pre></div> </td></tr></table> <p>添加磁盘</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>添加磁盘</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -3659,7 +3659,7 @@ volume_api_class=nova.volume.cinder.API
 <span class=normal>64</span>
 <span class=normal>65</span>
 <span class=normal>66</span>
-<span class=normal>67</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~(keystone)]# cinder create --display_name disk_nfs --volume-type nfs 10
+<span class=normal>67</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~(keystone)]# cinder create --display_name disk_nfs --volume-type nfs 10
 +---------------------------------------+--------------------------------------+
 |                Property               |                Value                 |
 +---------------------------------------+--------------------------------------+
@@ -3726,7 +3726,7 @@ volume_api_class=nova.volume.cinder.API
 | 1e92b9ca-20d7-4f63-881e- | available |    disk_nfs    |  10  |     nfs     |  false   |             |
 | d8dbaed2-e857-4162-baab- | available | disk_glusterfs |  10  |  glusterfs  |  false   |             |
 +--------------------------+-----------+----------------+------+-------------+----------+-------------+
-</code></pre></div> </td></tr></table> <p>附加磁盘到虚拟机</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>附加磁盘到虚拟机</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -3760,7 +3760,7 @@ volume_api_class=nova.volume.cinder.API
 <span class=normal>32</span>
 <span class=normal>33</span>
 <span class=normal>34</span>
-<span class=normal>35</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~(keystone)]# nova list
+<span class=normal>35</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~(keystone)]# nova list
 +----------------+----------+---------+------------+-------------+-----------------------------------+
 | ID             | Name     | Status  | Task State | Power State | Networks                          |
 +----------------+----------+---------+------------+-------------+-----------------------------------+
@@ -3795,7 +3795,7 @@ volume_api_class=nova.volume.cinder.API
 | 1e92b9ca-20d7-4f63-881e- | in-use |    disk_nfs    |  10  |     nfs     |  false   | 2c7a1025-30d6-446a-a4ff-309 |
 | d8dbaed2-e857-4162-baab- | in-use | disk_glusterfs |  10  |  glusterfs  |  false   | 2c7a1025-30d6-446a-a4ff-309 |
 +--------------------------+--------+----------------+------+-------------+----------+-----------------------------+
-</code></pre></div> </td></tr></table> <h4 id=swift>配置Swift</h4> <p>在此我们有三个存储节点作为swift backend，swift0作为swift访问入口。</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h4 id=swift>配置Swift</h4> <p>在此我们有三个存储节点作为swift backend，swift0作为swift访问入口。</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -3807,7 +3807,7 @@ volume_api_class=nova.volume.cinder.API
 <span class=normal>10</span>
 <span class=normal>11</span>
 <span class=normal>12</span>
-<span class=normal>13</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>                                    |
+<span class=normal>13</span></pre></div></td><td class=code><div><pre><span></span><code>                                    |
  +------------------+               |               +-----------------+
  | [ controller0 ]  |192.168.77.50  |  192.168.77.70|    [ swift0 ]   |
  |     Keystone     |---------------+---------------|      Proxy      |
@@ -3820,7 +3820,7 @@ volume_api_class=nova.volume.cinder.API
 | [ swift-stor0 ]  |       | [ swift-stor1 ]  |       | [ swift-stor2 ]  |
 |                  |-------|                  |-------|                  |
 +------------------+       +------------------+       +------------------+
-</code></pre></div> </td></tr></table> <p>配置控制节点</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>配置控制节点</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -3870,7 +3870,7 @@ volume_api_class=nova.volume.cinder.API
 <span class=normal>48</span>
 <span class=normal>49</span>
 <span class=normal>50</span>
-<span class=normal>51</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 添加swift用户
+<span class=normal>51</span></pre></div></td><td class=code><div><pre><span></span><code># 添加swift用户
 [root@controller0 ~(keystone)]# openstack user create --project service --password servicepassword swift
 +------------+----------------------------------+
 | Field      | Value                            |
@@ -3921,7 +3921,7 @@ root@controller0 ~(keystone)]# openstack endpoint create \
 | service_name | swift                                           |
 | service_type | object-store                                    |
 +--------------+-------------------------------------------------+
-</code></pre></div> </td></tr></table> <p>配置swift代理节点</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>配置swift代理节点</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -3986,7 +3986,7 @@ root@controller0 ~(keystone)]# openstack endpoint create \
 <span class=normal>63</span>
 <span class=normal>64</span>
 <span class=normal>65</span>
-<span class=normal>66</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@swift0 ~]# vi /etc/swift/proxy-server.conf
+<span class=normal>66</span></pre></div></td><td class=code><div><pre><span></span><code>[root@swift0 ~]# vi /etc/swift/proxy-server.conf
 # 第53行
 [filter:authtoken]
 paste.filter_factory = keystoneclient.middleware.auth_token:filter_factory
@@ -4052,7 +4052,7 @@ Reassigned 4096 (100.00%) partitions. Balance is now 0.00.  Dispersion is now 0.
 [root@swift0 ~]# systemctl enable memcached openstack-swift-proxy
 ln -s &#39;/usr/lib/systemd/system/memcached.service&#39; &#39;/etc/systemd/system/multi-user.target.wants/memcached.service&#39;
 ln -s &#39;/usr/lib/systemd/system/openstack-swift-proxy.service&#39; &#39;/etc/systemd/system/multi-user.target.wants/openstack-swift-proxy.service&#39;
-</code></pre></div> </td></tr></table> <p>配置存储节点，每个节点都要配置，注意selinux策略，否则会操作失败。</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>  1</span>
+</code></pre></div></td></tr></table></div> <p>配置存储节点，每个节点都要配置，注意selinux策略，否则会操作失败。</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>  1</span>
 <span class=normal>  2</span>
 <span class=normal>  3</span>
 <span class=normal>  4</span>
@@ -4174,7 +4174,7 @@ ln -s &#39;/usr/lib/systemd/system/openstack-swift-proxy.service&#39; &#39;/etc/
 <span class=normal>120</span>
 <span class=normal>121</span>
 <span class=normal>122</span>
-<span class=normal>123</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 禁用selinux
+<span class=normal>123</span></pre></div></td><td class=code><div><pre><span></span><code># 禁用selinux
 [root@swift-stor0 ~]# setenforce permissive
 [root@swift-stor0 ~]# vi /etc/selinux/config
 SELINUX=enforcing
@@ -4297,7 +4297,7 @@ ln -s &#39;/usr/lib/systemd/system/openstack-swift-object.service&#39; &#39;/etc
 ln -s &#39;/usr/lib/systemd/system/openstack-swift-object-replicator.service&#39; &#39;/etc/systemd/system/multi-user.target.wants/openstack-swift-object-replicator.service&#39;
 ln -s &#39;/usr/lib/systemd/system/openstack-swift-object-updater.service&#39; &#39;/etc/systemd/system/multi-user.target.wants/openstack-swift-object-updater.service&#39;
 ln -s &#39;/usr/lib/systemd/system/openstack-swift-object-auditor.service&#39; &#39;/etc/systemd/system/multi-user.target.wants/openstack-swift-object-auditor.service&#39;
-</code></pre></div> </td></tr></table> <p>添加用户</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>添加用户</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -4334,7 +4334,7 @@ ln -s &#39;/usr/lib/systemd/system/openstack-swift-object-auditor.service&#39; &
 <span class=normal>35</span>
 <span class=normal>36</span>
 <span class=normal>37</span>
-<span class=normal>38</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 添加工程
+<span class=normal>38</span></pre></div></td><td class=code><div><pre><span></span><code># 添加工程
 [root@controller0 ~(keystone)]# openstack project create --description &quot;Swift Service Project&quot; swiftservice
 +-------------+----------------------------------+
 | Field       | Value                            |
@@ -4372,7 +4372,7 @@ ln -s &#39;/usr/lib/systemd/system/openstack-swift-object-auditor.service&#39; &
 | id    | dbcb21e865ae435da39507bea32fe312 |
 | name  | swiftoperator                    |
 +-------+----------------------------------+
-</code></pre></div> </td></tr></table> <p>客户端操作</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>客户端操作</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -4407,7 +4407,7 @@ ln -s &#39;/usr/lib/systemd/system/openstack-swift-object-auditor.service&#39; &
 <span class=normal>33</span>
 <span class=normal>34</span>
 <span class=normal>35</span>
-<span class=normal>36</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 安装所需包
+<span class=normal>36</span></pre></div></td><td class=code><div><pre><span></span><code># 安装所需包
 [root@controller0 ~(keystone)]# yum install -y python-keystoneclient python-swiftclient
 
 # 添加keystone_rc文件
@@ -4443,7 +4443,7 @@ test_container
 admin_keystone
 # 下载文件
 [root@controller0 ~(swift)]# swift download test_container admin_keystone &gt; admin_keystone.txt
-</code></pre></div> </td></tr></table> <h4 id=heat>配置Heat（可选）</h4> <p>Heat服务即用于提供orchestration，在此我们使用neutron0当作heat节点。</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <h4 id=heat>配置Heat（可选）</h4> <p>Heat服务即用于提供orchestration，在此我们使用neutron0当作heat节点。</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -4456,7 +4456,7 @@ admin_keystone
 <span class=normal>11</span>
 <span class=normal>12</span>
 <span class=normal>13</span>
-<span class=normal>14</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>                                  |
+<span class=normal>14</span></pre></div></td><td class=code><div><pre><span></span><code>                                  |
 +------------------+              |              +-----------------------+
 | [ controller0 ]  |              |              |      [ neutron0 ]     |
 |     Keystone     |192.168.77.50 | 192.168.77.30|    DHCP,L3,L2 Agent   |
@@ -4470,7 +4470,7 @@ admin_keystone
                        |    Nova Compute    |
                        |      L2 Agent      |
                        +--------------------+
-</code></pre></div> </td></tr></table> <p>控制节点配置</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>  1</span>
+</code></pre></div></td></tr></table></div> <p>控制节点配置</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>  1</span>
 <span class=normal>  2</span>
 <span class=normal>  3</span>
 <span class=normal>  4</span>
@@ -4608,7 +4608,7 @@ admin_keystone
 <span class=normal>136</span>
 <span class=normal>137</span>
 <span class=normal>138</span>
-<span class=normal>139</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># 安装所需包
+<span class=normal>139</span></pre></div></td><td class=code><div><pre><span></span><code># 安装所需包
 [root@controller0 ~]# yum install -y openstack-heat-common
 
 # 添加用户，创建endpoint
@@ -4747,7 +4747,7 @@ Query OK, 0 rows affected (0.00 sec)
 
 MariaDB [(none)]&gt; exit
 Bye
-</code></pre></div> </td></tr></table> <p>heat节点配置</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>heat节点配置</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -4800,7 +4800,7 @@ Bye
 <span class=normal>51</span>
 <span class=normal>52</span>
 <span class=normal>53</span>
-<span class=normal>54</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@neutron0 ~]# mv /etc/heat/heat.conf /etc/heat/heat.conf.org
+<span class=normal>54</span></pre></div></td><td class=code><div><pre><span></span><code>[root@neutron0 ~]# mv /etc/heat/heat.conf /etc/heat/heat.conf.org
 [root@neutron0 ~]# vi /etc/heat/heat.conf
 [DEFAULT]
 deferred_auth_method = trusts
@@ -4854,7 +4854,7 @@ admin_tenant_name = service
 ln -s &#39;/usr/lib/systemd/system/openstack-heat-api.service&#39; &#39;/etc/systemd/system/multi-user.target.wants/openstack-heat-api.service&#39;
 ln -s &#39;/usr/lib/systemd/system/openstack-heat-api-cfn.service&#39; &#39;/etc/systemd/system/multi-user.target.wants/openstack-heat-api-cfn.service&#39;
 ln -s &#39;/usr/lib/systemd/system/openstack-heat-engine.service&#39; &#39;/etc/systemd/system/multi-user.target.wants/openstack-heat-engine.service&#39;
-</code></pre></div> </td></tr></table> <p>使用heat创建虚拟机</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+</code></pre></div></td></tr></table></div> <p>使用heat创建虚拟机</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
 <span class=normal> 2</span>
 <span class=normal> 3</span>
 <span class=normal> 4</span>
@@ -4895,7 +4895,7 @@ ln -s &#39;/usr/lib/systemd/system/openstack-heat-engine.service&#39; &#39;/etc/
 <span class=normal>39</span>
 <span class=normal>40</span>
 <span class=normal>41</span>
-<span class=normal>42</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>[root@controller0 ~]# vi sample-stack.yml
+<span class=normal>42</span></pre></div></td><td class=code><div><pre><span></span><code>[root@controller0 ~]# vi sample-stack.yml
 heat_template_version: 2014-10-16
 
 description: Heat Sample Template
@@ -4937,40 +4937,40 @@ outputs:
 +--------------------------------------+--------------+--------------------+----------------------+
 | 35b5c1e6-ec84-4bf8-9e77-1946bcf8d09b | Sample-Stack | CREATE_IN_PROGRESS | 2015-07-31T03:06:27Z |
 +--------------------------------------+--------------+--------------------+----------------------+
-</code></pre></div> </td></tr></table> <h4 id=ceilometer>配置Ceilometer（可选）</h4> <h4 id=sahara>配置Sahara（可选）</h4> <h4 id=ironic>配置Ironic（可选）</h4> <h2 id=_7>使用示例</h2> <h3 id=_8>基本操作</h3> <p>一些常用操作。</p> <h4 id=_9>添加镜像</h4> <p>以admin或者demo用户身份登录dashboard后，选择“镜像”，上传ISO。</p> <p>```{image} ../images/apx01-01.png :align: center</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+</code></pre></div></td></tr></table></div> <h4 id=ceilometer>配置Ceilometer（可选）</h4> <h4 id=sahara>配置Sahara（可选）</h4> <h4 id=ironic>配置Ironic（可选）</h4> <h2 id=_7>使用示例</h2> <h3 id=_8>基本操作</h3> <p>一些常用操作。</p> <h4 id=_9>添加镜像</h4> <p>以admin或者demo用户身份登录dashboard后，选择“镜像”，上传ISO。</p> <p>```{image} ../images/apx01-01.png :align: center</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
 <span class=normal>4</span>
 <span class=normal>5</span>
-<span class=normal>6</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>#### 从ISO安装新实例
+<span class=normal>6</span></pre></div></td><td class=code><div><pre><span></span><code>#### 从ISO安装新实例
 
 在“实例”选项卡中，选择“添加实例”，并从现有镜像启动。
 
 ```{image} ../images/apx01-02.png
 :align: center
-</code></pre></div> </td></tr></table> <h3 id=owncloud>与owncloud集成</h3> <ol> <li>创建一个指定region的endpoint于swift服务中</li> </ol> <blockquote> <blockquote> <p>```{code}</p> </blockquote> <h1 id=source-keystone_admin>source ./keystone_admin</h1> <p># keystone endpoint-create --service swift --region swift_region \ --publicurl "http://192.168.2.160:8080/v1/AUTH_7d11dd5a3f3544149e8b6a9799a2aa48/oc"</p> <p>```</p> <p>其中的publicurl可以从container的详细信息中查看。</p> <ol> <li>使用owncloud的第三方app——external storage，如下进行填写</li> </ol> <blockquote> <ul> <li>目录名称：显示在owncloud中的目录名称。</li> <li>user：project用户名。</li> <li>bucket：容器名。</li> <li>region：上一步指定的region。</li> <li>key：用户密码。</li> <li>tenant：project名。</li> <li>password：用户密码。</li> <li>service_name：服务名，即swift。</li> <li>url：使用keystone认证的url，即http://192.168.2.160:5000/v2.0 。</li> <li>timeout：超时时长，可不填。</li> </ul> </blockquote> </blockquote> <h3 id=ovirtglanceneutron>oVirt使用Glance与Neutron服务</h3> <p>oVirt自3.3版本起，便可以添加外部组件，比如Foreman、OpenStack的网络或镜像服务。</p> <p>在添加OpenStack相关组件之前，oVirt管理端需要配置OpenStack的KeyStone URL：</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
-<span class=normal>2</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># engine-config --set KeystoneAuthUrl=http://192.168.2.160:35357/v2.0
+</code></pre></div></td></tr></table></div> <h3 id=owncloud>与owncloud集成</h3> <ol> <li>创建一个指定region的endpoint于swift服务中</li> </ol> <blockquote> <blockquote> <p>```{code}</p> </blockquote> <h1 id=source-keystone_admin>source ./keystone_admin</h1> <p># keystone endpoint-create --service swift --region swift_region \ --publicurl "http://192.168.2.160:8080/v1/AUTH_7d11dd5a3f3544149e8b6a9799a2aa48/oc"</p> <p>```</p> <p>其中的publicurl可以从container的详细信息中查看。</p> <ol> <li>使用owncloud的第三方app——external storage，如下进行填写</li> </ol> <blockquote> <ul> <li>目录名称：显示在owncloud中的目录名称。</li> <li>user：project用户名。</li> <li>bucket：容器名。</li> <li>region：上一步指定的region。</li> <li>key：用户密码。</li> <li>tenant：project名。</li> <li>password：用户密码。</li> <li>service_name：服务名，即swift。</li> <li>url：使用keystone认证的url，即http://192.168.2.160:5000/v2.0 。</li> <li>timeout：超时时长，可不填。</li> </ul> </blockquote> </blockquote> <h3 id=ovirtglanceneutron>oVirt使用Glance与Neutron服务</h3> <p>oVirt自3.3版本起，便可以添加外部组件，比如Foreman、OpenStack的网络或镜像服务。</p> <p>在添加OpenStack相关组件之前，oVirt管理端需要配置OpenStack的KeyStone URL：</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span></pre></div></td><td class=code><div><pre><span></span><code># engine-config --set KeystoneAuthUrl=http://192.168.2.160:35357/v2.0
 # service ovirt-engine restart
-</code></pre></div> </td></tr></table> <h4 id=openstackglanceovirt>添加OpenStack镜像服务Glance至oVirt</h4> <ol> <li>在OpenStack的控制台中，添加一个新镜像，比如my_test_image，格式为raw。</li> </ol> <p>```{image} ../images/apx01-03.png :align: center</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+</code></pre></div></td></tr></table></div> <h4 id=openstackglanceovirt>添加OpenStack镜像服务Glance至oVirt</h4> <ol> <li>在OpenStack的控制台中，添加一个新镜像，比如my_test_image，格式为raw。</li> </ol> <p>```{image} ../images/apx01-03.png :align: center</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
-<span class=normal>4</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>2. 在oVirt左边栏，选择External Provider添加OpenStack Image服务。
+<span class=normal>4</span></pre></div></td><td class=code><div><pre><span></span><code>2. 在oVirt左边栏，选择External Provider添加OpenStack Image服务。
 
 ```{image} ../images/apx01-04.png
 :align: center
-</code></pre></div> </td></tr></table> <p>:::{note}</p> <p>认证选项</p> <p>用户名：glance</p> <p>密码：存于RDO配置文件中，形如 CONFIG_GLANCE_KS_PW=bf83b75a635843b4</p> <p>Tenant：services</p> <p>:::</p> <ol> <li>然后可以在oVirt的存储域中看到刚刚添加的Glance服务。</li> </ol> <p>```{image} ../images/apx01-05.png :align: center</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+</code></pre></div></td></tr></table></div> <p>:::{note}</p> <p>认证选项</p> <p>用户名：glance</p> <p>密码：存于RDO配置文件中，形如 CONFIG_GLANCE_KS_PW=bf83b75a635843b4</p> <p>Tenant：services</p> <p>:::</p> <ol> <li>然后可以在oVirt的存储域中看到刚刚添加的Glance服务。</li> </ol> <p>```{image} ../images/apx01-05.png :align: center</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
 <span class=normal>2</span>
 <span class=normal>3</span>
-<span class=normal>4</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>#### Neutron
+<span class=normal>4</span></pre></div></td><td class=code><div><pre><span></span><code>#### Neutron
 
 ```{image} ../images/apx01-06.jpeg
 :align: center
-</code></pre></div> </td></tr></table> <p>可参考 <a href=http://www.ovirt.org/Features/NeutronVirtualAppliance>NeutronVirtualAppliance</a> 以及 <a href=http://www.ovirt.org/Overlay_Networks_with_Neutron_Integration>Overlay_Networks_with_Neutron_Integration</a> ，另外提供 <a href=http://pan.baidu.com/s/1o6G61vG>操作视频</a> 。</p> <ol> <li>配置oVirt。</li> </ol> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+</code></pre></div></td></tr></table></div> <p>可参考 <a href=http://www.ovirt.org/Features/NeutronVirtualAppliance>NeutronVirtualAppliance</a> 以及 <a href=http://www.ovirt.org/Overlay_Networks_with_Neutron_Integration>Overlay_Networks_with_Neutron_Integration</a> ，另外提供 <a href=http://pan.baidu.com/s/1o6G61vG>操作视频</a> 。</p> <ol> <li>配置oVirt。</li> </ol> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
 <span class=normal>2</span>
-<span class=normal>3</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># engine-config --set OnlyRequiredNetworksMandatoryForVdsSelection=true
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code># engine-config --set OnlyRequiredNetworksMandatoryForVdsSelection=true
 # yum install vdsm-hook-openstacknet
 # service ovirt-engine restart
-</code></pre></div> </td></tr></table> <ol> <li>如图添加Neutron组件。</li> </ol> <p>```{image} ../images/apx01-07.png :align: center</p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
-<span class=normal>2</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code>```{image} ../images/apx01-08.png
+</code></pre></div></td></tr></table></div> <ol> <li>如图添加Neutron组件。</li> </ol> <p>```{image} ../images/apx01-07.png :align: center</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span></pre></div></td><td class=code><div><pre><span></span><code>```{image} ../images/apx01-08.png
 :align: center
-</code></pre></div> </td></tr></table> <p>:::{note}</p> <p>认证选项</p> <p>用户名：neutron</p> <p>密码：存于RDO配置文件中，形如 CONFIG_NEUTRON_KS_PW=a16c52e3ea634324</p> <p>Tenant：services</p> <p>agent 配置相同</p> <p>:::</p> <h2 id=openstack_2>OpenStack常见问题</h2> <p>Q：如何校验密码是否正确？</p> <p>A：keystone --os-username=neutron --os-password=servicepassword --os-auth-url=http://localhost:35357/v2.0 token-get</p> <p>Q：管理界面Swift不能删除目录？</p> <p>A：使用命令 swift delete public_container aaa/ 进行删除。</p> <p>Q： Neutron 网络快速开始？</p> <p>A：参考https://www.ustack.com/blog/neutron_intro/</p> <p>Q：OpenStack组件间的通信是靠什么？</p> <p>A：AMQP，比如RabbitMQ、Apache的ActiveMQ，部署时候可以选择，如果对这种消息传输工具有兴趣可以参考 <a href=http://www.rabbitmq.com/getstarted.html>rabbitmq tutorial</a> 以及 <a href=http://www.rabbitmq.com/plugins.html>各种有用的插件（web监视等）</a> 。</p> <p>Q：Swift有什么好用的客户端么？</p> <p>A：<a href=https://github.com/openstack/python-swiftclient>python-swiftclient</a> 、 <a href=http://www.gladient.com/ >Gladient Cloud Desktop</a> 、 <a href=http://www.cloudberrylab.com/ >Cloudberry</a> 、 <a href=http://cyberduck.ch/ >Cyberduck</a> 、 <a href=http://www.webdrive.com/ >WebDrive</a> 、 <a href=http://s3browser.com/ >S3 Browser</a> 等。</p> </article> </div> </div> </main> <footer class=md-footer> <nav class="md-footer__inner md-grid" aria-label=页脚> <a href=../ch05/ class="md-footer__link md-footer__link--prev" aria-label="上一页: 第五章 数据处理平台" rel=prev> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </div> <div class=md-footer__title> <div class=md-ellipsis> <span class=md-footer__direction> 上一页 </span> 第五章 数据处理平台 </div> </div> </a> <a href=../appendix02/ class="md-footer__link md-footer__link--next" aria-label="下一页: 附录二 公有云参考" rel=next> <div class=md-footer__title> <div class=md-ellipsis> <span class=md-footer__direction> 下一页 </span> 附录二 公有云参考 </div> </div> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg> </div> </a> </nav> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Copyright &copy; 2008 - 2021 lofyer </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.5e67fbfe.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script> <script src=../../assets/javascripts/bundle.c44cc438.min.js></script> <script src=../../javascripts/config.js></script> <script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script> </body> </html>
+</code></pre></div></td></tr></table></div> <p>:::{note}</p> <p>认证选项</p> <p>用户名：neutron</p> <p>密码：存于RDO配置文件中，形如 CONFIG_NEUTRON_KS_PW=a16c52e3ea634324</p> <p>Tenant：services</p> <p>agent 配置相同</p> <p>:::</p> <h2 id=openstack_2>OpenStack常见问题</h2> <p>Q：如何校验密码是否正确？</p> <p>A：keystone --os-username=neutron --os-password=servicepassword --os-auth-url=http://localhost:35357/v2.0 token-get</p> <p>Q：管理界面Swift不能删除目录？</p> <p>A：使用命令 swift delete public_container aaa/ 进行删除。</p> <p>Q： Neutron 网络快速开始？</p> <p>A：参考https://www.ustack.com/blog/neutron_intro/</p> <p>Q：OpenStack组件间的通信是靠什么？</p> <p>A：AMQP，比如RabbitMQ、Apache的ActiveMQ，部署时候可以选择，如果对这种消息传输工具有兴趣可以参考 <a href=http://www.rabbitmq.com/getstarted.html>rabbitmq tutorial</a> 以及 <a href=http://www.rabbitmq.com/plugins.html>各种有用的插件（web监视等）</a> 。</p> <p>Q：Swift有什么好用的客户端么？</p> <p>A：<a href=https://github.com/openstack/python-swiftclient>python-swiftclient</a> 、 <a href=http://www.gladient.com/ >Gladient Cloud Desktop</a> 、 <a href=http://www.cloudberrylab.com/ >Cloudberry</a> 、 <a href=http://cyberduck.ch/ >Cyberduck</a> 、 <a href=http://www.webdrive.com/ >WebDrive</a> 、 <a href=http://s3browser.com/ >S3 Browser</a> 等。</p> </article> </div> </div> </main> <footer class=md-footer> <nav class="md-footer__inner md-grid" aria-label=页脚> <a href=../ch05/ class="md-footer__link md-footer__link--prev" aria-label="上一页: 第五章 数据处理平台" rel=prev> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </div> <div class=md-footer__title> <div class=md-ellipsis> <span class=md-footer__direction> 上一页 </span> 第五章 数据处理平台 </div> </div> </a> <a href=../appendix02/ class="md-footer__link md-footer__link--next" aria-label="下一页: 附录二 公有云参考" rel=next> <div class=md-footer__title> <div class=md-ellipsis> <span class=md-footer__direction> 下一页 </span> 附录二 公有云参考 </div> </div> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg> </div> </a> </nav> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Copyright &copy; 2008 - 2022 lofyer </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script> <script src=../../assets/javascripts/bundle.a6c66575.min.js></script> <script src=../../javascripts/config.js></script> <script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script> </body> </html>
