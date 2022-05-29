@@ -3,6 +3,9 @@ title: "Add usbdevice to libvirt by modifying cgroup"
 date: "2013-10-31"
 categories: 
   - "cloud-infra"
+tags:
+  - "Libvirt"
+  - "Device Redirection"
 ---
 
 CGROUP means Control group. In my case, usb-redir works fine while usb-host not. [https://www.kernel.org/doc/Documentation/cgroups/devices.txt](https://www.kernel.org/doc/Documentation/cgroups/devices.txt "Cgroup HowTO")

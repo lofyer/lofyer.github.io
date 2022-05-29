@@ -3,6 +3,8 @@ title: "Something about curl -- Connecting IPA Server using json as an example"
 date: "2013-04-10"
 categories: 
   - "linux-admin"
+tags:
+  - "curl"
 ---
 
 With Arduino as a server.

@@ -52,6 +52,7 @@ Create a nat network.
 
 **UPDATE: use extnet from github with a little modification (Only the first vNIC will be NAT, the second one still keeps its way).**
 
+```
 #!/usr/bin/python
 
 import os
@@ -96,9 +97,11 @@ if \_\_name\_\_ == '\_\_main\_\_':
     except:
         hooking.exit\_hook('extnet hook: \[unexpected error\]: %s\\n' %
                           traceback.format\_exc()) 
+```
 
 **QEMU-CMD way:**
 
+```
 import os
 import sys
 import hooking
@@ -148,5 +151,6 @@ if 'qemu\_cmdline' in os.environ:
         sys.stderr.write('qemu\_cmdline: \[unexpected error\]: %s\\n'
                          % traceback.format\_exc())
         sys.exit(2)
+```
 
 Then you should start the vm **WITHOUT ANY NIC** if you are using _nat.py_.

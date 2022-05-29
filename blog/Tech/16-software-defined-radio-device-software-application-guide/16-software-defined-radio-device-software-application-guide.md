@@ -4,6 +4,8 @@ date: "2019-05-10"
 categories: 
   - "cloud-infra"
   - "devices"
+tags:
+  - "Software Defined Radio"
 ---
 
 [![](/blog/post/images/www.youtube.com_watch_v-mks0TAwqQUlistPLbBQHMnVMR41tOomyB0o7UKAxwKINkFFnindex4.png)](https://blog.lofyer.org/wp-content/uploads/www.youtube.com_watch_v-mks0TAwqQUlistPLbBQHMnVMR41tOomyB0o7UKAxwKINkFFnindex4.png)
