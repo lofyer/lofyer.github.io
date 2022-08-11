@@ -9,7 +9,7 @@ categories:
 
 使用ovirt-shell在一定程度上适合于某些场景。
 
-\# ovirt-shell -I -u admin@internal -l https://server\_ip/api
+# ovirt-shell -I -u admin@internal -l https://server\_ip/api
 
   ============================================================================
                       >>> connected to oVirt manager 3.4.0.0 <<<
@@ -47,7 +47,7 @@ categories:
 
 构造目录，形如：
 
-\# tree exports
+# tree exports
 .
 ├── 37e0e64b-5445-4bc3-8675-ceff4637e8e3/
 │   ├── dom\_md/
@@ -64,7 +64,7 @@ categories:
 
 创建_leases_文件：
 
-\# echo 2d2d2d2d2d2d465245452d2d2d2d2d2d3030303030303030303030303030
+# echo 2d2d2d2d2d2d465245452d2d2d2d2d2d3030303030303030303030303030
 303000000000000000000000000000000000000000000000000000000000
 000000000000000000000000000000000000000000000000000000000000
 000000000000000000000000000000000000000000000000000000000000
@@ -139,6 +139,6 @@ if \_\_name\_\_  == "\_\_main\_\_":
 
 更改权限：
 
-\# chown -R vdsm.kvm exports
+# chown -R vdsm.kvm exports
 
 然后可以作为空导出域进行导入。

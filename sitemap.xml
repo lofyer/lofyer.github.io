@@ -2,1752 +2,1407 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.lofyer.org/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/tags/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/template/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/about/about/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/ABM/abm-note/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/ABM/forex-note/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/5-1-1-fuse/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/5-2-cloud-gluster-des/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/5-3-glusterfs-howto/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/5-4-gluster-trick/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/6-2-1-deploy-ovirt-admin/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/6-2-2-cloud-ha-ovirt/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/6-4-complete-ovirt/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/6-5-1-ovirt-shell/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/7-1-hadoop-storm-intro/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/cloud-0-how-is-today/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/cloud-1-nowaday/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/cloud-2-yummy/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/cloud-3-arch/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/cloud-4-architecture-directory/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/cloud-5-glusterfs-story/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/cloud-6-1-ovirt-description/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/cloud-6-5-advanced-ovirt/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Archive/InTheCloudDraft/cloud-minus-1-pre/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/1-%E5%A4%87%E4%BB%BD%E5%B7%A5%E5%85%B7%EF%BC%88%E8%BF%81%E4%BA%91%E5%BF%85%E5%A4%87%EF%BC%89/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/1-3c/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/10-a-way-to-use-git/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/10-nvidia-jetson/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/11-add-nat-ovirt-vdsm-hooks/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/11-qemu-kvm/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/12-add-usbdevice-libvirt-modifying-cgroup/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/12-abm/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/13-all-about-curl/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/13-cloud-pid-controller/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/14-android-container-or-virtualization-on-arm-x86-server/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/14-zstack/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/15-build-your-own-nitro-smartnicfpga-arm-based-bare-metal-hypervisor/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/15-opendedup/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/16-software-defined-radio-device-software-application-guide/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/16-fpga-ft/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/17-arduino/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/17-fpga-test/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/19-boost-virtualization-performance-with-xilinx-intel-fpga/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/18-all-cloud/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/2-%E8%99%9A%E6%8B%9F%E5%8C%96%E5%B9%B3%E5%8F%B0%E9%95%9C%E5%83%8F%E5%8E%BB%E5%86%97%E6%B5%8B%E8%AF%95/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/19-android-kvm/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/20-build-a-robot-assistant-with-nowadays-cloud-apis/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/20-backup-tools/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/21-build-netlogo-for-armnvidia-jetson-nano/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/22-configure-corosync-and-pacemaker/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/23-create-dummy-vga-adpter/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/24-deploy-skype-for-business-server-2015/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/25-design-of-fault-tolerance-x86-server-with-fpga/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/26-deploy-asterisk-centos/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/21-linux-vtep/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Lab/27-%E5%85%B3%E4%BA%8E%E4%BA%A7%E5%93%81%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.lofyer.org/blog/Lab/28-gpu-raspberry-pi/</loc>
+         <lastmod>2022-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.lofyer.org/blog/Lab/29-lotus-howto/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Lab/3-%E4%BA%A7%E5%93%81%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BB%B7/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/3-%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E3%80%81raid%E7%BB%84%E4%B8%8E%E7%A1%AC%E7%9B%98iops%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/30-nvme-in-the-cloud/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/4-%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E8%AE%A1%E7%AE%97cpu%E5%88%A9%E7%94%A8%E7%8E%87%EF%BC%9F/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/31-openstack-opendaylight-pica8/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/5-%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8E%E4%BA%91%E5%B9%B3%E5%8F%B0%E8%B4%9F%E8%BD%BD%E7%9A%84%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/32-ovirt/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/6-%E5%9C%A8linux-bridge-ovs%E4%B8%AD%E4%BD%BF%E7%94%A8vxlan%E7%BB%84%E7%BD%91%E4%BB%A5%E5%8F%8A%E5%88%9B%E5%BB%BAvtep/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/33-ovs-in-openwrt/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/7-%E5%9C%A8zstack%E9%9B%86%E6%88%90opendaylight/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/34-quick-notes/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/9-a-design-of-user-frontend-for-kinds-of-cloud-with-accounting/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/35-realtime-k8s/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/building-the-infrastructure-for-cloud-security/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/36-rex/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/cloud-init-how-to/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/37-sdr/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/deploy-debug-earwar-in-intellij-ide/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/38-server/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/docker-using-linux-bridge/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/39-vmware-convert-sdk/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/ejabber-howto/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/4-arduino/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/ez430-chronos%E5%85%A5%E6%89%8B/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/40-zstack-product/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/foremanpuppetcfenginebcfg2chef-howto/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/41-%E8%BF%99%E7%A4%BE%E4%BC%9A%E8%BF%9B%E6%AD%A5%E5%BF%AB/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/gitlab-quick-deploy/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/5-baremetal/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/gpu-raspberry-pi/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/6-cloud/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/gpupassthrough-xen/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/7-hpc/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/grafanainfluxdbcollectdtelegraf-on-rpi2/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/8-leapmotion/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.lofyer.org/blog/Lab/heartbeat-drbd-test-high-availability/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/hercules-with-jason-ui/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/home-based-hybridcloud%EF%BC%88%E5%AE%B6%E5%BA%AD%E4%BD%9C%E5%9D%8A%E5%BC%8F%E6%B7%B7%E5%90%88%E4%BA%91%EF%BC%89/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/how-to-build-an-arm-hpc-cluster/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/how-to-resolve-the-boot-storm/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/hpc/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/httpwiki-phys-ethz-chreadmesetting_up_an_ltsp_server_for_diskless_clients/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/incrontab-howto-filesystem-status-change-notify/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/inspire/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/intel-igvt-g-vgpu-in-kvm-kvmgt-howto/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/intel-igvt-g-vgpu-in-xen-howto/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/intergrate-owncloud-adldap/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/ipa-server/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/kvm-perfermance-test-including-periphery-virtual-device/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/kvmgt-in-linux-4-10/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/leapmotion-%E5%85%A5%E6%89%8B%EF%BC%8C%E6%99%92%E4%B8%80%E4%B8%8B%E5%BC%80%E7%AE%B1%E4%BB%A5%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/light-weighted-vm-webadmin/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/lockunlockroot-nexus-5/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/lotus-howto/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/migrate-vm-esxi-ovirt/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/mingw%E7%BC%96%E8%AF%91remoteviewer/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/myidc-everythings-traceable/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/nagiosicinga-event-handler-life-easy/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/ndk-compile-android-spiceaspice/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/nvidia-grid-vgpu-and-kvmgt-for-kvm/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/nvidia-jetson-end-user-guide/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/nvme-in-the-cloud/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/oauth2-guide/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/openflow-openvswitch-in-openwrt/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/openldap-kerberos-howto/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/openstack-auto-deployment-and-hosted-controller/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/openstack-configure-and-api/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/openstack%E3%80%81opendaylight%E3%80%81%E7%A1%AC%E4%BB%B6sdn%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%9B%86%E6%88%90/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/openvpn/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/openvswitch-howto/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/ovirt-notes/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/owncloud-intergration/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/p4-network-with-xilinx-fpga/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/pass-host-gpu-to-guest-via-qemu-ncursescurses/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/petalinux-in-qemu/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/porting-kvm-to-nvidia-jetson-nano/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/private-cloud-design/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/pynq-overlay-networking-test/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/qemu-3d/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/qemu-uefi/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/quick-notes/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/rex/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/rtx%E5%86%85%E6%A0%B8/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/sdn-windows-linux-baremetal/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/setup-k8s-with-realtime-linux/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/slic-for-qemu-kvm/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/tcp%E5%8D%8F%E8%AE%AE%E4%B9%8B%E4%B8%8A%E7%9A%84ccnx/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/tensorflow-in-netlogo-make-your-agent-more-intelligent/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/text-terminal-history/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/transfer-ipv6-to-ipv4-via-socat/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/unixlinuxmacos-monitor-tools/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/use-dhcp-or-dnsmasq-as-dhcp-server-in-libvirt-based-environment/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/using-solrnutchdjango-to-build-your-own-search-engine-portal/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/using-x-server-in-windows-linux-subsystem/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/vdsm/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/vmware-vcenter-converter-sdk/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/windows%E4%B8%AD%E4%BD%BF%E7%94%A8ebpf/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/wrt54gs-64ram-8flash/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/yacy-2/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/zstack-kubernetesk8sdocker-intergration/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Lab/%E6%95%B0%E6%8D%AE%E7%AC%94%E8%AE%B0/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <loc>https://docs.lofyer.org/blog/Lab/9-linux/</loc>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/bio-hack/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/if-christmas-never-came/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/importance-body/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/living/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/lord-land/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/paint-cat/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/sam-haris-it-is-always-now/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/solace/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/they-are-all-gone/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/this-while/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/unite/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/v/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/world-pre/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E3%80%8Akvm%E7%A7%81%E6%9C%89%E4%BA%91%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5%E3%80%8B%E7%AC%AC%E4%B8%80%E7%89%88%E9%94%99%E8%AF%AF%E4%BF%AE%E8%AE%A2/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E4%B8%89%E6%9C%88%E4%BB%BD/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E5%81%B6%E7%84%B6-%E5%BE%90%E5%BF%97%E6%91%A9/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E5%86%8D%E4%B8%80%E4%B8%AA%E8%BF%91%E6%9C%9F/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E5%90%83%E7%83%9F%E8%AE%B0/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E5%90%8D%E4%BA%BA%E7%83%9F%E6%96%97%EF%BC%9A%E6%80%A7%E6%A0%BC%E4%B8%8E%E9%A3%8E%E9%AA%A8%E7%9A%84%E5%BB%B6%E4%BC%B8/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E5%9B%9E%E5%AE%B6%E4%BA%86/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E5%B9%B4%E7%BB%88/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E6%8D%A2%E4%B8%AA%E9%A6%96%E9%A1%B5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E6%96%B0%E5%BC%80%E5%A7%8B/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E6%9C%80%E8%BF%91/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E6%9C%AA%E5%90%8D/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E6%9E%81%E9%99%90%E4%B8%8E%E7%8E%B0%E5%AE%9E/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E6%AF%95%E4%B8%9A/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E6%AF%95%E4%B8%9A%E5%89%8D%E7%9A%84%E6%97%A5%E5%AD%90/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E7%94%BB-%E5%A2%9E%E8%A1%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E7%96%91%E6%83%91/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E8%8F%9C%E6%A0%B9%E8%B0%AD%E5%B0%8F%E8%AE%B0/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E8%AE%A9dnspod%E8%A7%A3%E6%9E%90%E4%BA%86/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E8%BF%91%E6%9C%9F-2/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E8%BF%91%E6%9C%9F-2016-08/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E8%BF%91%E6%9C%9F/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E8%A1%A8%E8%BE%BE/</loc>
-         <lastmod>2022-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.lofyer.org/blog/Prose/%E8%BF%99%E7%A4%BE%E4%BC%9A%E8%BF%9B%E6%AD%A5%E5%BF%AB/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E9%BB%84%E9%85%92%E6%94%B6%E9%9B%86/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%EF%BC%88%E6%91%98%E6%8A%84%EF%BC%89/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/doc-dream/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E4%BD%A0%E6%83%B3%E8%A6%81%E7%9A%84/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E4%BD%A0%E8%BF%98%E5%8F%AF%E7%88%B1%E4%B9%88/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E5%85%B3%E4%BA%8E%E7%BA%AA%E5%BF%B5%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E5%86%B7%E4%BA%91-2/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E5%9B%9A%E5%BE%92%E6%89%8B%E8%AE%B0/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E5%9B%9E%E4%B8%8D%E5%8E%BB%E5%B0%B1%E5%BE%80%E5%89%8D%E8%B5%B0/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E6%83%8A%E6%A2%A6/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E6%84%A4%E6%80%92%E7%9A%84%E5%87%AF%E5%A5%87/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E6%98%8E%E5%A4%A9/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E7%AC%AC%E4%B8%80%E7%AB%A0/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E7%AC%AC%E4%B8%89%E7%AB%A0-im-still-here/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%8F%98%E5%BC%82/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E8%88%9E%E8%80%85/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E8%8D%92%E8%8A%9C%E7%9A%84%E5%BF%83%E8%BF%B9/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E8%A3%82%E7%97%95-2/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/Fantasy/%E9%A3%8E%E4%BF%A1%E5%AD%90/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/10-4/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/201/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8810%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8811%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8813%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8814%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8815%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8820%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8821%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8822%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8823%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8824%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8825%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8826%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8827%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8828%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8829%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%8830%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%883%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%885%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%886%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%887%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B410%E6%9C%888%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E5%B9%B420%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8810%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8811%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8813%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8814%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8815%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8816%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8817%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8819%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%881%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8821%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8823%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8824%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8826%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8827%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8828%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%8829%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%883%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%884%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%885%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%887%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%888%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B411%E6%9C%889%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%8811%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%8812%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%8813%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%8814%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%8815%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%8817%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%8818%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%881%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%8820%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%8821%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%8823%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%8826%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%8828%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%8829%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%883%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%885%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%886%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%887%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%888%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B412%E6%9C%889%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B41%E6%9C%884%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B43%E6%9C%8811%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B43%E6%9C%8827%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B44%E6%9C%8820%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8814/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8815%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8816%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8817%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8818%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8819%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8820%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8822%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8823%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8825%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8827%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8828%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8829%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8830/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B48%E6%9C%8831%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8810%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8812%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8813%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8814%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8816%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8817%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8818%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8821%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8822%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8824%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8825%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8826%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8828%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8829%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%8830%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%883%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%884%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%885%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%886%E6%97%A5-2/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%887%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2011%E5%B9%B49%E6%9C%889%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B410%E6%9C%8813%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B41%E6%9C%881%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B41%E6%9C%882%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B41%E6%9C%887%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B43%E6%9C%8825%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B43%E6%9C%8829%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B43%E6%9C%8830%E6%97%A5-2/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B43%E6%9C%884%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%8812%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%8814%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%8815%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%8817%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%8819%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%8821%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%8823%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%8824%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%8826%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%8827%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%8828%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%8830%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%885%E6%97%A5-2/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%886%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B44%E6%9C%889%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B45%E6%9C%8821%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B45%E6%9C%882%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B45%E6%9C%883%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B45%E6%9C%885%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B45%E6%9C%887%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2012%E5%B9%B46%E6%9C%888%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2013-2014/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2015-roadmap/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/blog/Prose/LofyerDiary/2052%E5%B9%B412%E6%9C%882%E6%97%A5/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/datanote/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/datanote/about/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/datanote/ch01/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/datanote/ch02/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/datanote/ch03/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/datanote/ch04/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/datanote/ch05/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/datanote/ch06/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/datanote/ch07/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/datanote/ch08/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/about/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/appendix01/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/appendix02/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/appendix03/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/appendix04/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/appendix05/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/appendix06/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/appendix07/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/ch01/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/ch02/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/ch03/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/ch04/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/ch05/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/frontline-network/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/inthecloud/frontline-storage/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/wangsheng/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/wangsheng/chap01/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.lofyer.org/tags/</loc>
-         <lastmod>2022-06-07</lastmod>
+         <lastmod>2022-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

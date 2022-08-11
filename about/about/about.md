@@ -3,7 +3,7 @@ title: "关于"
 date: "2011-11-19"
 ---
 
-现居上海，一个懂点技术的产品经理。
+现居上海。
 
 **Github:** [https://github.com/lofyer](https://github.com/lofyer)
 

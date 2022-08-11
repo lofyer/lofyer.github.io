@@ -223,7 +223,7 @@ SAR（n）=SAR（n－1）+AF\*\[EP(n-1)-SAR(n-1)\]
 
 其中：SAR（n）为第n日的SAR值，SAR（n－1）为第（n－1）日的值；AF为加速因子（或叫加速系数），EP为极点价（最高价或最低价）。
 
-\# -\*- coding: utf-8 -\*-
+# -\*- coding: utf-8 -\*-
 
 """
 http://virtualizedfrog.wordpress.com/   2014

@@ -13,7 +13,7 @@ categories:
 
 鉴于笔者所在环境中暂时没有配置独立的DNS，此处先修改hosts文件以完成配置（每台机器上都如此设置）：
 
-\# echo -e "192.168.10.101\\tgs1.example.com\\n192.168.10.102\\tgs2.example.com\\n192.168.10.103\\tgs3.example.com\\n192.168.10.104\\tgs4.example.com" >> /etc/hosts
+# echo -e "192.168.10.101\\tgs1.example.com\\n192.168.10.102\\tgs2.example.com\\n192.168.10.103\\tgs3.example.com\\n192.168.10.104\\tgs4.example.com" >> /etc/hosts
 
 ## 添加repo
 
@@ -54,7 +54,7 @@ gpgkey=http://download.gluster.org/pub/gluster/glusterfs/LATEST/EPEL.repo/pub.ke
 
 每一个节点都可以看做gluster server，安装xfs用户空间工具：
 
-\# yum install -y glusterfs glusterfs-fuse glusterfs-server xfsprogs
+# yum install -y glusterfs glusterfs-fuse glusterfs-server xfsprogs
 # /etc/init.d/glusterd start
 # /etc/init.d/glusterfsd start
 # chkconfig glusterfsd on
@@ -62,7 +62,7 @@ gpgkey=http://download.gluster.org/pub/gluster/glusterfs/LATEST/EPEL.repo/pub.ke
 
 假如每台机器除系统盘之外都有2块1T SATA硬盘。 对其进行分区，创建逻辑卷，格式化并挂载：
 
-\# fdisk /dev/sdX << EOF
+# fdisk /dev/sdX << EOF
 n
 p
 1
@@ -72,7 +72,7 @@ EOF
 
 直接使用物理盘：
 
-\# mkfs.xfs -i size 512 /dev/sdb1
+# mkfs.xfs -i size 512 /dev/sdb1
 # mkfs.xfs -i size 512 /dev/sdc1
 # mkdir /gluster\_brick0
 # mkdir /gluster\_brick1
@@ -81,7 +81,7 @@ EOF
 
 或者使用逻辑卷：
 
-\# pvcreate /dev/sdb1 /dev/sdc1
+# pvcreate /dev/sdb1 /dev/sdc1
 # vgcreate vg\_gluster /dev/sdb1 /dev/sdc1
 # lvcreate --name lv\_gluster --size 2500G vg\_gluster
 # mkfs.xfs -i size 512 /dev/vg\_gluster-lv\_gluster
@@ -95,13 +95,13 @@ _为什么要用XFS？_ XFS具有元数据日志功能，可以快速恢复数�
 
 在其中任何一台机器上，比如gs2.example.com，执行：
 
-\# gluster
+# gluster
   > peer probe gs1.example.com
   > peer probe gs2.example.com
 
 添加brick至volume，**合理调整砖块顺序**：
 
-\# gluster
+# gluster
   > volume create gluster-vol1 stripe 2 replica 2 gs1.example.com:/gluster\_brick0 gs1.example.com:/gluster\_brick1 gs2.example.com:/gluster\_brick0 gs2.example.com:/gluster\_brick1 gs3.example.com:/gluster\_brick0 gs3.example.com:/gluster\_brick1 gs4.example.com:/gluster\_brick0 gs4.example.com:/gluster\_brick1 force
   > volume start gluster-vol1
   > volume status
@@ -158,7 +158,7 @@ Brick8: gs4.example.com:/gluster\_brick1
 
 安装glusterfuse，将gluster卷作为glusterfs挂载，并写入1M文件查看其在各砖块分配：
 
-\# yum install glusterfs glusterfs-fuse
+# yum install glusterfs glusterfs-fuse
 # mount.glusterfs 192.168.1.81:/gluster-vol1 /mnt
 # cd /mnt
 # dd if=/dev/zero of=a.img bs=1k count=1k

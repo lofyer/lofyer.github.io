@@ -21,7 +21,7 @@ glusterfs在创建卷时会更改砖块所有者为root.root，对于某些应�
 
 创建卷时，使用如下命令：
 
-\# gluster volume create gluster-vol1 stripe 2 replica 2 host1:/brick1 host1:/brick2 host2:/brick1 host2:/brick2 host3:/brick1 host3:/brick2 host4:/brick1 host4:/brick2 force
+# gluster volume create gluster-vol1 stripe 2 replica 2 host1:/brick1 host1:/brick2 host2:/brick1 host2:/brick2 host3:/brick1 host3:/brick2 host4:/brick1 host4:/brick2 force
 
 则会进行下列组合：
 
@@ -29,7 +29,7 @@ glusterfs在创建卷时会更改砖块所有者为root.root，对于某些应�
 
 创建卷时，使用如下命令：
 
-\# gluster volume create gluster-vol1 stripe 2 replica 2 host1:/brick1 host2:/brick1 host3:/brick1 host4:/brick1 host1:/brick2 host2:/brick2 host3:/brick2 host4:/brick2 force
+# gluster volume create gluster-vol1 stripe 2 replica 2 host1:/brick1 host2:/brick1 host3:/brick1 host4:/brick1 host1:/brick2 host2:/brick2 host3:/brick2 host4:/brick2 force
 
 则会进行下列组合（注意颜色，可改为实虚线）：
 
@@ -59,7 +59,7 @@ guest ok = yes
 
 **定位裂脑文件** 通过命令
 
-\# gluster volume heal info split-brain
+# gluster volume heal info split-brain
 
 或者查看在客户端仍然是Input/Output错误的文件。 **关闭已经打开的文件或者虚机** **确定正确副本** **恢复扩展属性**
 
@@ -67,7 +67,7 @@ guest ok = yes
 
 当一个volume正在使用时，你删除了其中一个brick，会出现“/bricks/app or a prefix of it is already part of a volume”，对于3.3版本以后的glusterfs有此问题。 解决方法：
 
-\# setfattr -x trusted.glusterfs.volume-id $brick\_path
+# setfattr -x trusted.glusterfs.volume-id $brick\_path
 # setfattr -x trusted.gfid $brick\_path
 # rm -rf $brick\_path/.glusterfs
 

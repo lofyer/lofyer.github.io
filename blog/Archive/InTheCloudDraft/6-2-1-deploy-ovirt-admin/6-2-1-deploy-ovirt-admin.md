@@ -13,7 +13,7 @@ categories:
 
 **存储可以使用之前的glusterfs，方式为NFS\_V3，注意将brick的权限设置为vdsm.kvm或者36:36。**
 
-\# gluster volume create gluster-vol1 replica 2 gs1.example.com:/gluster\_brick0 gs2.example.com:/gluster\_brick0 gs3.example.com:/gluster\_brick0 gs4.example.com:/gluster\_brick0 gs1.example.com:/gluster\_brick1 gs2.example.com:/gluster\_brick1 gs3.example.com:/gluster\_brick1 gs4.example.com:/gluster\_brick1 force
+# gluster volume create gluster-vol1 replica 2 gs1.example.com:/gluster\_brick0 gs2.example.com:/gluster\_brick0 gs3.example.com:/gluster\_brick0 gs4.example.com:/gluster\_brick0 gs1.example.com:/gluster\_brick1 gs2.example.com:/gluster\_brick1 gs3.example.com:/gluster\_brick1 gs4.example.com:/gluster\_brick1 force
 
 [![gluster-ovirt](/blog/images/gluster-ovirt.png)](http://blog.lofyer.org/11-cloud-ha-ovirt/gluster-ovirt/)
 
@@ -29,13 +29,13 @@ NETMASK=255.255.255.0
 GATEWAY=192.168.10.1
 DNS1=192.168.10.1
 
-\# chkconfig NetworkManager off
+# chkconfig NetworkManager off
 # chkconfig network on
 # service NetworkManager stop; service network restart
 
 ## 添加repo
 
-\# yum localinstall http://resources.ovirt.org/releases/ovirt-release.noarch.rpm
+# yum localinstall http://resources.ovirt.org/releases/ovirt-release.noarch.rpm
 # yum install ovirt-hosted-engine-setup
 
 或者手动添加：
@@ -81,7 +81,7 @@ gpgcheck=0
 
 在gs1上运行如下命令。
 
-\# yum install ovirt-engine
+# yum install ovirt-engine
 # engine-setup --offline
 \[ INFO  \] Stage: Initializing
 \[ INFO  \] Stage: Environment setup
