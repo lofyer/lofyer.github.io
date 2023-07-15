@@ -1,3 +1,4 @@
+poetry
 Pygments>=2.4
 markdown>=3.2
 mike
@@ -10,3 +11,5 @@ mkdocs
 pymdown-extensions>=7.0
 mkdocs-redirects
 mkdocs-material
+#mkdocs-jupyter
+mkdocs-encryptcontent-plugin
