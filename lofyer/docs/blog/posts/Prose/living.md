@@ -1,6 +1,6 @@
 ---
 title: "Living"
-date: "2015-11-07"
+date: 2015-11-07
 categories: 
   - "mylife"
 ---

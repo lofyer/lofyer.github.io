@@ -1,8 +1,8 @@
 ---
 title: "模板文章标题"
-date: "2022-06-07"
+date: 2022-06-07
 categories: 
-  - "目录"
+  - "分类"
 tags:
   - "template"
 ---

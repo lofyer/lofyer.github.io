@@ -1,6 +1,6 @@
 ---
 title: "I'm still here"
-date: "2011-07-17"
+date: 2011-07-17
 categories: 
   - "mylife"
 ---

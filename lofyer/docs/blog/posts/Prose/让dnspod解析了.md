@@ -1,6 +1,6 @@
 ---
 title: "让dnspod解析了"
-date: "2012-10-11"
+date: 2012-10-11
 categories: 
   - "mylife"
 ---

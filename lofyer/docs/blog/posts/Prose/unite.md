@@ -1,6 +1,6 @@
 ---
 title: "Unité"
-date: "2012-04-15"
+date: 2012-04-15
 categories: 
   - "collect"
 ---

@@ -4,51 +4,13 @@ site_author: lofyer
 repo_name: lofyer/lofyer.github.io
 repo_url: https://github.com/lofyer/lofyer.github.io
 edit_uri: ""
-copyright: Copyright &copy; 2008 - 2022 lofyer
+copyright: Copyright &copy; 2008 - 2024 lofyer
 
 nav:
   - Index: index.md
-  - Lab:
-    - 产品与市场:
-      - 产品如何定价的模型讨论: blog/Lab/3-产品如何定价.md
-      - 关于产品的一点思考: blog/Lab/27-关于产品的一点思考.md
-      - ZStack的产品化之路（PR文）: blog/Lab/40-zstack-product.md
-    - 云计算: 
-      - Android虚拟化技术实现: blog/Lab/19-android-kvm.md
-      - ZStack集成: blog/Lab/14-zstack.md
-      - 去重软件测试OpenDedup: blog/Lab/15-opendedup.md
-      - 当代ARM/X86服务器中的Android: blog/Lab/19-android-kvm.md
-      - 开源备份工具的选择: blog/Lab/20-backup-tools.md
-      - 适合云计算的高性能NVMe存储探索: blog/Lab/30-nvme-in-the-cloud.md
-      - OpenStack中对接Pica8交换机: blog/Lab/31-openstack-opendaylight-pica8.md
-      - oVirt虚拟化笔记: blog/Lab/32-ovirt.md
-      - OpenWRT固件使用ovs（自制SDN交换机）: blog/Lab/33-ovs-in-openwrt.md
-      - 实时操作系统的K8s平台: blog/Lab/35-realtime-k8s.md
-      - VMware Converter SDK初探: blog/Lab/39-vmware-convert-sdk.md
-    - 裸金属:
-      - 构建自用裸金属（RPI、OpenBMC、FPGA、BF2）: blog/Lab/5-baremetal.md
-      - 基于FPGA的物理机容错探索: blog/Lab/16-fpga-ft.md
-      - FPGA测试: blog/Lab/17-fpga-test.md
-    - 软件定义无线电: blog/Lab/37-sdr.md
-    - 高性能计算:
-      - HPC笔记: blog/Lab/7-hpc.md
-      - 探索路径之负载自动化云平台PID控制器: blog/Lab/13-cloud-pid-controller.md
-      - 高性能本地VDI: blog/Lab/41-这社会进步快.md
-    - 其他技术记录:
-      - 3C数码: blog/Lab/1-3c.md 
-      - Arduino: blog/Lab/4-arduino.md
-      - LeapMotion: blog/Lab/8-leapmotion.md
-      - NVIDIA Jetson: blog/Lab/10-nvidia-jetson.md
-      - RaspberryPi: blog/Lab/28-gpu-raspberry-pi.md
-      - IPFS/Filecoin: blog/Lab/29-lotus-howto.md
-      - IT应用与服务: blog/Lab/38-server.md
-      - 临时笔记: blog/Lab/34-quick-notes.md
-      - Rex: blog/Lab/36-rex.md
-  - ABM:
-    - ABM学习笔记: blog/ABM/abm-note.md
-    - 应用外汇学习笔记: blog/ABM/forex-note.md
-  #- 500PX: https://500px.com.cn/lofyer
-  - Docs:
+  - WangSheng:
+      - wangsheng/index.md
+  - Archive Docs:
     - DataNote:
         - datanote/index.md
         - 第一章 数据收集、统计: datanote/ch01.md
@@ -77,13 +39,10 @@ nav:
         - 关于作者与文档: inthecloud/about.md
         - 《运维前线》私有云桌面网络组建草稿: inthecloud/frontline-network.md
         - 《运维前线》虚拟化存储启动风暴草稿: inthecloud/frontline-storage.md
-    - WangSheng:
-        - wangsheng/index.md
-  - Tags: tags.md
-  - About: about/about.md
-  - Template: template_password.md
-  - Blog:
+  - Archive Blog:
     - blog/index.md
+  #- Template: template_password.md
+  - Tags: tags.md
 
 theme:
   name: material
@@ -92,16 +51,17 @@ theme:
   favicon: images/favicon.ico
   font: false
   features:
+    - search.suggest
+    - search.highlight
     #- navigation.expand
     - navigation.tabs
     - navigation.tabs.sticky
     #- navigation.sections
     - navigation.tracking
+    - navigation.prune
     #- navigation.indexes
-    #- navigation.instant
-    - search.suggest
-    - search.highlight
-    - search.share
+    - navigation.instant
+    - navigation.instant.progess
     #- toc.integrate
   palette:
     - scheme: default
@@ -123,8 +83,8 @@ plugins:
         remove_comments: true
   - search:
       lang: zh
-  - awesome-pages:
-      collapse_single_pages: false
+#  - awesome-pages:
+#      collapse_single_pages: false
   #- mkdocs-jupyter:
   #    include_source: True
   - encryptcontent:
@@ -138,23 +98,16 @@ plugins:
       encryption_info_message: '联系管理员获取访问密码'
       password_button: True
       password_button_text: '确认密码'
-  - search: {}
   - blog:
       blog_dir: blog
       #blog_toc: true
       post_url_date_format: yyyy/MM/dd
+      post_date_format: medium
       post_readtime_words_per_minute: 265
-
-
-  #- blog:
-  #    folder: blog
-  #     articles: 50
-  #    format: "(%y/%m/%d)"
-  #     text-align: "right"
-  #     display-more-articles: true
-  #     display-article-date: true
-  #     pagination: "Page % of %"
-  #     more-articles: "More articles(%)"
+      archive_name: 归档
+      post_excerpt: optional
+      #pagination_template: "$link_first $link_previous ~2~ $link_next $link_last"
+      pagination_format: "~2~"
   # - macros:
   #   include_dir: snippets
 
@@ -170,8 +123,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       linenums: true
   - pymdownx.inlinehilite

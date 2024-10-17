@@ -1,6 +1,6 @@
 ---
 title: "2015 Roadmap"
-date: "2015-02-08"
+date: 2015-02-08
 categories: 
   - "mylife"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Solace"
-date: "2011-12-17"
+date: 2011-12-17
 categories: 
   - "collect"
 ---

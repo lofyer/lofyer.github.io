@@ -1,6 +1,6 @@
 ---
 title: "《KVM私有云架构设计与实践》第1版错误修订记录"
-date: "2017-04-24"
+date: 2017-04-24
 categories: 
   - "my-books"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Sam Haris - It is always now"
-date: "2015-05-25"
+date: 2015-05-25
 categories: 
   - "collect"
   - "followmyheart"

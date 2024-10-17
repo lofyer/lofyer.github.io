@@ -1,6 +1,6 @@
 ---
 title: "论身体的重要性"
-date: "2013-09-19"
+date: 2013-09-19
 categories: 
   - "mylife"
 ---

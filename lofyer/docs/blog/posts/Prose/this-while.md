@@ -1,6 +1,6 @@
 ---
 title: "近来"
-date: "2013-06-01"
+date: 2013-06-01
 categories: 
   - "mylife"
 ---

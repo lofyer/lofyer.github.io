@@ -1,6 +1,6 @@
 ---
 title: "V字仇杀队--经典台词"
-date: "2012-07-04"
+date: 2012-07-04
 categories: 
   - "collect"
 ---
